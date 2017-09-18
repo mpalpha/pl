@@ -1,0 +1,70 @@
+.mobile-icon {
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.icon-has-flag,
+.icon-has-no-flag {
+  color: $brand-danger;
+}
+
+.icon-has-note,
+.icon-has-no-note {
+  color: $flat-turquoise;
+}
+
+.icon-has-no-flag {
+  cursor: default;
+  opacity: .5;
+}
+
+.heading-icon {
+  margin-right: 2px;
+}
+
+.tooltip-inner {
+  text-align: left;
+}
+
+//-------------------
+//  icon badge
+//-------------------
+.fa {
+  &[class*=fa-] {
+    > .badge {
+      background: #e75200;
+      border: 1px solid #606061;
+      bottom: 0.1em;
+      font-family: sans-serif;
+      left: 0.82em;
+      max-width: 1.75em;
+      min-width: 1.75em;
+      padding: 0.3em 0.2em;
+      position: absolute;
+    }
+  }
+}
+
+.fa {
+  &[class*=fa-] {
+    > .badge {
+      &.emergency {
+        background: #c0392b;
+        border: 1px solid #606061;
+      }
+    }
+  }
+}
+
+.navbar .dropdown {
+  .open > a,
+  &:hover > a {
+    .fa {
+      &[class*=fa-] {
+        > .badge {
+          border-color: #fff;
+        }
+      }
+    }
+  }
+}

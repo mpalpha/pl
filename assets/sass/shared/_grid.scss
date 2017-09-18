@@ -1,0 +1,60 @@
+.col-md-7.cdr {
+  padding: 0;
+}
+
+
+/*
+ * Grid examples
+ *
+*/
+
+%grid-bg {
+  position: relative;
+
+  &:after {
+    background-color: transparent;
+    background-image: repeating-linear-gradient(to right, rgba(254, 0, 0, 0.25) 0%, rgba(254, 0, 0, 0.25) calc(0% + 1px), transparent calc(0% + 1px), transparent 50%, rgba(0, 254, 0, 0.3) calc(50% + 1px), transparent calc(50% + 1px), transparent 100%), repeating-linear-gradient(to bottom, rgba(254, 0, 0, 0.25) 0%, rgba(254, 0, 0, 0.25) calc(0% + 1px), transparent calc(0% + 1px), transparent 50%, rgba(0, 254, 0, 0.4) calc(50% + 1px), transparent calc(50% + 1px), transparent 100%);
+    background-position: -0.5px -0.5px;
+    background-size: 1rem 1rem;
+    box-sizing: border-box;
+    content: '';
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.grid-bg {
+  @extend %grid-bg;
+}
+
+/*
+ * Highlight the grid columns within the docs so folks can see their padding,
+ * alignment, sizing, etc.
+ */
+
+.show-grid {
+  margin-bottom: 15px;
+
+  .row,
+  .row-flex,
+  &.row-flex {
+    background-color: rgba(0, 188, 212, .1);
+
+    > *,
+    [class*=col-] {
+      background-color: #eee;
+      background-color: rgba(86, 61, 124, .15);
+      border: 1px solid #ddd;
+      border: 1px solid rgba(86, 61, 124, .2);
+    }
+  }
+
+  [class*=col-] {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+}

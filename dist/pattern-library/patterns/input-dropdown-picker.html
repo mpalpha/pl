@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Input Dropdown Checkbox</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Input Dropdown Checkbox</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    <p>DESCRIPTION</p>
+    <h3 id="example">Example</h3>
+    <div class="library__example">
+    <div style="height:300px; width:100%; float:left;">
+    <div class="search-criteria-dropdown-checkbox dropdown-checkbox dropdown open">
+      <button class="dropdown-checkbox-toggle input-group-addon" data-toggle="dropdown" href="#" aria-expanded="false" style="width:112px;">Search types</button>
+      <div class="dropdown-checkbox-content">
+          <div class="dropdown-checkbox-header">
+            <input class="checkbox-all" type="checkbox" checked><input type="text" placeholder="Search" class="search">
+          </div>
+          <ul class="dropdown-checkbox-menu">
+            <li><div class="layout"><input type="checkbox" id="1373755191307.4465" class="search-type-call" checked><label for="1373755191307.4465" style="padding-left:30px; height:25px; line-height:25px; display:block;">Calls</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="1221827789807.2217" checked><label for="1221827789807.2217">Videos</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="526283792165.4719" class="search-type-crime-tip" checked><label for="526283792165.4719">Crime Tip</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="306649965215.74585" class="search-type-informant-line" checked><label for="306649965215.74585">Informant Line</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="136856026720.60788" class="search-type-emergency-call" checked><label for="136856026720.60788">Emergency Call</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="836522252811.2626" class="search-type-voice-biometrics" checked><label for="836522252811.2626">Voice Biometrics</label></div>
+            </li>
+            <li><div class="layout"><input type="checkbox" id="567331255255.8156" class="search-type-voice-biometrics-failure" checked><label for="567331255255.8156">Voice Biometrics Failure</label></div>
+            </li>
+          </ul>
+       </div>
+      </div>
+    </div>
+    
+    <p></div></p>
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">    &lt;div class=&quot;search-criteria-dropdown-checkbox dropdown-checkbox dropdown open&quot;&gt;
+          &lt;button class=&quot;dropdown-checkbox-toggle input-group-addon&quot; data-toggle=&quot;dropdown&quot; href=&quot;#&quot; aria-expanded=&quot;false&quot;&gt;Search types&lt;/button&gt;
+            &lt;div class=&quot;dropdown-checkbox-content&quot;&gt;
+              &lt;div class=&quot;dropdown-checkbox-header&quot;&gt;
+                &lt;input class=&quot;checkbox-all&quot; type=&quot;checkbox&quot;&gt;&lt;input type=&quot;text&quot; placeholder=&quot;Search&quot; class=&quot;search&quot;&gt;
+              &lt;/div&gt;
+              &lt;ul class=&quot;dropdown-checkbox-menu&quot;&gt;
+                &lt;li&gt;
+                  &lt;div class=&quot;layout&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot; class=&quot;search-type-call&quot;&gt;
+                    &lt;label&gt;Calls&lt;/label&gt;
+                  &lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                  ...
+                &lt;/li&gt;
+                &lt;li&gt;
+                  ...
+                &lt;/li&gt;
+              &lt;/ul&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

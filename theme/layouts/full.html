@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../{{globals.assets}}/{{themeassets}}/css/patternpack.css" rel="stylesheet" />
+    <link href="./../{{globals.assets}}/{{themeassets}}/css/github.css" rel="stylesheet" />
+    <link href="./../{{globals.assets}}/css/securus.css" rel="stylesheet" />
+    <link href="./../{{globals.assets}}/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {{> navbar}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>{{title}}</h2>
+</div>
+
+<div id="libraryContent" class="no-breadcrumb markdown__body">
+    {{> body }}
+</div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

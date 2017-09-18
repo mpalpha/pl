@@ -1,0 +1,34 @@
+// responsive text alignment utilities
+// ex: .text-xs-right .text-lg-center .text-md-left
+// 
+// variables
+// Small screen / tablet
+$screen-sm-min: variable-exists(screen-sm) or 768px !default;
+// Medium screen / desktop
+$screen-md-min: variable-exists(screen-md) or 992px !default;
+// Large screen / wide desktop
+$screen-lg-min: variable-exists(screen-lg) or 1200px !default;
+
+// text alignment class builder
+@mixin make-text-alignment($class: null) {
+  $class: if($class == null, null, "-#{$class}");
+
+  .text#{$class} {
+    @each $item in ('center', 'left', 'right') {
+      &-#{$item} {
+        text-align: #{$item};
+      }
+    }
+  }
+}
+
+// text alignment media query builder
+@each $mq-name, $mq in ("xs": "0px", "sm": "#{$screen-sm-min}", "md": "#{$screen-md-min}", 'lg': "#{$screen-lg-min}") {
+  @if ($mq-name == xs) {
+    @include make-text-alignment();
+  } @else {
+    @media (min-width: #{$mq}) {
+      @include make-text-alignment(#{$mq-name});
+    }
+  }
+}

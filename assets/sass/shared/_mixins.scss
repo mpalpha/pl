@@ -1,0 +1,51 @@
+/// Thanks to Hugo Giraudel of Sass Guidelines at http://sass-guidelin.es/
+/// for the following. Use the following instead of Sass lighten() and darken() as those
+/// tend to blow out the colors early, giving you fewer actual shades and tints.
+
+/// Slightly lighten a color
+/// @access public
+/// @param {Color} $color - color to tint
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+
+@function tint($color, $percentage) {
+  @return mix($color, white, $percentage);
+}
+
+/// Slightly darken a color
+/// @access public
+/// @param {Color} $color - color to shade
+/// @param {Number} $percentage - percentage of `$color` in returned color
+/// @return {Color}
+
+@function shade($color, $percentage) {
+  @return mix($color, black, $percentage);
+}
+
+//Style placeholders so they don't look like field is already filled in
+@mixin placeholder-default {
+  //  font-style: italic;
+  color: $gray-lightest;
+}
+
+::-webkit-input-placeholder {
+  @include placeholder-default;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  @include placeholder-default;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  @include placeholder-default;
+}
+
+:-ms-input-placeholder {
+  @include placeholder-default;
+}
+
+%transparent {
+  background: none;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,54 @@
+//-------------------------------
+// Sidebar Affix
+// ------------------------------
+
+.affix-top,
+.affix {
+  position: static;
+}
+
+#sidebar {
+  float: left;
+  margin-top: 100px;
+  position: relative;
+}
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    margin-top: 0;
+    position: static;
+    width: 228px;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top: -20px;
+    width: 228px;
+  }
+
+  #sidebar.affix-bottom {
+    position: absolute;
+    top: auto;
+    width: 228px;
+  }
+}
+
+#sidebar li.active,
+#sidebar li.active a {
+  background-color: $brand-primary;
+  border-radius: 4px;
+  color: white;
+}
+
+#sidebar:hover {
+  border-radius: 4px;
+}
+
+.unlimited-style {
+  border-bottom: 1px dashed $brand-primary;
+  color: $brand-primary;
+}
+
+.pan-enable {
+  display: block;
+}

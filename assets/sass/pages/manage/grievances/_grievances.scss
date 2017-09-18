@@ -1,0 +1,55 @@
+.selected {
+  color: #000;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.table-grievances {
+  th:nth-child(7),
+  th:nth-child(8),
+  th:nth-child(9),
+  td:nth-child(7),
+  td:nth-child(8),
+  td:nth-child(9) {
+    text-align: center;
+  }
+
+  .inmate {
+    color: #ccc;
+  }
+}
+
+.grievance-workflow-settings {
+  border-bottom: 1px dashed #eee;
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+}
+
+.grievance-auto-assign {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.grievance-escalation-level > * {
+  display: inline-block;
+}
+
+.escalation-level {
+  .pagination {
+    margin: 0;
+
+    .title {
+      border: 0;
+      float: left;
+      font-size: 16px;
+      font-weight: 700;
+      margin-right: 12px;
+      padding: 6px 0;
+    }
+
+    li:nth-child(2) > a {
+      border-bottom-left-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+  }
+}

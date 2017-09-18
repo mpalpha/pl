@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Notifications</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Notifications</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    <p>Display messages to the user on save errors, save successes, info messages, or system alerts.</p>
+    <p>To stick a notification to the bottom of the screen, add the <code>.notify--bottom</code> class to <code>.notify</code>.</p>
+    <h3 id="example">Example</h3>
+    <div class="library__example" style="margin-bottom: 60px; top: 16px !important;">
+        <div style="position: relative; height: 60px;">
+            <div class="notify-container">
+                <div class="notify notify-info" style="display: block; top: 16px !important;">
+                    <div class="text"><i class="fa fa-info-circle"></i> Password changes can take up to 30 minutes to take effect.</div>
+                    <div class="close"><i class="fa fa-times-circle"></i></div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; height: 60px;">
+            <div class="notify-container">
+                <div style="display: block !important; top: 16px !important;" class="notify notify-alert notify-alert-multiple">
+                    <div class="text"><i class="fa fa-warning"></i> CDR could not be downloaded <span class="badge">3</span></div>
+                    <div class="close"><i class="fa fa-times-circle"></i></div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; height: 60px;">
+            <div class="notify-container">
+                <div style="display: block !important; top: 16px !important;" class="notify notify-alert">
+                    <div class="text"><i class="fa fa-warning"></i> Please correct the errors in the form before saving.</div>
+                    <div class="close"><i class="fa fa-times-circle"></i></div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; height: 60px;">
+            <div class="notify-container">
+                <div style="display: block !important; top: 16px !important;" class="notify notify-success">
+                    <div class="text"><i class="fa fa-check-circle"></i> Changes saved.</div>
+                </div>
+            </div>
+        </div>
+        <div style="position: relative; height: 60px;">
+            <div class="notify-container">
+                <div style="display: block !important; top: 16px !important;" class="notify notify-system">
+                    <div class="text"><i class="fa fa-exclamation-circle"></i> We were unable to save the changes. Please try again later.</div>
+                    <div class="close"><i class="fa fa-times-circle"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">&lt;div class=&quot;notify-container&quot;&gt;
+        &lt;div class=&quot;notify notify-info&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;&lt;i class=&quot;fa fa-info-circle&quot;&gt;&lt;/i&gt; &lt;!-- info message --&gt; &lt;/div&gt;
+            &lt;div class=&quot;close&quot;&gt;&lt;i class=&quot;fa fa-times-circle&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notify notify-alert notify-alert-multiple&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;!-- message --&gt; &lt;span class=&quot;badge&quot;&gt;&lt;!-- count --&gt;&lt;/span&gt;&lt;/div&gt;
+            &lt;div class=&quot;close&quot;&gt;&lt;i class=&quot;fa fa-times-circle&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notify notify-alert&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;&lt;i class=&quot;fa fa-warning&quot;&gt;&lt;/i&gt; &lt;!-- validation message --&gt;&lt;/div&gt;
+            &lt;div class=&quot;close&quot;&gt;&lt;i class=&quot;fa fa-times-circle&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notify notify-success&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;&lt;i class=&quot;fa fa-check-circle&quot;&gt;&lt;/i&gt; &lt;!-- success message --&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;notify notify-system&quot;&gt;
+            &lt;div class=&quot;text&quot;&gt;&lt;i class=&quot;fa fa-exclamation-circle&quot;&gt;&lt;/i&gt; &lt;!-- system message --&gt;&lt;/div&gt;
+            &lt;div class=&quot;close&quot;&gt;&lt;i class=&quot;fa fa-times-circle&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+    
+  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

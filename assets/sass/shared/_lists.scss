@@ -1,0 +1,171 @@
+dl {
+  &.#{&}-horizontal,
+  &.#{&}-timeline {
+    padding: 0;
+
+    dt {
+      clear: left;
+      float: left;
+      // white-space: normal;
+      font-weight: normal;
+      overflow: visible;
+      text-align: left;
+    }
+
+    dd {
+      margin-bottom: 0;
+    }
+  }
+
+  &.#{&}-horizontal {
+    margin: 0 0 5px;
+
+    dt {
+      width: 90px;
+    }
+
+    dd {
+      margin-left: 100px;
+    }
+  }
+
+  &.#{&}-timeline {
+    margin: 10px 0 0;
+
+    dt {
+      width: 30px;
+    }
+
+    dd {
+      margin-left: 30px;
+    }
+  }
+}
+
+.step-style {
+  background: #eee;
+  border-radius: 50%;
+  color: #555;
+  display: inline-block;
+  height: 24px;
+  margin-right: 3px;
+  padding: 2px;
+  text-align: center;
+  width: 24px;
+}
+
+ul.call-tag {
+  margin-top: 10px;
+  padding: 0;
+
+  * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  li {
+    background: $gray-lighter;
+    border: 1px solid #dadada;
+    border-radius: 15px;
+    color: $gray-light;
+    font-size: 13px;
+    margin-bottom: 5px;
+    padding: 5px 10px 5px 5px;
+    white-space: nowrap;
+
+    &:before {
+      display: inline-block;
+      font-family: FontAwesome;
+      -webkit-font-smoothing: antialiased;
+      margin: 0 5px;
+
+      &.private {
+        content: "\f007";
+      }
+
+      &.public {
+        content: "\f0c0";
+      }
+    }
+
+    &:hover {
+      background-color: $brand-primary;
+      border: 1px solid darken($brand-primary, 5%);
+      color: white;
+      cursor: pointer;
+
+      a {
+        color: white;
+        text-decoration: none;
+
+        &.delete {
+          color: white;
+        }
+      }
+    }
+
+    a {
+      color: $gray-light;
+      max-width: 150px;
+      @include text-overflow();
+
+      &.delete {
+        color: $gray-light;
+        margin: -3px 0 0 5px;
+        text-indent: 0;
+
+        &:hover {
+          color: darken($brand-danger, 15%);
+        }
+      }
+    }
+  }
+}
+
+.item-list {
+  margin-top: 20px;
+
+  .item {
+    margin-bottom: 20px;
+  }
+
+  &-message {
+    margin-top: 20px;
+  }
+}
+
+.metadata {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+
+  .date-time {
+    font-size: 12px;
+  }
+
+  .user {
+    font-weight: bold;
+  }
+
+  .action {
+    float: right;
+  }
+
+  hr {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+}
+
+// ul, ol list styles
+//
+// Classes to append to ul, ol to achieve certain effects
+.list {
+  &--without-left-spacing {
+    padding-left: 0;
+  }
+
+  &--plain {
+    list-style: none;
+  }
+}

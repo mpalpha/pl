@@ -1,0 +1,149 @@
+{
+    "icons": [
+        {
+            "id": "add-child",
+            "name": "Add Child",
+            "unicode": "ea01"
+        },
+        {
+            "id": "add-sibling",
+            "name": "Add Sibling",
+            "unicode": "ea02"
+        },
+        {
+            "id": "building8",
+            "name": "Building8",
+            "unicode": "ea03"
+        },
+        {
+            "id": "cd-image",
+            "name": "Cd Image",
+            "unicode": "ea04"
+        },
+        {
+            "id": "covert-alert",
+            "name": "Covert Alert",
+            "unicode": "ea05"
+        },
+        {
+            "id": "expired-call",
+            "name": "Expired Call",
+            "unicode": "ea06"
+        },
+        {
+            "id": "expired-video-visit",
+            "name": "Expired Video Visit",
+            "unicode": "ea07"
+        },
+        {
+            "id": "extend-time",
+            "name": "Extend Time",
+            "unicode": "ea08"
+        },
+        {
+            "id": "facility",
+            "name": "Facility",
+            "unicode": "ea09"
+        },
+        {
+            "id": "forward-call",
+            "name": "Forward Call",
+            "unicode": "ea0a"
+        },
+        {
+            "id": "geofence",
+            "name": "Geofence",
+            "unicode": "ea0b"
+        },
+        {
+            "id": "informant-line-call",
+            "name": "Informant Line Call",
+            "unicode": "ea0c"
+        },
+        {
+            "id": "inmate",
+            "name": "Inmate",
+            "unicode": "ea0d"
+        },
+        {
+            "id": "mobile-phone-custom",
+            "name": "Mobile Phone Custom",
+            "unicode": "ea0e"
+        },
+        {
+            "id": "no-recording",
+            "name": "No Recording",
+            "unicode": "ea0f"
+        },
+        {
+            "id": "play-call",
+            "name": "Play Call",
+            "unicode": "ea10"
+        },
+        {
+            "id": "play-video-visit",
+            "name": "Play Video Visit",
+            "unicode": "ea11"
+        },
+        {
+            "id": "private-call",
+            "name": "Private Call",
+            "unicode": "ea12"
+        },
+        {
+            "id": "private-video-visit",
+            "name": "Private Video Visit",
+            "unicode": "ea13"
+        },
+        {
+            "id": "rewind-30",
+            "name": "Rewind 30",
+            "unicode": "ea14"
+        },
+        {
+            "id": "sick-call",
+            "name": "Sick Call",
+            "unicode": "ea15"
+        },
+        {
+            "id": "terminate-call",
+            "name": "Terminate Call",
+            "unicode": "ea16"
+        },
+        {
+            "id": "terminate-video-visit",
+            "name": "Terminate Video Visit",
+            "unicode": "ea17"
+        },
+        {
+            "id": "video-off",
+            "name": "Video Off",
+            "unicode": "ea18"
+        },
+        {
+            "id": "virtual-groups",
+            "name": "Virtual Groups",
+            "unicode": "ea19"
+        },
+        {
+            "id": "visitor",
+            "name": "Visitor",
+            "unicode": "ea1a"
+        },
+        {
+            "id": "voice-biometrics",
+            "name": "Voice Biometrics",
+            "unicode": "ea1b"
+        },
+        {
+            "id": "volume-mute",
+            "name": "Volume Mute",
+            "unicode": "ea1c"
+        },
+        {
+            "id": "webcam",
+            "name": "Webcam",
+            "unicode": "ea1d"
+        }
+    ]
+}

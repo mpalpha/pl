@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Global Navigation</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Global Navigation</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    <p>DESCRIPTION</p>
+    <p>Navbar dropdowns works by adding the &quot;open&quot; class to the corresponding li tag.</p>
+    <h3 id="example">Example</h3>
+    <div class="library__example">
+    
+      <div id="exampleNavBar" class="navbar" role="navigation" style="z-index: 1">
+          <div class="container-fluid">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar icon-bar--whiteOut"></span>
+                      <span class="icon-bar icon-bar--whiteOut"></span>
+                      <span class="icon-bar icon-bar--whiteOut"></span>
+                  </button>
+                  <a class="logo" href="#/Home.html">Securus Technologies</a>
+              </div>
+              <div class="navbar-collapse collapse">
+                  <ul class="nav navbar-nav">
+                      <!-- Dashboard -->
+                      <li>
+                          <a href="#/pages/dashboard/">
+                              <div class="divider divider-first">
+                                  <span class="fa fa-dashboard"></span>Dashboard
+                              </div>
+                          </a>
+                      </li>
+                      <!-- Monitor Activity -->
+                      <li>
+                          <a href="#/pages/monitor/">
+                              <div class="divider">
+                                  <span class="fa fa-bar-chart-o"></span>Monitor
+                              </div>
+                          </a>
+                      </li>
+                      <!-- Searches -->
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <div class="divider">
+                                  <span class="fa fa-search"></span>Search<b class="caret"></b>
+                              </div>
+                          </a>
+                          <ul class="dropdown-menu dropdown--cropped">
+                              <li>
+                                  <a href="#/pages/search/inmates/">Inmates</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/search/communication/">Communication Records</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/search/system-logs/">System Logs</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/search/debit-transactions/">Debit Transactions</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/search/debit-balance/">Inmate Balance</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <!-- Investigate -->
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <div class="divider">
+                                  <span class="fa fa-eye"></span>
+                                  <span>Investigate <i class="caret"></i>
+                              </span>
+                              </div>
+                          </a>
+                          <ul class="dropdown-menu dropdown--cropped">
+                              <li><a href="#">Investigator Pro</a>
+                              </li>
+                              <li><a href="#/pages/investigate/lbs/">Location Based Services</a>
+                              </li>
+                              <li><a href="#">THREADS</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <!-- Visitation -->
+                      <li>
+                          <a href="#/pages/visits/">
+                              <div class="divider">
+                                  <span class="fa securus-webcam"></span>Visits</div>
+                          </a>
+                      </li>
+                      <!-- Manage -->
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                              <div class="divider divider-last">
+                                  <span class="fa fa-gear"></span>Manage<b class="caret"></b>
+                              </div>
+                          </a>
+                          <ul class="dropdown-menu dropdown--cropped">
+                              <li>
+                                  <a href="#/pages/manage/facility-and-sites/facility">Facility and Sites</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="#/pages/manage/phone-numbers/blocked-numbers">Phone Numbers</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/call-settings/call-forward-numbers">Call Settings</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="#/pages/manage/grievances/">Grievances <span class="badge">13</span></a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/sick-calls/">Sick Forms</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/commissary/">Commissary Requests</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="#/pages/manage/visitors/">Visitors</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/visitor-types/">Visitor Types</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/visit-settings/visit-restrictions">Visit Settings</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="#/pages/manage/security-roles/">Security Roles</a>
+                              </li>
+                              <li>
+                                  <a href="#/pages/manage/users/">Users</a>
+                              </li>
+                              <li class="divider"></li>
+                              <li>
+                                  <a href="http://10.88.14.20:7006/eimport/login/entrypage.jsp;jsessionid=tTZGT1GLJyCQ3fbhKHJ4TJhG9tZH2GJj!-1754741843!377768658">E-Import Admin Tool</a>
+                              </li>
+                          </ul>
+                      </li>
+                      <!-- Management Level -->
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle mgmt-level" data-toggle="dropdown">
+                              <div class="mgmt-level-button">
+                                  <div class="mgmt-level-icon">
+                                      <i class="mgmt-level-icon-facility fa securus-facility fa-2x"></i>
+                                      <i class="mgmt-level-icon-site fa securus-building8 fa-2x" style="display: none;"></i>
+                                  </div>
+                                  <div class="mgmt-level-text" data-placement="bottom" data-toggle="tooltip" title="" data-original-title="" tooltip="CI Eden">
+                                      <span>CI Eden</span>
+                                  </div>
+                                  <div>
+                                      <b class="caret"></b>
+                                  </div>
+                              </div>
+                          </a>
+                          <ul class="mgmt-level-dropdown mgmt-level-dropdown-global-nav" style="display: none;">
+                              <li>
+                                  <div class="form-horizontal">
+                                      <div class="form-group">
+                                          <label for="FacilityContext"><i class="fa securus-facility"></i>
+                                              <span>Facility</span>
+                                          </label>
+                                          <select id="FacilityContext" class="form-control mgmt-level-select-facility"><option>CI Eden</option><option>RO South Central</option><option>FCC Three Rivers</option></select>
+                                      </div>
+                                      <div class="form-group">
+                                          <label for="SiteContext"><i class="fa securus-building8"></i>Site</label>
+                                          <select id="SiteContext" class="form-control mgmt-level-select-site"><option>All Sites</option><option>King County Community Correction Div Wrk Rel, WA</option><option>Collin County Jail</option><option>Frisco City Jail</option></select>
+                                      </div>
+                                      <div class="form-group">
+                                          <a href="#" class="update-mgmt-context btn btn-success form-update-btn">Update</a>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                  <div class="navbar-right">
+                      <ul class="nav navbar-nav">
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" class="dropdown-toggle right-nav-icon active" href="#">
+                                  <i class="fa fa-bell fa-flip-horizontal animated swing"></i>
+                                  <span>5</span>
+                              </a>
+                              <ul class="dropdown-menu alert">
+                                  <li class="header">You have 1 new alert</li>
+                                  <!-- Video download link. -->
+                                  <li class="item">
+                                      <a href="#">
+                                          <div class="icon">
+                                              <i class="fa fa-video-camera fa-2x"></i>
+                                          </div>
+                                          <div class="description">
+                                              <div class="date-time">9-7-2014 at 12:59 p.m.</div>
+                                              <div class="summary"><b>Inmate video</b> is ready for download</div>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <!-- Video download link. -->
+                                  <!-- CD Image link. -->
+                                  <li class="item">
+                                      <a href="#">
+                                          <div class="icon">
+                                              <i class="fa securus-cd-image fa-2x"></i>
+                                          </div>
+                                          <div class="description">
+                                              <div class="date-time">9-7-2014 at 12:59 p.m.</div>
+                                              <div class="summary">CD Image: <b>Chavez Case</b> is ready for download</div>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <!-- CD Image link. -->
+                                  <!-- CD Image couldn't be created alert. Note: no link -->
+                                  <li class="item">
+                                      <a href="#">
+                                          <div class="icon">
+                                              <i class="fa fa-warning fa-2x"></i>
+                                          </div>
+                                          <div class="description">
+                                              <div class="date-time">9-7-2014 at 12:59 p.m.</div>
+                                              <div class="summary">CD Image: <b>Chavez Case</b> failed. Try again later.</div>
+                                          </div>
+                                      </a>
+                                  </li>
+                                  <!-- CD Image couldn't be created alert. Note: no link -->
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" class="dropdown-toggle right-nav-icon" href="#">
+                                  <i class="fa fa-question-circle"></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <a href=" #/pages/profile/">Frequently Asked Questions</a>
+                                  </li>
+                                  <li>
+                                      <a href="#">Help</a>
+                                  </li>
+                                  <li>
+                                      <a href="#/pages/help">Service Tickets</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="dropdown">
+                              <a data-toggle="dropdown" class="dropdown-toggle right-nav-icon" href="#">
+                                  <i class="fa fa-wrench"></i>
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#/pages/admin/users/">All Users</a>
+                                </li>
+                                <li>
+                                    <a href="#/pages/admin/facilities/">All Facilities</a>
+                                </li>
+                                <li>
+                                    <a href="#/pages/admin/security-roles/">Securus Security Roles</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                  <li>
+                                      <a href="#/pages/admin/cdr-errors">CDR Error Log</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li class="dropdown current-user-dropdown">
+                              <a data-toggle="dropdown" class="dropdown-toggle right-nav-icon" href="#">
+                                  <img src="http://fillmurray.com/16/16" style="margin-right: 5px; border-radius: 4px;">
+                                  <span class="username">H. Schrader</span>
+                                  <b class="caret"></b>
+                              </a>
+                              <ul class="dropdown-menu">
+                                  <li>
+                                      <a href="#/pages/profile/notifications.html">Profile</a>
+                                  </li>
+                                  <li>
+                                      <a href="FirstTime/#/Login.html">Log Out</a>
+                                  </li>
+                              </ul>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+    
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">  &lt;div class=&quot;navbar navbar-fixed-top&quot; role=&quot;navigation&quot;&gt;
+          &lt;div class=&quot;container-fluid&quot;&gt;
+              &lt;div class=&quot;navbar-header&quot;&gt;
+                  &lt;button type=&quot;button&quot; class=&quot;navbar-toggle&quot; data-toggle=&quot;collapse&quot; data-target=&quot;.navbar-collapse&quot;&gt;
+                      &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
+                      &lt;span class=&quot;icon-bar icon-bar--whiteOut&quot;&gt;&lt;/span&gt;
+                      &lt;span class=&quot;icon-bar icon-bar--whiteOut&quot;&gt;&lt;/span&gt;
+                      &lt;span class=&quot;icon-bar icon-bar--whiteOut&quot;&gt;&lt;/span&gt;
+                  &lt;/button&gt;
+                  &lt;a class=&quot;logo&quot; href=&quot;#/Home.html&quot;&gt;Securus Technologies&lt;/a&gt;
+              &lt;/div&gt;
+              &lt;div class=&quot;navbar-collapse collapse&quot;&gt;
+                  &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                      &lt;!-- Dashboard --&gt;
+                      &lt;li&gt;
+                          &lt;a href=&quot;#/pages/dashboard/&quot;&gt;
+                              &lt;div class=&quot;divider divider-first&quot;&gt;
+                                  &lt;span class=&quot;fa fa-dashboard&quot;&gt;&lt;/span&gt;Dashboard
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Monitor Activity --&gt;
+                      &lt;li&gt;
+                          &lt;a href=&quot;#/pages/monitor/&quot;&gt;
+                              &lt;div class=&quot;divider&quot;&gt;
+                                  &lt;span class=&quot;fa fa-bar-chart-o&quot;&gt;&lt;/span&gt;Monitor
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Searches --&gt;
+                      &lt;li class=&quot;dropdown&quot;&gt;
+                          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                              &lt;div class=&quot;divider&quot;&gt;
+                                  &lt;span class=&quot;fa fa-search&quot;&gt;&lt;/span&gt;Search&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                          &lt;ul class=&quot;dropdown-menu dropdown--cropped&quot;&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/search/inmates/&quot;&gt;Inmates&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/search/communication/&quot;&gt;Communication Records&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/search/system-logs/&quot;&gt;System Logs&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/search/debit-transactions/&quot;&gt;Debit Transactions&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/search/debit-balance/&quot;&gt;Inmate Balance&lt;/a&gt;
+                              &lt;/li&gt;
+                          &lt;/ul&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Investigate --&gt;
+                      &lt;li class=&quot;dropdown&quot;&gt;
+                          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                              &lt;div class=&quot;divider&quot;&gt;
+                                  &lt;span class=&quot;fa fa-eye&quot;&gt;&lt;/span&gt;
+                                  &lt;span&gt;Investigate &lt;i class=&quot;caret&quot;&gt;&lt;/i&gt;
+                              &lt;/span&gt;
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                          &lt;ul class=&quot;dropdown-menu dropdown--cropped&quot;&gt;
+                              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Investigator Pro&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;&lt;a href=&quot;#/pages/investigate/lbs/&quot;&gt;Location Based Services&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;&lt;a href=&quot;#&quot;&gt;THREADS&lt;/a&gt;
+                              &lt;/li&gt;
+                          &lt;/ul&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Visitation --&gt;
+                      &lt;li&gt;
+                          &lt;a href=&quot;#/pages/visits/&quot;&gt;
+                              &lt;div class=&quot;divider&quot;&gt;
+                                  &lt;span class=&quot;fa securus-webcam&quot;&gt;&lt;/span&gt;Visits&lt;/div&gt;
+                          &lt;/a&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Manage --&gt;
+                      &lt;li class=&quot;dropdown&quot;&gt;
+                          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot;&gt;
+                              &lt;div class=&quot;divider divider-last&quot;&gt;
+                                  &lt;span class=&quot;fa fa-gear&quot;&gt;&lt;/span&gt;Manage&lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                          &lt;ul class=&quot;dropdown-menu dropdown--cropped&quot;&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/facility-and-sites/facility&quot;&gt;Facility and Sites&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/phone-numbers/blocked-numbers&quot;&gt;Phone Numbers&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/call-settings/call-forward-numbers&quot;&gt;Call Settings&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/grievances/&quot;&gt;Grievances &lt;span class=&quot;badge&quot;&gt;13&lt;/span&gt;&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/sick-calls/&quot;&gt;Sick Forms&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/commissary/&quot;&gt;Commissary Requests&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/visitors/&quot;&gt;Visitors&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/visitor-types/&quot;&gt;Visitor Types&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/visit-settings/visit-restrictions&quot;&gt;Visit Settings&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/security-roles/&quot;&gt;Security Roles&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;#/pages/manage/users/&quot;&gt;Users&lt;/a&gt;
+                              &lt;/li&gt;
+                              &lt;li class=&quot;divider&quot;&gt;&lt;/li&gt;
+                              &lt;li&gt;
+                                  &lt;a href=&quot;http://10.88.14.20:7006/eimport/login/entrypage.jsp;jsessionid=tTZGT1GLJyCQ3fbhKHJ4TJhG9tZH2GJj!-1754741843!377768658&quot;&gt;E-Import Admin Tool&lt;/a&gt;
+                              &lt;/li&gt;
+                          &lt;/ul&gt;
+                      &lt;/li&gt;
+                      &lt;!-- Management Level --&gt;
+                      &lt;li class=&quot;dropdown&quot;&gt;
+                          &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle mgmt-level&quot; data-toggle=&quot;dropdown&quot;&gt;
+                              &lt;div class=&quot;mgmt-level-button&quot;&gt;
+                                  &lt;div class=&quot;mgmt-level-icon&quot;&gt;
+                                      &lt;i class=&quot;mgmt-level-icon-facility fa securus-facility fa-2x&quot;&gt;&lt;/i&gt;
+                                      &lt;i class=&quot;mgmt-level-icon-site fa securus-building8 fa-2x&quot; style=&quot;display: none;&quot;&gt;&lt;/i&gt;
+                                  &lt;/div&gt;
+                                  &lt;div class=&quot;mgmt-level-text&quot; data-placement=&quot;bottom&quot; data-toggle=&quot;tooltip&quot; title=&quot;&quot; data-original-title=&quot;&quot; tooltip=&quot;CI Eden&quot;&gt;
+                                      &lt;span&gt;CI Eden&lt;/span&gt;
+                                  &lt;/div&gt;
+                                  &lt;div&gt;
+                                      &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+                                  &lt;/div&gt;
+                              &lt;/div&gt;
+                          &lt;/a&gt;
+                          &lt;ul class=&quot;mgmt-level-dropdown mgmt-level-dropdown-global-nav&quot; style=&quot;display: none;&quot;&gt;
+                              &lt;li&gt;
+                                  &lt;div class=&quot;form-horizontal&quot;&gt;
+                                      &lt;div class=&quot;form-group&quot;&gt;
+                                          &lt;label for=&quot;FacilityContext&quot;&gt;&lt;i class=&quot;fa securus-facility&quot;&gt;&lt;/i&gt;
+                                              &lt;span&gt;Facility&lt;/span&gt;
+                                          &lt;/label&gt;
+                                          &lt;select id=&quot;FacilityContext&quot; class=&quot;form-control mgmt-level-select-facility&quot;&gt;&lt;option&gt;CI Eden&lt;/option&gt;&lt;option&gt;RO South Central&lt;/option&gt;&lt;option&gt;FCC Three Rivers&lt;/option&gt;&lt;/select&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class=&quot;form-group&quot;&gt;
+                                          &lt;label for=&quot;SiteContext&quot;&gt;&lt;i class=&quot;fa securus-building8&quot;&gt;&lt;/i&gt;Site&lt;/label&gt;
+                                          &lt;select id=&quot;SiteContext&quot; class=&quot;form-control mgmt-level-select-site&quot;&gt;&lt;option&gt;All Sites&lt;/option&gt;&lt;option&gt;King County Community Correction Div Wrk Rel, WA&lt;/option&gt;&lt;option&gt;Collin County Jail&lt;/option&gt;&lt;option&gt;Frisco City Jail&lt;/option&gt;&lt;/select&gt;
+                                      &lt;/div&gt;
+                                      &lt;div class=&quot;form-group&quot;&gt;
+                                          &lt;a href=&quot;#&quot; class=&quot;update-mgmt-context btn btn-success form-update-btn&quot;&gt;Update&lt;/a&gt;
+                                      &lt;/div&gt;
+                                  &lt;/div&gt;
+                              &lt;/li&gt;
+                          &lt;/ul&gt;
+                      &lt;/li&gt;
+                  &lt;/ul&gt;
+                  &lt;div class=&quot;navbar-right&quot;&gt;
+                      &lt;ul class=&quot;nav navbar-nav&quot;&gt;
+                          &lt;li class=&quot;dropdown&quot;&gt;
+                              &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle right-nav-icon active&quot; href=&quot;#&quot;&gt;
+                                  &lt;i class=&quot;fa fa-bell fa-flip-horizontal animated swing&quot;&gt;&lt;/i&gt;
+                                  &lt;span&gt;5&lt;/span&gt;
+                              &lt;/a&gt;
+                              &lt;ul class=&quot;dropdown-menu alert&quot;&gt;
+                                  &lt;li class=&quot;header&quot;&gt;You have 1 new alert&lt;/li&gt;
+                                  &lt;!-- Video download link. --&gt;
+                                  &lt;li class=&quot;item&quot;&gt;
+                                      &lt;a href=&quot;#&quot;&gt;
+                                          &lt;div class=&quot;icon&quot;&gt;
+                                              &lt;i class=&quot;fa fa-video-camera fa-2x&quot;&gt;&lt;/i&gt;
+                                          &lt;/div&gt;
+                                          &lt;div class=&quot;description&quot;&gt;
+                                              &lt;div class=&quot;date-time&quot;&gt;9-7-2014 at 12:59 p.m.&lt;/div&gt;
+                                              &lt;div class=&quot;summary&quot;&gt;&lt;b&gt;Inmate video&lt;/b&gt; is ready for download&lt;/div&gt;
+                                          &lt;/div&gt;
+                                      &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;!-- Video download link. --&gt;
+                                  &lt;!-- CD Image link. --&gt;
+                                  &lt;li class=&quot;item&quot;&gt;
+                                      &lt;a href=&quot;#&quot;&gt;
+                                          &lt;div class=&quot;icon&quot;&gt;
+                                              &lt;i class=&quot;fa securus-cd-image fa-2x&quot;&gt;&lt;/i&gt;
+                                          &lt;/div&gt;
+                                          &lt;div class=&quot;description&quot;&gt;
+                                              &lt;div class=&quot;date-time&quot;&gt;9-7-2014 at 12:59 p.m.&lt;/div&gt;
+                                              &lt;div class=&quot;summary&quot;&gt;CD Image: &lt;b&gt;Chavez Case&lt;/b&gt; is ready for download&lt;/div&gt;
+                                          &lt;/div&gt;
+                                      &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;!-- CD Image link. --&gt;
+                                  &lt;!-- CD Image couldn&#39;t be created alert. Note: no link --&gt;
+                                  &lt;li class=&quot;item&quot;&gt;
+                                      &lt;a href=&quot;#&quot;&gt;
+                                          &lt;div class=&quot;icon&quot;&gt;
+                                              &lt;i class=&quot;fa fa-warning fa-2x&quot;&gt;&lt;/i&gt;
+                                          &lt;/div&gt;
+                                          &lt;div class=&quot;description&quot;&gt;
+                                              &lt;div class=&quot;date-time&quot;&gt;9-7-2014 at 12:59 p.m.&lt;/div&gt;
+                                              &lt;div class=&quot;summary&quot;&gt;CD Image: &lt;b&gt;Chavez Case&lt;/b&gt; failed. Try again later.&lt;/div&gt;
+                                          &lt;/div&gt;
+                                      &lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;!-- CD Image couldn&#39;t be created alert. Note: no link --&gt;
+                              &lt;/ul&gt;
+                          &lt;/li&gt;
+                          &lt;li class=&quot;dropdown&quot;&gt;
+                              &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle right-nav-icon&quot; href=&quot;#&quot;&gt;
+                                  &lt;i class=&quot;fa fa-question-circle&quot;&gt;&lt;/i&gt;
+                              &lt;/a&gt;
+                              &lt;ul class=&quot;dropdown-menu dropdown--cropped&quot;&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot; #/pages/profile/&quot;&gt;Frequently Asked Questions&lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot;#&quot;&gt;Help&lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot;#/pages/help&quot;&gt;Service Tickets&lt;/a&gt;
+                                  &lt;/li&gt;
+                              &lt;/ul&gt;
+                          &lt;/li&gt;
+                          &lt;li class=&quot;dropdown&quot;&gt;
+                              &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle right-nav-icon&quot; href=&quot;#&quot;&gt;
+                                  &lt;i class=&quot;fa fa-wrench&quot;&gt;&lt;/i&gt;
+                              &lt;/a&gt;
+                              &lt;ul class=&quot;dropdown-menu dropdown--cropped&quot;&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;#/pages/admin/users/&quot;&gt;All Users&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;#/pages/admin/facilities/&quot;&gt;All Facilities&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li&gt;
+                                    &lt;a href=&quot;#/pages/admin/security-roles/&quot;&gt;Scurus Security Roles&lt;/a&gt;
+                                &lt;/li&gt;
+                                &lt;li class=&quot;divider&quot;&gt;
+                                &lt;/li&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot;#/pages/admin/cdr-errors&quot;&gt;CDR Error Log&lt;/a&gt;
+                                  &lt;/li&gt;
+                              &lt;/ul&gt;
+                          &lt;/li&gt;
+                          &lt;li class=&quot;dropdown current-user-dropdown&quot;&gt;
+                              &lt;a data-toggle=&quot;dropdown&quot; class=&quot;dropdown-toggle right-nav-icon&quot; href=&quot;#&quot;&gt;
+                                  &lt;img src=&quot;http://fillmurray.com/16/16&quot; style=&quot;margin-right: 5px; border-radius: 4px;&quot;&gt;
+                                  &lt;span class=&quot;username&quot;&gt;H. Schrader&lt;/span&gt;
+                                  &lt;b class=&quot;caret&quot;&gt;&lt;/b&gt;
+                              &lt;/a&gt;
+                              &lt;ul class=&quot;dropdown-menu&quot;&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot;#/pages/profile/notifications.html&quot;&gt;Profile&lt;/a&gt;
+                                  &lt;/li&gt;
+                                  &lt;li&gt;
+                                      &lt;a href=&quot;FirstTime/#/Login.html&quot;&gt;Log Out&lt;/a&gt;
+                                  &lt;/li&gt;
+                              &lt;/ul&gt;
+                          &lt;/li&gt;
+                      &lt;/ul&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    </code></pre>
+    
+  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

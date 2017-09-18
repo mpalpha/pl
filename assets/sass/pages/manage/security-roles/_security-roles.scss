@@ -1,0 +1,59 @@
+.has-permission {
+  text-align: center;
+  width: 200px;
+}
+
+.permission-create-new,
+.permission-existing {
+  padding-right: 0;
+}
+
+// Permissions Page //
+.permissions-form-background {
+  background-color: $gray-lighter;
+  border-radius: 4px;
+  padding: 25px;
+}
+
+.permissions > .table {
+  thead > tr > th {
+    border: none;
+    border-color: #fff;
+    padding-left: 15px;
+    vertical-align: middle;
+
+    &:first-child {
+      width: 70%;
+    }
+
+    &:last-child {
+      text-align: center;
+    }
+  }
+
+  tbody > tr > td {
+    padding-left: 15px;
+
+    &:last-child {
+      text-align: center;
+    }
+  }
+
+  .rounded-check {
+    display: inline-block;
+    margin: 13px 0 -3px;
+    padding: 0;
+
+    .icon {
+      left: 0;
+      position: inherit;
+      top: 0;
+      //      width: auto;
+      //      height: auto;
+
+      &:after {
+        margin: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.accordion {
+  .accordion-body {
+    display: none;
+
+    &.bsnav li {
+      margin-top: 2px;
+    }
+
+    a {
+      padding-left: 40px;
+    }
+  }
+
+  &.active .accordion-body {
+    display: block;
+  }
+}
+
+.scp-entity-accordion {
+  .accordion-toggle:hover {
+    text-decoration: none;
+  }
+
+  .accordion-toggle:link {
+    text-decoration: none;
+  }
+
+  .panel {
+    border: 0;
+    box-shadow: none;
+  }
+
+  .panel-default {
+    background: transparent none;
+    border: 0;
+  }
+
+  .panel-default > .panel-heading {
+    background: transparent none;
+    border: 0;
+    color: #0074c8;
+    padding: 0;
+  }
+
+  .panel-default > .panel-heading .fa {
+    margin-right: 10px;
+  }
+
+  .panel-default > .panel-heading:hover {
+    background-color: #0074c8;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border: 0;
+  }
+
+  .panel-default > .panel-heading .accordion-toggle {
+    display: block;
+    font-size: .9em;
+    font-weight: normal;
+    padding: 10px 15px;
+  }
+
+  .panel-group .panel-body {
+    height: auto;
+    padding: 0;
+  }
+
+  .panel-group .panel-body ul li a {
+    cursor: default;
+    padding: 5px 15px 5px 30px;
+    text-decoration: none;
+  }
+
+  .panel-group .panel-body ul li a:hover {
+    background-color: #0074c8;
+    border-radius: 5px;
+    color: white;
+  }
+}
+
+// filter nav (angular ui-bootstrap accordion)
+.accordion-nav {
+  .panel {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+    &-title {
+      cursor: pointer;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+
+      > a {
+        display: inline-block;
+        height: 100%;
+        padding: 10px 15px;
+        width: 100%;
+      }
+    }
+
+    &-body {
+      padding: 0;
+    }
+
+    &-heading {
+      background-color: transparent;
+      border: none;
+      border-radius: 4px;
+      padding: 0;
+
+      &:hover {
+        background-color: $brand-primary;
+        color: white;
+      }
+    }
+
+    &.active {
+      .panel-heading {
+        background-color: $brand-primary;
+        color: white;
+      }
+    }
+  }
+}

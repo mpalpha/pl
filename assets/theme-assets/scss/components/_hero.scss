@@ -1,0 +1,47 @@
+.pp-hero {
+  background: linear-gradient(rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url('../../../assets/images/shared/brand/bg/backdrop4.jpg');
+  background-position: bottom center;
+  background-size: cover;
+  color: white;
+  height: 500px;
+  width: 100%;
+
+  &__content {
+    margin-top: 200px;
+  }
+
+  &__navigation {
+    float: right;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline-block;
+      float: left;
+      margin-left: 10px;
+    }
+
+    .btn-link {
+      color: white;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fafafa;
+      }
+    }
+  }
+
+  h1 {
+    border: 0;
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+}

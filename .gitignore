@@ -1,0 +1,17 @@
+# Project directories
+node_modules/
+bower_components/
+
+# Generated files
+html/
+assets/css/*
+!assets/css/font-awesome.min.css
+
+# OS & project generated files
+*.orig
+.log
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+.idea/

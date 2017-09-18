@@ -1,0 +1,47 @@
+// generated from the icons task in icons.gulp.js using the template at ./templates/_icons.scss
+@font-face {
+  font-family: "<%= fontName %>";
+  font-style: normal;
+  font-weight: normal;
+  src: url('<%= fontPath %><%= fontName %>.eot?<%= timeStamp %>');
+  src :
+    url('<%= fontPath %><%= fontName %>.eot?#iefix') format('eot'),
+    url('<%= fontPath %><%= fontName %>.woff?<%= timeStamp %>') format('woff'),
+    url('<%= fontPath %><%= fontName %>.ttf?<%= timeStamp %>') format('truetype'),
+    url('<%= fontPath %><%= fontName %>.svg?<%= timeStamp %>#<%= fontName %>') format('svg');
+}
+
+// charachter decode function
+@function icon($character){
+    @return unquote("\"") + unquote(str-insert($character,"\\", 1)) + unquote("\"");
+}
+
+// base styles placeholder
+%icon-base-styles {
+  display: inline-block;
+  font-family: "<%= fontName %>";
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering:auto;
+  text-transform: none;
+}
+
+// Bootstrap Overrides
+[class^="securus-"]:before,
+[class*=" securus-"]:before {
+  @extend %icon-base-styles;
+}
+
+// icons sass charachter map
+$icons: <%= glyphsSassMap %>;
+
+// set unicode charachter
+@each $name, $icon in $icons {
+.<%= classPrefix %>-#{$name}:before {
+	content: icon($icon);
+}
+}

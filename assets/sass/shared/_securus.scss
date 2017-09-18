@@ -1,0 +1,48 @@
+.securus-admin {
+  border-top: 2px solid $securus-primary-blue;
+  margin-top: 20px;
+  padding-top: 20px;
+  position: relative;
+}
+
+.securus-admin.securus-panel-padding {
+  padding-top: 40px;
+}
+
+.securus-admin:before {
+  background-color: $securus-primary-blue;
+  color: white;
+  content: "Securus Admin Settings";
+  display: block;
+  font-size: 1.2em;
+  left: 0;
+  padding: 6px 12px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.securus-admin {
+  display: none;
+}
+
+.securus-admin.visible {
+  display: block;
+}
+
+.securus-admin-mode-link.badge {
+  background-color: $securus-primary-blue;
+  color: white;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.securus-admin-mode-off,
+.securus-admin-mode-on {
+  display: none;
+}
+
+.securus-admin-mode-off.visible,
+.securus-admin-mode-on.visible {
+  display: inline-block;
+}

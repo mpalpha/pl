@@ -1,0 +1,120 @@
+//Animations
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.fa-spin {
+  -webkit-animation: fa-spin 1s infinite linear;
+  animation: fa-spin 1s infinite linear;
+  -webkit-filter: blur(0);
+}
+
+.hvr-grow {
+  transition: all .2s ease-in;
+  transition-duration: 0.3s;
+  transition-property: all;
+  vertical-align: middle;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 1px solid rgba(0, 116, 200, 0.3);
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
+    transition: all .2s ease-out;
+  }
+}
+
+
+/* Grow */
+
+[ui-view] {
+  &.scp-animate-popup {
+    height: 100%;
+    min-height: 1800px;
+  }
+
+  .popup {
+    display: block;
+  }
+
+  &.scp-animate-popup {
+    &.ng-enter,
+    &.ng-leave {
+      left: 0;
+      position: absolute;
+      right: 0;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+    }
+
+    &.ng-enter {
+      opacity: 0;
+      -webkit-transform: scale3d(0.5, 0.5, 0.5);
+      -moz-transform: scale3d(0.5, 0.5, 0.5);
+      transform: scale3d(0.5, 0.5, 0.5);
+    }
+
+    &.ng-enter-active {
+      opacity: 1;
+      -webkit-transform: scale3d(1, 1, 1);
+      -moz-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+
+    &.ng-leave {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.ng-leave-active {
+      opacity: 0;
+      -webkit-transform: translate3d(100px, 0, 0);
+      -moz-transform: translate3d(100px, 0, 0);
+      transform: translate3d(100px, 0, 0);
+    }
+  }
+}
+
+@-webkit-keyframes notify-slide-down {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes notify-slide-down {
+  0% {
+    top: -50px;
+  }
+
+  100% {
+    top: 0;
+  }
+}

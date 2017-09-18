@@ -1,0 +1,395 @@
+//== begin Variables
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+// $screen-xs: 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+// $screen-xs-min: $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+// $screen-phone: $screen-xs-min !default;
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+// $screen-sm: 768px !default;
+// $screen-sm-min: $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+// $screen-tablet: $screen-sm-min !default;
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+// $screen-md: 992px !default;
+// $screen-md-min: $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+// $screen-desktop: $screen-md-min !default;
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+// $screen-lg: 1200px !default;
+// $screen-lg-min: $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+// $screen-lg-desktop: $screen-lg-min !default;
+// So media queries don't overlap when required, provide a maximum
+// $screen-xs-max: ($screen-sm-min - 1) !default;
+// $screen-sm-max: ($screen-md-min - 1) !default;
+// $screen-md-max: ($screen-lg-min - 1) !default;
+//== begin Grid system
+//
+//## Define your custom responsive grid.
+//** Number of columns in the grid.
+// $grid-columns: 12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+//$grid-gutter-width: 30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+//$grid-float-breakpoint: $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+//$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+// Framework grid generation
+//
+// Used only by Bootstrap to generate the correct number of grid classes given
+// any value of `$grid-columns`.
+// namespaces
+$row-ns: "row" !default;
+$col-ns: "col" !default;
+
+@mixin make-grid-flex-columns($i: 1, $list: ".col-flex-xs-#{$i}, .col-flex-sm-#{$i}, .col-flex-md-#{$i}, .col-flex-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-flex-xs-#{$i}, .col-flex-sm-#{$i}, .col-flex-md-#{$i}, .col-flex-lg-#{$i}";
+  }
+
+  #{$list} {
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    flex-basis: percentage(($grid-columns / $grid-columns));
+    max-width: percentage(($grid-columns / $grid-columns));
+    min-height: 1px;
+    padding-left: ceil(($grid-gutter-width / 2));
+    padding-right: floor(($grid-gutter-width / 2)); // Set default width to max column
+    width: percentage(($grid-columns / $grid-columns));
+  }
+}
+
+@mixin calc-grid-flex-column($index, $class, $type) {
+  @if ($type == width) and ($index > 0) {
+    .col-flex-#{$class}-#{$index} {
+      flex-basis: percentage(($index / $grid-columns));
+      max-width: percentage(($index / $grid-columns));
+      width: percentage(($index / $grid-columns));
+    }
+  }
+
+  @if ($type == push) and ($index > 0) {
+    .col-flex-#{$class}-push-#{$index} {
+      left: percentage(($index / $grid-columns));
+    }
+  }
+
+  @if ($type == push) and ($index == 0) {
+    .col-flex-#{$class}-push-0 {
+      left: auto;
+    }
+  }
+
+  @if ($type == pull) and ($index > 0) {
+    .col-flex-#{$class}-pull-#{$index} {
+      right: percentage(($index / $grid-columns));
+    }
+  }
+
+  @if ($type == pull) and ($index == 0) {
+    .col-flex-#{$class}-pull-0 {
+      right: auto;
+    }
+  }
+
+  @if ($type == offset) {
+    .col-flex-#{$class}-offset-#{$index} {
+      margin-left: percentage(($index / $grid-columns));
+    }
+  }
+}
+
+// [converter] This is defined recursively in LESS, but Sass supports real loops
+@mixin loop-grid-flex-columns($columns, $class, $type) {
+  @for $i from 0 through $columns {
+    @include calc-grid-flex-column($i, $class, $type);
+  }
+}
+
+// Create grid for specific class
+@mixin make-grid-flex($class) {
+  @include loop-grid-flex-columns($grid-columns, $class, width);
+  @include loop-grid-flex-columns($grid-columns, $class, pull);
+  @include loop-grid-flex-columns($grid-columns, $class, push);
+  @include loop-grid-flex-columns($grid-columns, $class, offset);
+}
+
+// Create row
+@mixin make-row-flex($grid: $grid-gutter-width) {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-flow: row wrap;
+  margin-left: ceil(($grid / -2));
+  margin-right: floor(($grid / -2));
+
+  &.reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@mixin make-generate-alignment-other($alignment) {
+  @if ($alignment == center) {
+    justify-content: $alignment;
+  } @else if($alignment == start or $alignment == end) {
+    justify-content: flex-#{$alignment};
+  } @else if($alignment == between or $alignment == around) {
+    justify-content: space-#{$alignment};
+  }
+}
+
+@mixin make-generate-self-alignment-other($alignment) {
+  @if ($alignment == start or $alignment == end) {
+    align-self: flex-#{$alignment};
+  } @else {
+    align-self: #{$alignment};
+  }
+}
+
+@mixin make-generate-self-alignment($class, $name) {
+  @if ($class == xs) {
+    $mq: -#{$class};
+  }
+  $mq: $class;
+
+  .#{$name}-self#{$mq} {
+    @include make-generate-self-alignment-other($name);
+  }
+}
+
+@mixin make-generate-vertical-alignment-other($alignment) {
+  @if ($alignment == center or $alignment == stretch or $alignment == baseline) {
+    align-items: $alignment;
+  } @else {
+    align-items: flex-#{$alignment};
+  }
+}
+
+@mixin make-generate-alignment($class, $name) {
+  .#{$name}-#{$class} {
+    @include make-generate-alignment-other($name);
+  }
+}
+
+
+// collapse utility
+@mixin make-generate-collapse($class, $name) {
+  @if ($class == xs) {
+    .#{$name}-between {
+      @extend %#{$name}-between-#{$class};
+    }
+
+    .#{$name}-sides {
+      @extend %#{$name}-sides-#{$class};
+    }
+
+    .#{$name}-sides-nested {
+      @extend %#{$name}-sides-#{$class};
+      @extend %#{$name}-sides-nested-#{$class};
+    }
+  }
+
+  %#{$name}-between-#{$class} {
+    > [class*="#{$col-ns}-"] {
+      &:not(:nth-last-child(1)) {
+        padding-right: 0%;
+      }
+
+      &:not(:nth-child(1)) {
+        padding-left: 0%;
+      }
+    }
+  }
+
+  %#{$name}-sides-#{$class} {
+    &[class*="#{$row-ns}-"] {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+
+    &[class*="#{$col-ns}-"] {
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+  }
+
+  %#{$name}-sides-nested-#{$class} {
+    > [class*="#{$col-ns}-"] {
+      padding-left: 0%;
+      padding-right: 0%;
+    }
+  }
+
+  .#{$name}-between-#{$class} {
+    @extend %#{$name}-between-#{$class};
+  }
+
+  .#{$name}-sides-#{$class} {
+    @extend %#{$name}-sides-#{$class};
+  }
+
+  .#{$name}-sides-nested-#{$class} {
+    @extend %#{$name}-sides-#{$class};
+    @extend %#{$name}-sides-nested-#{$class};
+  }
+}
+
+@mixin make-generate-vertical-alignment($class, $name, $alignment) {
+  .#{$name}-#{$class} {
+    @include make-generate-vertical-alignment-other($alignment);
+  }
+}
+
+@mixin make-alignment($class) {
+  @include make-generate-alignment($class, start);
+  @include make-generate-alignment($class, center);
+  @include make-generate-alignment($class, end);
+  @include make-generate-alignment($class, between);
+  @include make-generate-alignment($class, around);
+  @include make-generate-vertical-alignment($class, top, start);
+  @include make-generate-vertical-alignment($class, middle, center);
+  @include make-generate-vertical-alignment($class, bottom, end);
+  @include make-generate-vertical-alignment($class, stretch, stretch);
+  @include make-generate-vertical-alignment($class, baseline, baseline);
+}
+
+@mixin make-alignment-self($class) {
+  @include make-generate-self-alignment($class, start);
+  @include make-generate-self-alignment($class, end);
+  @include make-generate-self-alignment($class, auto);
+  @include make-generate-self-alignment($class, baseline);
+  @include make-generate-self-alignment($class, stretch);
+  @include make-generate-self-alignment($class, start);
+  @include make-generate-self-alignment($class, center);
+}
+
+@mixin make-collapse($class) {
+  @include make-generate-collapse($class, collapse);
+}
+
+@mixin make-order($class: null) {
+  @if ($class == null) {
+    @include make-order(xs);
+  }
+  $class: $class or '';
+
+  .order#{$class} {
+    &-first {
+      order: -1;
+    }
+
+    &-last {
+      order: 1;
+    }
+
+    &-0 {
+      order: 0;
+    }
+  }
+}
+
+// display class builder
+@mixin make-display-utility($size: null) {
+  $size: if($size==null, null, "#{$size}-");
+
+  .#{$size}display {
+    @each $item in ('none', 'block', 'inline', 'inline-block', 'flex', 'inline-flex') {
+      &-#{$item} {
+        display: #{$item};
+      }
+    }
+  }
+}
+
+// position utility
+@mixin make-position-utility($size: null) {
+  $size: if($size==null, null, "#{$size}-");
+
+  .#{$size}position {
+    @each $item in ('relative', 'static', 'absolute', 'fixed') {
+      &-#{$item} {
+        position: #{$item};
+      }
+    }
+  }
+}
+
+// utility classes builder
+// each media query
+@each $name, $size in ("xs": "0px", "sm": "#{$screen-sm-min}", "md": "#{$screen-md-min}", 'lg': "#{$screen-lg-min}") {
+  @if ($name == xs) {
+    @include make-display-utility();
+    @include make-display-utility(xs);
+    @include make-position-utility();
+    @include make-position-utility(xs);
+  } @else {
+    @media (min-width: #{$size}) {
+      @include make-display-utility(#{$name});
+      @include make-position-utility(#{$name});
+    }
+  }
+}
+
+//== end Grid system
+// begin Core
+// Create the row
+.row-flex {
+  @include make-row-flex();
+}
+
+// Default grid
+@include make-grid-flex-columns();
+// default ordering
+@include make-order();
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+@include make-collapse(xs);
+@include make-alignment(xs);
+@include make-grid-flex(xs);
+@include make-alignment-self(xs);
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+@media (min-width: $screen-sm-min) {
+  @include make-collapse(sm);
+  @include make-alignment(sm);
+  @include make-grid-flex(sm);
+  @include make-order(sm);
+  @include make-alignment-self(sm);
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@media (min-width: $screen-md-min) {
+  @include make-collapse(md);
+  @include make-alignment(md);
+  @include make-grid-flex(md);
+  @include make-order(md);
+  @include make-alignment-self(md);
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@media (min-width: $screen-lg-min) {
+  @include make-collapse(lg);
+  @include make-alignment(lg);
+  @include make-grid-flex(lg);
+  @include make-order(lg);
+  @include make-alignment-self(lg);
+}
+
+// end Core

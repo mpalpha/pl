@@ -1,0 +1,1589 @@
+$table-column-padding-h: 10px;
+$table-column-padding-v: 8px;
+
+.ellipsis-text {
+  //  overflow: hidden;
+  //  white-space: nowrap;
+  //  text-overflow: ellipsis;
+  @include text-overflow();
+}
+
+.table {
+  > tbody {
+    > tr {
+      &.visit-hover,
+      &.active {
+        background-color: #eeeeee;
+        border: 0px;
+        box-shadow: none;
+      }
+
+      > td,
+      > th {
+        padding: $table-column-padding-v $table-column-padding-h;
+
+        &:first-child() {
+          padding-left: 0px;
+        }
+
+        &:last-child() {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+
+  > thead {
+    > tr {
+      > td,
+      > th {
+        padding: $table-column-padding-v $table-column-padding-h;
+
+        &:first-child() {
+          padding-left: 0px;
+        }
+
+        &:last-child() {
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+// todo: fix this
+tr:not([class*="valign-"]) {
+  td {
+    vertical-align: middle !important;
+  }
+}
+
+.table-no-top-border tr:first-child td {
+  border-top: 0 !important;
+}
+
+.header-right-aligned {
+  text-align: right;
+}
+
+.col-percent {
+  text-align: right;
+}
+
+.col-percent:after {
+  color: #bbb;
+  content: '%';
+  padding-left: 2px;
+}
+
+.col-active {
+  text-align: center;
+}
+
+.col-name,
+.col-username,
+.col-job-title,
+.col-security-roles {
+  max-width: 150px;
+}
+
+.col-date-time {
+  min-width: 160px;
+  padding-left: 0;
+}
+
+.col-row-actions {
+  width: 160px;
+}
+
+.col-url-wrap {
+  word-break: break-word;
+}
+
+tr {
+  color: inherit; // Make an inactive row opaque
+  &.inactive-row {
+    opacity: 0.5;
+  }
+}
+
+.table > tbody > tr.active > td {
+  background-color: #e8e8e8;
+}
+
+.table-hover > tbody > tr:hover > td:not(.custom-color),
+.table-hover > tbody > tr:hover > th {
+  background-color: #eee;
+}
+
+// If a row is inactive in a hover table, don't highlight the cells when hovering
+.table-hover {
+  .inactive-row {
+    &:hover {
+      background-color: transparent; // overrides Bootstrap's default style
+      td {
+        background-color: transparent; // overrides the specific styles above
+      }
+    }
+  }
+}
+
+.table-below tr:first-child td {
+  border-top: 0 !important;
+}
+
+.table-panel {
+  border-collapse: collapse;
+  margin-top: -10px;
+}
+
+.table-panel tbody:first-child {
+  border-top: 2px solid transparent !important;
+}
+
+//--------------------------------
+//   Call Frequency Results Table
+//--------------------------------
+.call-frequency-search-results {
+  > table {
+    tbody {
+      tr {
+        td {
+          @extend %padding-v-5;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------
+//      Recent Activity
+//--------------------------------
+.table-recent-activity {
+  tr {
+    th:first-child,
+    td:first-child,
+    th:nth-child(n+5),
+    td:nth-child(n+5) {
+      text-align: center;
+    }
+  }
+}
+
+//--------------------------------
+//      Security Roles
+//--------------------------------
+.table-security-permission {
+  tr {
+    th:last-child,
+    td:last-child {
+      text-align: center;
+      width: 120px;
+    }
+  }
+
+  label.rounded-check {
+    margin: 0 0 7px 36px;
+  }
+}
+
+//--------------------------------
+//      Job Titles
+//--------------------------------
+.table-job-titles {
+  tr {
+    th:first-child,
+    td:first-child {
+      width: 35%;
+    }
+
+    th:nth-child(2),
+    td:nth-child(2) {
+      width: 35%;
+    }
+
+    th:last-child,
+    td:last-child {
+      text-align: center;
+      width: 30%;
+    }
+  }
+}
+
+//--------------------------------
+//      Access Location
+//--------------------------------
+.table-access-location {
+  tr {
+    th:first-child,
+    td:first-child {
+      width: 20%;
+    }
+
+    th:last-child,
+    td:last-child {
+      text-align: center;
+      width: 30%;
+    }
+  }
+}
+
+//--------------------------------
+//      Monitor Activity
+//--------------------------------
+.table-monitor-activity {
+  tr {
+    td {
+      a.forward {
+        font-size: 12px;
+        position: relative;
+
+        i {
+          left: 10px;
+          position: relative;
+        }
+
+        span.badge {
+          left: 5px;
+          position: relative;
+        }
+      }
+
+      a.terminate-call {
+        color: $brand-danger;
+        font-size: 14px;
+
+        &:hover {
+          color: darken($brand-danger, 15%);
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------
+//      Virtual Groups
+//--------------------------------
+.table-virtual-group-list {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 35px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    max-width: 100px;
+    @include text-overflow();
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    max-width: 250px;
+    @include text-overflow();
+  }
+
+  th:nth-child(n+4),
+  td:nth-child(n+4) {
+    text-align: center;
+    width: 150px;
+  }
+}
+
+.table-virtual-groups {
+  th:first-child,
+  td:first-child {
+    max-width: 150px;
+    @include text-overflow();
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    max-width: 150px;
+    @include text-overflow();
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    text-align: center;
+    width: 120px;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: center;
+    width: 120px;
+  }
+}
+
+//--------------------------------
+//      Grievance
+//--------------------------------
+.table-sergeant-actions {
+  tr:last-child td {
+    border-bottom: 1px solid #ddd;
+  }
+
+  td:nth-child(1) {
+    padding-left: 0;
+    width: 60%;
+  }
+
+  td:nth-child(2) {
+    padding-right: 0;
+    text-align: right;
+    width: 40%;
+  }
+}
+
+.table-grievance-admin {
+  tr:first-child td {
+    border-top: 0 !important;
+  }
+
+  &.table-editable td {
+    //    padding: 4px 0;
+    height: 32px;
+  }
+
+  th:nth-child(1),
+  td:nth-child(1) {
+    text-align: center;
+    width: 32px;
+  }
+}
+
+.table-grievance-groups {
+  tr td {
+    border-bottom: 1px solid #ddd;
+    border-top: 0 !important;
+    height: 32px;
+  }
+
+  tr:last-child td {
+    border-bottom: 0;
+  }
+}
+
+//--------------------------------
+//      Manage Visits
+//--------------------------------
+.table-manage-visits {
+  .wordwrap {
+    max-width: 100px;
+    overflow: hidden;
+    word-wrap: break-word;
+  }
+
+  > thead > tr > th {
+    border-bottom: 1px solid #ccc;
+  }
+
+  &.table-hover > tbody > tr:hover {
+    background-color: #efefef;
+  }
+
+  &.table > tbody,
+  &.table > thead {
+    border-bottom: 1px solid #ddd;
+
+    > tr {
+      > td.custom-color,
+      > th.custom-color {
+        padding: 0;
+      }
+
+      > td.custom-color {
+        border: 1px solid #ddd;
+        border-right: none;
+        height: 100%;
+        width: 10px;
+      }
+    }
+  }
+
+  .table-actions {
+    height: 100%;
+    margin-left: -1.5rem;
+    text-align: right;
+
+    > div {
+      height: 100%;
+    }
+
+    > .inline-group {
+      display: inline-block;
+      position: relative;
+    }
+
+    > .btn-group,
+    > button {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    > .btn-group {
+      > .btn + .dropdown-toggle.color-picker {
+        padding: 6px 12px;
+      }
+    }
+
+    .vr {
+      border-left: 1px solid #ccc;
+    }
+
+    .color-picker {
+      &.btn {
+        padding: 6px 12px;
+      }
+
+      ~ .dropdown-menu {
+        left: auto;
+        min-width: 75px;
+        position: absolute;
+        right: 0px;
+        width: 75px;
+      }
+
+      ~ .dropdown-menu > li {
+        float: left;
+        width: auto;
+      }
+
+      ~ .dropdown-menu > li > a {
+        padding: 0px;
+      }
+
+      ~ .dropdown-menu > li > a > i.active {
+        outline: 1px solid #555;
+      }
+
+      ~ .dropdown-menu > li > a:hover,
+      .dropdown-menu > li > a:focus {
+        background-color: transparent;
+      }
+
+      ~ .dropdown-menu > li > a:hover i,
+      .dropdown-menu > li > a:focus i {
+        outline: 1px solid #0074c8;
+      }
+
+      ~ .dropdown-menu > li {
+        padding: 0px 6px;
+      }
+
+      ~ .dropdown-menu > li ~ li {
+        padding-left: 0px;
+      }
+    }
+  }
+
+  .inline-group {
+    ~ .btn-group {
+      margin-left: 1rem;
+
+      &::before {
+        background: #ccc;
+        content: '';
+        height: 2.25em;
+        left: -1rem;
+        margin-right: 1rem;
+        position: absolute;
+        top: 0.1em;
+        width: 1px;
+      }
+    }
+  }
+
+  .inline-group {
+    > button {
+      margin-bottom: 0.5rem;
+      padding: 6px 8px;
+      width: 36px;
+    }
+
+    > button ~ button {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+//--------------------------------
+//      SVV Visitors
+//--------------------------------
+.table-visitors {
+  td:first-child,
+  th:first-child {
+    text-align: center;
+    width: 40px;
+  }
+
+  td:last-child,
+  th:last-child {
+    text-align: center;
+  }
+
+  td:nth-child(2),
+  th:nth-child(2) {
+    text-align: center;
+    width: 60px;
+  }
+}
+
+.table-visitor-types {
+  td:last-child,
+  th:last-child {
+    text-align: center;
+  }
+
+  td:first-child,
+  th:first-child {
+    text-align: center;
+    width: 60px;
+  }
+}
+
+.table-schedule-visitors {
+  th:first-child {
+    text-align: center;
+    white-space: nowrap;
+    width: 40px;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: center;
+    width: 160px;
+  }
+}
+
+.table-schedule-inmate {
+  th,
+  td {
+    white-space: nowrap;
+
+    &:first-child() {
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &:last-child() {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+}
+
+.table-visit-schedule-confirmation {
+  td:first-child {
+    color: $securus-gunmetal-gray;
+    width: 225px;
+  }
+}
+
+.table-visit-schedule-done {
+  margin-bottom: 0;
+
+  tr:first-child td {
+    border-top: 0;
+  }
+
+  td:first-child {
+    color: $securus-gunmetal-gray;
+    width: 225px;
+  }
+}
+
+//--------------------------------
+//             LBS
+//--------------------------------
+.table-geofence {
+  th:first-child {
+    text-align: center;
+    width: 60px;
+  }
+
+  td:first-child {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: center;
+  }
+}
+
+//--------------------------------
+//      Inmate List
+//--------------------------------
+.table-inmate-list {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 35px;
+  }
+}
+
+//--------------------------------
+//      CDR Search Results
+//--------------------------------
+.table-cdr-results {
+  margin-top: 20px;
+
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 35px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(n+7),
+  td:nth-child(n+7) {
+    text-align: center;
+  }
+
+  td:nth-child(4) {
+    white-space: nowrap;
+  }
+
+  i {
+    margin-left: 4px;
+  } // Make gray icons in CDR results table opaque (but only if they are not a link)
+  td:nth-child(2) {
+    i {
+      opacity: 0.5;
+    }
+
+    a {
+      i {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//--------------------------------
+//     Blocked Phone Numbers
+//--------------------------------
+.table-blocked-numbers {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+  }
+
+  th:nth-child(n+2),
+  td:nth-child(n+2),
+  th:nth-child(-n+4),
+  td:nth-child(-n+4) {
+    white-space: nowrap;
+  }
+
+  th:nth-child(3),
+  td:nth-child(3) {
+    max-width: 150px;
+    @include text-overflow();
+  }
+
+  th:nth-child(5),
+  td:nth-child(5),
+  div {
+    max-width: 150px;
+    @include text-overflow();
+
+    + div.tooltip {
+      overflow: visible !important;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+  }
+
+  th:nth-child(7),
+  td:nth-child(7) {
+    max-width: 150px;
+    @include text-overflow();
+
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  th:last-child,
+  td:last-child {
+    max-width: 100px;
+    @include text-overflow();
+  }
+}
+
+//--------------------------------
+//      Managed Phone Numbers
+//--------------------------------
+.table-managed-numbers {
+  td:nth-child(n+2),
+  td:nth-child(-n+4) {
+    white-space: nowrap;
+  }
+
+  th:first-child,
+  td:first-child,
+  td:nth-child(5),
+  td:nth-child(7) {
+    text-align: center;
+  }
+
+  td:nth-child(6),
+  td:nth-child(6) div {
+    max-width: 150px;
+    @include text-overflow();
+
+    + div.tooltip {
+      overflow: visible !important;
+      text-overflow: ellipsis;
+      white-space: normal;
+    }
+  }
+
+  td:nth-child(8) {
+    max-width: 150px;
+    @include text-overflow();
+
+    i {
+      padding-right: 8px;
+    }
+  }
+
+  td:last-child {
+    max-width: 100px;
+    @include text-overflow();
+  }
+}
+
+//--------------------------------
+//      Call Forward
+//--------------------------------
+.table-call-forward-results {
+  th:nth-child(1) {
+    width: 30%;
+  }
+
+  th:nth-child(2) {
+    width: 20%;
+  }
+
+  th:nth-child(2) {
+    width: 20%;
+  }
+
+  th:nth-child(3) {
+    width: 30%;
+  }
+}
+
+.table-end-call-forward td:nth-child(3) {
+  text-align: center;
+}
+
+//--------------------------------
+//      Users
+//--------------------------------
+.table-users {
+  thead {
+    tr {
+      th:first-child,
+      th:last-child,
+      th:nth-child(6) {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:nth-child(3),
+      td:nth-child(4) {
+        max-width: 180px;
+        @include text-overflow();
+      }
+
+      td:first-child,
+      td:last-child,
+      td:nth-child(6) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+//--------------------------------
+//      Service Tickets
+//--------------------------------
+.table-service-tickets {
+  thead {
+    tr {
+      th:first-child {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:nth-child(3),
+      td:nth-child(3) {
+        max-width: 260px;
+        @include text-overflow();
+      }
+
+      td:first-child {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.table-service-tickets-closed {
+  thead {
+    tr {
+      th:first-child {
+        text-align: center;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td:nth-child(3),
+      td:nth-child(3) {
+        max-width: 260px;
+        @include text-overflow();
+      }
+
+      td:first-child {
+        text-align: center;
+      }
+    }
+  }
+}
+
+//--------------------------------
+//      Covert Alerts
+//--------------------------------
+.table-covert-alert-list {
+  tbody {
+    tr {
+      td:nth-child(3),
+      td:nth-child(4) {
+        max-width: 180px;
+        @include text-overflow();
+      }
+    }
+  }
+
+  th:first-child,
+  td:first-child {
+    text-align: center;
+  }
+}
+
+//--------------------------------
+//      Inmate Profile
+//--------------------------------
+.table-call-schedule-holiday {
+  th:first-child {
+    width: 25%;
+  }
+
+  th:nth-child(2) {
+    width: 45%;
+  }
+
+  th:last-child {
+    width: 30%;
+  }
+}
+
+.table-call-usage-detail tbody tr:last-child,
+.table-call-usage-detail tbody tr:nth-last-child(2) {
+  font-weight: bold;
+}
+
+.table-pan thead th:last-child,
+.table-pan tbody tr td:last-child {
+  text-align: center;
+}
+
+.table-pan tbody tr td a i {
+  left: 10px;
+  position: relative;
+}
+
+.table-call-usage th,
+.table-call-usage td {
+  text-align: center;
+}
+
+.table-call-usage > thead > tr > th {
+  line-height: 1em;
+}
+
+//--------------------------------
+//        Call Schedule
+//--------------------------------
+.schedule-scroll {
+  border-bottom: solid 1px #ddd;
+  height: 345px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+}
+
+.table-date {
+  margin-bottom: 0;
+
+  tbody {
+    tr {
+      &:last-child {
+        td {
+          border-bottom: none;
+        }
+      }
+
+      td {
+        border: solid 1px #ddd;
+        padding: 1px 3px;
+
+        &.time {
+          background-color: $brand-success;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+.child-row > td:first-child {
+  padding-left: 40px;
+}
+
+//--------------------------------
+//        PAN
+//--------------------------------
+.pan-table {
+  margin-bottom: 0;
+  table-layout: fixed;
+
+  td {
+    @include text-overflow();
+  }
+}
+
+//--------------------------------
+//        Logging
+//--------------------------------
+.table-automated td:nth-child(2),
+.table-automated th:nth-child(2) {
+  text-align: center;
+}
+
+.table-slalom-log {
+  th:nth-child(1) {
+    width: 5%;
+  }
+
+  th:nth-child(2) {
+    width: 10%;
+  }
+
+  th:nth-child(3) {
+    width: 10%;
+  }
+
+  th:nth-child(4) {
+    width: 15%;
+  }
+
+  th:nth-child(5) {
+    width: 25%;
+  }
+
+  th:nth-child(6) {
+    width: 15%;
+  }
+
+  th:nth-child(7) {
+    width: 20%;
+  }
+}
+
+//--------------------------------
+//      Notifications
+//--------------------------------
+.table-notifications {
+  tbody {
+    tr {
+      td {
+        padding-bottom: 15px;
+        padding-top: 15px;
+      }
+    }
+  }
+}
+
+//--------------------------------
+//        Commissary
+//--------------------------------
+.table-commissary {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 35px;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: center;
+  }
+}
+
+.table-commissary-admin {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 35px;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2) {
+    width: 80px;
+  }
+
+  th:nth-child(4),
+  td:nth-child(4) {
+    text-align: center;
+  }
+
+  th:nth-child(5),
+  td:nth-child(5) {
+    text-align: center;
+  }
+
+  img {
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 5px;
+  }
+}
+
+.commissary-shopping-cart {
+  td:last-child {
+    text-align: center;
+  }
+}
+
+.table-editable {
+  td {
+    height: 51px;
+
+    .row-actions {
+      display: none;
+
+      .btn {
+        border: none;
+        margin: 0;
+      }
+    }
+  }
+
+  tr {
+    .row-actions {
+      text-align: center;
+    }
+
+    &:hover .row-actions {
+      display: block;
+    }
+  }
+
+  .edit-row {
+    background-color: rgba(52, 152, 219, 0.1) !important;
+    text-align: center;
+  }
+}
+
+.table-all-permissions {
+  background-color: $gray-lighter;
+  border-radius: 4px;
+
+  a {
+    color: $brand-primary;
+    font-weight: normal;
+  }
+}
+
+.table-vbio-failures {
+  td {
+    padding: 2px 2px 2px 0 !important;
+  }
+
+  .col-inmate {
+    max-width: 160px;
+  }
+}
+
+.hilite-row td {
+  background-color: #feffcd;
+}
+
+.header-nowrap {
+  white-space: nowrap;
+}
+
+// Add to a table cell to make it position: relative;
+.cell-relative {
+  position: relative;
+}
+
+.padding-td td th {
+  padding-right: 10px;
+}
+
+.position-toggle-tables {
+  float: left;
+  left: -10px;
+  position: relative;
+  top: -20px;
+}
+
+.grid td {
+  padding: 10px 95px 10px 10px !important;
+}
+
+.first-table-grid td {
+  border-top: 1px solid #ddd;
+  margin-bottom: 20px;
+  max-width: 100%;
+  padding: 10px 53px 10px 10px !important;
+  width: 100% !important;
+}
+
+.striped tr:nth-child(even) {
+  background-color: #ecf0f1;
+}
+
+.collapse-space {
+  padding: 0 0 0 10px;
+}
+
+.first-row-fixed {
+  float: left;
+  padding-right: 10px;
+  position: relative;
+  top: -20px;
+  z-index: 20;
+}
+
+@media screen and (max-width: 805px) {
+  .table {
+    margin-bottom: 20px;
+    max-width: 100%;
+  }
+
+  .first-table-grid td {
+    border-top: 1px solid #ddd;
+    margin-bottom: 20px;
+    max-width: 100%;
+    padding: 10px 53px 10px 10px !important;
+    width: 100% !important;
+  }
+
+  .grid td {
+    padding: 10px 40px 10px 10px !important;
+  }
+
+  .position-toggle-tables {
+    left: 122px;
+    overflow: scroll;
+    padding: 0 5px;
+    position: relative;
+    top: -204px;
+    width: 600px;
+    z-index: 20;
+  }
+
+  .first-row-fixed {
+    float: left;
+    padding-right: 10px;
+    position: relative;
+    z-index: 20;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .first-table-grid td {
+    .first-table-grid td {
+      border-top: 1px solid #ddd;
+      margin-bottom: 20px;
+      max-width: 100%;
+      padding: 10px 0px 10px 10px !important;
+      width: 100% !important;
+    }
+  }
+
+  .grid td {
+    padding: 10px 0px 10px 10px !important;
+  }
+
+  .full-table {
+    overflow: hidden;
+  }
+
+  .first-row-fixed {
+    float: left;
+    padding-right: 10px;
+    position: relative;
+    z-index: 20;
+  }
+
+  .position-toggle-tables {
+    left: 112px;
+    overflow: scroll;
+    padding: 0 5px;
+    position: relative;
+    top: -204px;
+    width: 200px;
+    z-index: 20;
+  }
+
+  .cell-width-toggle table,
+  th,
+  td {
+    width: 300px !important;
+  }
+}
+
+.hide-overflow {
+  overflow: hidden;
+}
+
+//--------------------------------
+// Inmate Debit Table
+//--------------------------------
+.table-inmate-debit {
+  word-break: break-word;
+
+  th:nth-child(1) {
+    width: 10%;
+  }
+
+  th:nth-child(2) {
+    width: 6%;
+  }
+
+  th:nth-child(3) {
+    width: 8%;
+  }
+
+  th:nth-child(4) {
+    width: 24%;
+  }
+
+  th:nth-child(5) {
+    width: 19%;
+  }
+
+  th:nth-child(6) {
+    width: 19%;
+  }
+
+  th:nth-child(7) {
+    width: 19%;
+  }
+}
+
+//--------------------------------
+// Covert Alerts Search Results
+//--------------------------------
+.table-covert-alert-results {
+  margin-top: 20px;
+
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+
+  th:nth-child(2),
+  td:nth-child(2),
+  th:nth-child(n+6),
+  td:nth-child(n+6) {
+    text-align: center;
+  }
+
+  th:nth-child(2) {
+    width: 3%;
+  }
+
+  th:nth-child(3) {
+    width: 20%;
+  }
+
+  th:nth-child(4) {
+    width: 20%;
+  }
+
+  th:nth-child(5) {
+    width: 20%;
+  }
+
+  th:nth-child(6) {
+    width: 15%;
+  }
+
+  th:nth-child(7) {
+    width: 5%;
+  }
+
+  th:nth-child(8) {
+    width: 15%;
+  }
+
+  i {
+    margin-left: 4px;
+  } // Make gray icons in CDR results table opaque (but only if they are not a link)
+  td:nth-child(2) {
+    i {
+      opacity: 0.5;
+    }
+
+    a {
+      i {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//--------------------------------
+// System Log Results - Data Changes
+//--------------------------------
+.table-log-results {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+
+  th:nth-child(2) {
+    width: 10%;
+  }
+
+  th:nth-child(3) {
+    width: 10%;
+  }
+
+  th:nth-child(4) {
+    width: 10%;
+  }
+
+  th:nth-child(5) {
+    width: 28%;
+  }
+
+  th:nth-child(6) {
+    width: 20%;
+  }
+
+  th:nth-child(7) {
+    width: 20%;
+  }
+}
+
+//--------------------------------
+// System Log Results - System Access
+//--------------------------------
+.table-log-system {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+}
+
+//--------------------------------
+// System Log Results - Communication Activity
+//--------------------------------
+.table-log-communication {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+}
+
+//--------------------------------
+// System Log Results - Webpage Visitations
+//--------------------------------
+.table-log-webpage {
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+}
+
+//--------------------------------
+// PAN Frequency List
+//--------------------------------
+.table-pan-frequency {
+  margin-top: 20px;
+
+  th:first-child,
+  td:first-child {
+    text-align: center;
+    width: 2%;
+  }
+}
+
+//---------------------------------------------------------------
+// Visitor Widget Table 
+// To Do: Use .nowrap helper on children instead of static widths
+//---------------------------------------------------------------
+.table-visitor-widget {
+  th:first-child {
+    width: 5%;
+  }
+
+  th:nth-child(2) {
+    width: 10%;
+  }
+}
+
+//--------------------------------
+// Table Right Align "last column"
+//--------------------------------
+.table-right-align {
+  &-first {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:first-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &-last {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+
+//--------------------------------
+// Table center align "first/last column"
+//--------------------------------
+.table-center-align {
+  &-first {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:first-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &-last {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:last-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------
+// Table middle align "first/last column"
+//--------------------------------
+.table-middle-align {
+  &-first {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:first-child {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  &-last {
+    > thead,
+    > tbody {
+      th,
+      td {
+        &:last-child {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+
+//--------------------------------
+// Call Velocity Rule Table
+//--------------------------------
+.table-velocity-rule {
+  th:first-child {
+    width: 25%;
+  }
+
+  th:nth-child(2) {
+    width: 25%;
+  }
+
+  th:nth-child(3) {
+    width: 25%;
+  }
+
+  th:nth-child(4) {
+    width: 5%;
+  }
+
+  th:nth-child(5) {
+    width: 20%;
+  }
+}
+
+//--------------------------------
+// Inmate Info Detail Table
+//--------------------------------
+.table-inmate-info {
+  td {
+    max-width: 130px;
+  }
+}
+
+//--------------------------------
+// Edit Visit Table
+//--------------------------------
+.table-edit-visit tbody tr td {
+  line-height: 1.71428571429;
+  /*24/14*/
+}

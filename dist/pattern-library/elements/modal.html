@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Modal</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Modal</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    
+    <h3 id="problem-summary">Problem summary</h3>
+    <p>Display a modal so the user can view, or edit information without having to navigate away and lose context on the current screen. </p>
+    <p>Display a modal with a static header and footer as well as scrollable content area.</p>
+    <h3 id="usage">Usage</h3>
+    <ul>
+    <li>Modal&#39;s come in three sizes: small, medium, and large. To change the modal size, change the class <code>modal-md</code> to <code>modal-sm</code> for a
+    small modal or <code>modal-lg</code> for a wide modal.</li>
+    <li>The modal header can also have different colors, depending on the action that the user will be performing. To change the color,
+    replace <code>modal-danger</code> in the code with <code>modal-success</code> for Add modals (adding a new entry to the system), <code>modal-default</code> for
+     editing or displaying information, and leave it as <code>modal-danger</code> for any action that involves deleting something.</li>
+    <li>Note that the primary action button in the modal footer should match the modal header color e.g. if the modal is of type <code>modal-danger</code>
+    the primary action should have the class <code>btn-danger</code> and so on.</li>
+    <li>Use when a modal contains inputs/controls that influece the data displayed in the scrollable modal field.</li>
+    <li>Use when you have directions/guidelines/rules/suggestions that are required to be visible at all times while still be able to scroll content.</li>
+    <li>Use when you have key information related to the scrollable field that the user needs to stay visible while scrolling the content field.</li>
+    <li>Do not use when there is only 1 or 2 steps in submitting data to the website.</li>
+    <li>Do not use when the process of filling out data is easily foreseeable.</li>
+    </ul>
+    <h3 id="example-modal-with-a-scrolling-body">Example: Modal with a scrolling body</h3>
+    <div class="library__example">
+        <div class="modal-dialog">
+            <div class="modal-content modal-md">
+                <div class="modal-header modal-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="DeleteForwardingCallModalLabel">Delete Call Forward Number</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus sed leo vel tempus. Aliquam vestibulum, felis vitae tristique interdum, risus nibh commodo metus, malesuada tempor neque enim vitae libero. Vestibulum augue sem, finibus et sapien id, commodo pretium mauris. Quisque convallis odio eu suscipit ultrices. Maecenas sagittis placerat nibh, eu pretium ipsum egestas nec. Sed placerat vitae purus sed consectetur. Nam id ipsum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nunc sapien, at dapibus leo feugiat accumsan.</p>
+                        <p>Morbi cursus risus vel ante dapibus, eget fringilla lorem blandit. Vestibulum vehicula malesuada libero non efficitur. Nulla mattis urna a libero consectetur euismod. Etiam sodales mattis aliquam. Cras ac tempus ex. Proin eleifend ut dolor id luctus. Suspendisse lacus nibh, bibendum sed nunc id, ultrices sodales turpis. Aliquam maximus sodales enim a iaculis. Nullam elementum augue non arcu consequat, et dignissim odio interdum. Fusce viverra ligula sit amet aliquet pharetra. Pellentesque ac elit at mauris hendrerit rutrum.</p>
+                        <p>Donec in felis luctus, tincidunt velit eu, congue lacus. Nulla a iaculis erat, posuere auctor ex. Donec tristique dui justo, eget sollicitudin turpis ullamcorper et. Praesent a urna a justo porta feugiat at eu arcu. Nullam placerat, purus non porta volutpat, magna libero efficitur tellus, non posuere nisi augue ut purus. Mauris libero nunc, rhoncus at ipsum eget, cursus ornare ex. Cras facilisis lacus non est consequat scelerisque. Sed ac pretium lacus, quis egestas sem. Etiam sit amet metus ornare, porta lorem sit amet, lacinia mauris.</p>
+                        <p>Praesent mollis, nisl et molestie mattis, dolor diam volutpat felis, a luctus lectus arcu non justo. Maecenas aliquet, enim non volutpat malesuada, sem sem pulvinar ante, et aliquam ante ante et magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut efficitur magna et egestas finibus. Pellentesque ut libero vulputate, hendrerit arcu id, pretium arcu. Morbi eu malesuada mauris, sed rutrum libero. Sed in dolor id lorem sagittis finibus. Vestibulum ultrices ipsum ac est rutrum, sit amet dapibus quam convallis. Morbi hendrerit magna a erat laoreet, sed congue nunc condimentum.</p>
+                        <p>Nulla sit amet turpis enim. Nulla eleifend ipsum sit amet ornare auctor. In vitae molestie tortor, et consequat ante. Duis ac orci eu enim blandit consectetur sit amet eu lectus. Vestibulum porttitor risus eget libero volutpat, nec egestas magna venenatis. Fusce congue faucibus arcu eget consectetur. Phasellus ligula lacus, scelerisque eu congue eget, facilisis non nisi. Nunc volutpat eros non ipsum cursus, vitae dictum est interdum. Fusce posuere velit sed interdum aliquam.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Delete Call Forward Number</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">&lt;div class=&quot;library__example&quot;&gt;
+        &lt;div class=&quot;modal-dialog&quot;&gt;
+            &lt;div class=&quot;modal-content modal-md&quot;&gt;
+                &lt;div class=&quot;modal-header modal-danger&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;x&lt;/button&gt;
+                    &lt;h4 class=&quot;modal-title&quot; id=&quot;&quot;&gt;&lt;!-- Modal Title --&gt;&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-body&quot;&gt;
+                    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus sed leo vel tempus. Aliquam vestibulum, felis vitae tristique interdum, risus nibh commodo metus, malesuada tempor neque enim vitae libero. Vestibulum augue sem, finibus et sapien id, commodo pretium mauris. Quisque convallis odio eu suscipit ultrices. Maecenas sagittis placerat nibh, eu pretium ipsum egestas nec. Sed placerat vitae purus sed consectetur. Nam id ipsum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nunc sapien, at dapibus leo feugiat accumsan.&lt;/p&gt;
+                        &lt;p&gt;Morbi cursus risus vel ante dapibus, eget fringilla lorem blandit. Vestibulum vehicula malesuada libero non efficitur. Nulla mattis urna a libero consectetur euismod. Etiam sodales mattis aliquam. Cras ac tempus ex. Proin eleifend ut dolor id luctus. Suspendisse lacus nibh, bibendum sed nunc id, ultrices sodales turpis. Aliquam maximus sodales enim a iaculis. Nullam elementum augue non arcu consequat, et dignissim odio interdum. Fusce viverra ligula sit amet aliquet pharetra. Pellentesque ac elit at mauris hendrerit rutrum.&lt;/p&gt;
+                        &lt;p&gt;Donec in felis luctus, tincidunt velit eu, congue lacus. Nulla a iaculis erat, posuere auctor ex. Donec tristique dui justo, eget sollicitudin turpis ullamcorper et. Praesent a urna a justo porta feugiat at eu arcu. Nullam placerat, purus non porta volutpat, magna libero efficitur tellus, non posuere nisi augue ut purus. Mauris libero nunc, rhoncus at ipsum eget, cursus ornare ex. Cras facilisis lacus non est consequat scelerisque. Sed ac pretium lacus, quis egestas sem. Etiam sit amet metus ornare, porta lorem sit amet, lacinia mauris.&lt;/p&gt;
+                        &lt;p&gt;Praesent mollis, nisl et molestie mattis, dolor diam volutpat felis, a luctus lectus arcu non justo. Maecenas aliquet, enim non volutpat malesuada, sem sem pulvinar ante, et aliquam ante ante et magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut efficitur magna et egestas finibus. Pellentesque ut libero vulputate, hendrerit arcu id, pretium arcu. Morbi eu malesuada mauris, sed rutrum libero. Sed in dolor id lorem sagittis finibus. Vestibulum ultrices ipsum ac est rutrum, sit amet dapibus quam convallis. Morbi hendrerit magna a erat laoreet, sed congue nunc condimentum.&lt;/p&gt;
+                        &lt;p&gt;Nulla sit amet turpis enim. Nulla eleifend ipsum sit amet ornare auctor. In vitae molestie tortor, et consequat ante. Duis ac orci eu enim blandit consectetur sit amet eu lectus. Vestibulum porttitor risus eget libero volutpat, nec egestas magna venenatis. Fusce congue faucibus arcu eget consectetur. Phasellus ligula lacus, scelerisque eu congue eget, facilisis non nisi. Nunc volutpat eros non ipsum cursus, vitae dictum est interdum. Fusce posuere velit sed interdum aliquam.&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;modal-footer&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-link&quot; data-dismiss=&quot;modal&quot;&gt;Cancel&lt;/button&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; data-dismiss=&quot;modal&quot;&gt;OK&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+    <h3 id="example-modal-with-a-scrolling-body-content-area-and-static-header-footer">Example: Modal with a scrolling body content area and static header/footer</h3>
+    <div class="library__example">
+        <div class="modal-dialog">
+            <div class="modal-content modal-md">
+                <div class="modal-header modal-danger">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                    <h4 class="modal-title" id="DeleteForwardingCallModalLabel">Delete Call Forward Number</h4>
+                </div>
+                <div class="modal-body modal-body-flex">
+                    <div class="modal-body-flex-header padding-bottom-10">
+    <h4><b>Static Header</b></h4>
+    </div>
+                    <div class="modal-body-flex-content">
+                    <h4><b>Scrollable Content</b></h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus sed leo vel tempus. Aliquam vestibulum, felis vitae tristique interdum, risus nibh commodo metus, malesuada tempor neque enim vitae libero. Vestibulum augue sem, finibus et sapien id, commodo pretium mauris. Quisque convallis odio eu suscipit ultrices. Maecenas sagittis placerat nibh, eu pretium ipsum egestas nec. Sed placerat vitae purus sed consectetur. Nam id ipsum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nunc sapien, at dapibus leo feugiat accumsan.</p>
+                        <p>Morbi cursus risus vel ante dapibus, eget fringilla lorem blandit. Vestibulum vehicula malesuada libero non efficitur. Nulla mattis urna a libero consectetur euismod. Etiam sodales mattis aliquam. Cras ac tempus ex. Proin eleifend ut dolor id luctus. Suspendisse lacus nibh, bibendum sed nunc id, ultrices sodales turpis. Aliquam maximus sodales enim a iaculis. Nullam elementum augue non arcu consequat, et dignissim odio interdum. Fusce viverra ligula sit amet aliquet pharetra. Pellentesque ac elit at mauris hendrerit rutrum.</p>
+                        <p>Donec in felis luctus, tincidunt velit eu, congue lacus. Nulla a iaculis erat, posuere auctor ex. Donec tristique dui justo, eget sollicitudin turpis ullamcorper et. Praesent a urna a justo porta feugiat at eu arcu. Nullam placerat, purus non porta volutpat, magna libero efficitur tellus, non posuere nisi augue ut purus. Mauris libero nunc, rhoncus at ipsum eget, cursus ornare ex. Cras facilisis lacus non est consequat scelerisque. Sed ac pretium lacus, quis egestas sem. Etiam sit amet metus ornare, porta lorem sit amet, lacinia mauris.</p>
+                        <p>Praesent mollis, nisl et molestie mattis, dolor diam volutpat felis, a luctus lectus arcu non justo. Maecenas aliquet, enim non volutpat malesuada, sem sem pulvinar ante, et aliquam ante ante et magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut efficitur magna et egestas finibus. Pellentesque ut libero vulputate, hendrerit arcu id, pretium arcu. Morbi eu malesuada mauris, sed rutrum libero. Sed in dolor id lorem sagittis finibus. Vestibulum ultrices ipsum ac est rutrum, sit amet dapibus quam convallis. Morbi hendrerit magna a erat laoreet, sed congue nunc condimentum.</p>
+                        <p>Nulla sit amet turpis enim. Nulla eleifend ipsum sit amet ornare auctor. In vitae molestie tortor, et consequat ante. Duis ac orci eu enim blandit consectetur sit amet eu lectus. Vestibulum porttitor risus eget libero volutpat, nec egestas magna venenatis. Fusce congue faucibus arcu eget consectetur. Phasellus ligula lacus, scelerisque eu congue eget, facilisis non nisi. Nunc volutpat eros non ipsum cursus, vitae dictum est interdum. Fusce posuere velit sed interdum aliquam.</p>
+                    </div>
+    <div class="modal-body-flex-footer">
+                       <h4><b>Static Footer</b></h4>
+                    </div>
+    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Delete Call Forward Number</button>
+                </div>
+            </div>
+        </div>
+    
+    <p></div></p>
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">&lt;div class=&quot;modal fade&quot; id=&quot;impactRuleTable&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;div class=&quot;modal-dialog&quot;&gt;
+            &lt;div class=&quot;modal-content modal-lg&quot;&gt;
+    
+                &lt;div class=&quot;modal-header modal-danger&quot;&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;x&lt;/button&gt;
+                    &lt;div class=&quot;modal-title&quot;&gt;
+                        Impacted Visits
+                    &lt;/div&gt;
+                &lt;/div&gt;
+    
+                &lt;div class=&quot;modal-body modal-body-flex&quot;&gt;
+                    &lt;div class=&quot;modal-body-flex-header padding-bottom-10&quot;&gt;
+    
+                        &lt;h4&gt;&lt;b&gt;Static Header&lt;/b&gt;&lt;/h4&gt;
+    
+                    &lt;/div&gt;
+                    &lt;div class=&quot;modal-body-flex-content&quot;&gt;
+                    &lt;h4&gt;&lt;b&gt;Scrollable Content&lt;/b&gt;&lt;/h4&gt;
+                        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus sed leo vel tempus. Aliquam vestibulum, felis vitae tristique interdum, risus nibh commodo metus, malesuada tempor neque enim vitae libero. Vestibulum augue sem, finibus et sapien id, commodo pretium mauris. Quisque convallis odio eu suscipit ultrices. Maecenas sagittis placerat nibh, eu pretium ipsum egestas nec. Sed placerat vitae purus sed consectetur. Nam id ipsum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar nunc sapien, at dapibus leo feugiat accumsan.
+    
+                        Morbi cursus risus vel ante dapibus, eget fringilla lorem blandit. Vestibulum vehicula malesuada libero non efficitur. Nulla mattis urna a libero consectetur euismod. Etiam sodales mattis aliquam. Cras ac tempus ex. Proin eleifend ut dolor id luctus. Suspendisse lacus nibh, bibendum sed nunc id, ultrices sodales turpis. Aliquam maximus sodales enim a iaculis. Nullam elementum augue non arcu consequat, et dignissim odio interdum. Fusce viverra ligula sit amet aliquet pharetra. Pellentesque ac elit at mauris hendrerit rutrum.
+    
+                        Donec in felis luctus, tincidunt velit eu, congue lacus. Nulla a iaculis erat, posuere auctor ex. Donec tristique dui justo, eget sollicitudin turpis ullamcorper et. Praesent a urna a justo porta feugiat at eu arcu. Nullam placerat, purus non porta volutpat, magna libero efficitur tellus, non posuere nisi augue ut purus. Mauris libero nunc, rhoncus at ipsum eget, cursus ornare ex. Cras facilisis lacus non est consequat scelerisque. Sed ac pretium lacus, quis egestas sem. Etiam sit amet metus ornare, porta lorem sit amet, lacinia mauris.
+    
+                        Praesent mollis, nisl et molestie mattis, dolor diam volutpat felis, a luctus lectus arcu non justo. Maecenas aliquet, enim non volutpat malesuada, sem sem pulvinar ante, et aliquam ante ante et magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Ut efficitur magna et egestas finibus. Pellentesque ut libero vulputate, hendrerit arcu id, pretium arcu. Morbi eu malesuada mauris, sed rutrum libero. Sed in dolor id lorem sagittis finibus. Vestibulum ultrices ipsum ac est rutrum, sit amet dapibus quam convallis. Morbi hendrerit magna a erat laoreet, sed congue nunc condimentum.
+    
+                        Nulla sit amet turpis enim. Nulla eleifend ipsum sit amet ornare auctor. In vitae molestie tortor, et consequat ante. Duis ac orci eu enim blandit consectetur sit amet eu lectus. Vestibulum porttitor risus eget libero volutpat, nec egestas magna venenatis. Fusce congue faucibus arcu eget consectetur. Phasellus ligula lacus, scelerisque eu congue eget, facilisis non nisi. Nunc volutpat eros non ipsum cursus, vitae dictum est interdum. Fusce posuere velit sed interdum aliquam.&lt;/p&gt;
+                    &lt;/div&gt;
+    
+                    &lt;div class=&quot;modal-body-flex-footer&quot;&gt;
+                       &lt;h4&gt;&lt;b&gt;Static Footer&lt;/b&gt;&lt;/h4&gt;
+                    &lt;/div&gt;
+    
+    
+                &lt;/div&gt;
+    
+                &lt;div class=&quot;modal-footer&quot;&gt;
+                    &lt;a href class=&quot;btn btn-link&quot; data-dismiss=&quot;modal&quot;&gt;Cancel&lt;/a&gt;
+                    &lt;button type=&quot;button&quot; class=&quot;btn btn-danger&quot; data-dismiss=&quot;modal&quot; disabled&gt;Confirm&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

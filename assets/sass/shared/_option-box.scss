@@ -1,0 +1,104 @@
+
+// We're going to make extensive use of Flexbox here to build these, which requires
+// IE 10+. If you're not familiar with flexbox, take a look at https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+.option-box__wrapper {
+  align-items: flex-start;            // don't stretch each .option-box'es height if one gets taller
+  display: flex;
+  flex-flow: row wrap;                    // wrap items down to the next row
+}
+
+.option-box {
+  background-color: $white;
+  border: 1px solid $gray-lighter;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  margin-bottom: 10px;
+  margin-right: 1%;
+  padding: 10px;
+  text-align: center;
+  transition: border-color 100ms, color 100ms;
+
+  hr {
+    &.divider {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
+
+  // State Modifiers
+  &.is-disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+
+  &.is-selected {
+    border-color: $brand-primary;
+    color: $brand-primary;
+  }
+
+  // Size Modifiers
+  //
+  // Each size modifier is computed by width = (1/n) - (n/(n+1)) where n is the fraction denominator
+  // (1/n) tells us it is a fraction of the entire width
+  // (n/(n+1)) subtracts a 1% margin and distributes it amongst the spaces
+  // Every n boxes must have a margin-right of 0 to account for the last box
+  &.one-third {
+    width: (1 / 3 * 100%) - (2% / 3);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  &.one-seventh {
+    width: (1 / 7 * 100%) - (6% / 7);
+
+    // From fluid breakpoint to the sm breakpoint, a 1/7 option box should be 50%
+    @media (max-width: $screen-sm) {
+      width: 49%;
+    }
+
+    &:nth-child(7n) {
+      margin-right: 0;
+    }
+  }
+
+  // At the fluid breakpoint, all option boxes should span the full width
+  &.one-third,
+  &.one-seventh {
+    @media (max-width: $screen-xs) {
+      width: 100%;
+    }
+  }
+}
+
+.option-box__heading {
+  display: block;
+  font-size: 30px;
+}
+
+.option-box__options {
+  display: none;      // hide by default
+
+  a {
+    color: $gray;
+    display: inline-block;
+    margin-bottom: 10px;
+    width: 30%;
+
+    &.is-selected {
+      border: 1px solid $brand-primary;
+      border-radius: 4px;
+      color: $brand-primary;
+      margin-bottom: 8px;
+      margin-top: -2px;
+    }
+  }
+}
+
+.option-box__view-more {
+  text-align: center;
+  width: 100%;
+}

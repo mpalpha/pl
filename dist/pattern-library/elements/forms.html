@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Forms</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    <p>Use this page to guide your designs and layouts, both online and off, to ensure you&#39;re staying consistent with the Base Structures.</p>
+    <h3 id="basic-example">Basic Example</h3>
+    <p>Individual form controls automatically receive some global styling. All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with <code>.form-control</code> are set to <code>width: 100%;</code> by default. Wrap labels and controls in 
+    <code>.form-group</code> for optimum spacing.</p>
+    <div class="spl-example">
+        <form role="form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <input type="file" id="exampleInputFile">
+                <p class="help-block">Example block-level help text here.</p>
+            </div>
+            <div class="checkbox">
+            <input type="checkbox" id="checkmeout" class="fa checkbox" value="check">
+              <label for="checkmeout">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form role=&quot;form&quot;&gt;&lt;/form&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;exampleInputEmail1&quot;&gt;Email address&lt;/label&gt;
+        &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail1&quot; placeholder=&quot;Enter email&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;exampleInputPassword1&quot;&gt;Password&lt;/label&gt;
+        &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword1&quot; placeholder=&quot;Password&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;exampleInputFile&quot;&gt;File input&lt;/label&gt;
+        &lt;input type=&quot;file&quot; id=&quot;exampleInputFile&quot;&gt;
+        &lt;p class=&quot;help-block&quot;&gt;Example block-level help text here.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;checkmeout&quot; class=&quot;fa checkbox&quot; value=&quot;check&quot;&gt;
+          &lt;label for=&quot;checkmeout&quot;&gt;Check me out&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+    </code></pre><h2 id="inline-form">Inline form</h2>
+    <p>Add <code>.form-inline</code> to your <code>&lt;form&gt;</code> for left-aligned and inline-block controls. <strong>This only applies to forms within viewports that are at least 768px wide.</strong></p>
+    <h4 id="requires-custom-widths">Requires custom widths</h4>
+    <p>Inputs, selects, and textareas are 100% wide by default in Securus Pattern Library. To use the inline form, you&#39;ll have to set a width on the form controls used within.</p>
+    <h4 id="always-add-labels">Always add labels</h4>
+    <p>Screen readers will have trouble with your forms if you don&#39;t include a label for every input. For these inline forms, you can hide the labels using the <code>.sr-only</code> class.</p>
+    <div class="spl-example">
+        <form class="form-inline" role="form">
+          <div class="form-group">
+              <label class="sr-only" for="exampleInputEmail2">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+              <label class="sr-only" for="exampleInputPassword2">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+          </div>
+          <div class="checkbox">
+              <input type="checkbox" id="rememberme" class="fa checkbox" value="check">
+                <label for="rememberme">Remember me</label>
+          </div>
+          <button type="submit" class="btn btn-default">Sign in</button>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form class=&quot;form-inline&quot; role=&quot;form&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label class=&quot;sr-only&quot; for=&quot;exampleInputEmail2&quot;&gt;Email address&lt;/label&gt;
+          &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;exampleInputEmail2&quot; placeholder=&quot;Enter email&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label class=&quot;sr-only&quot; for=&quot;exampleInputPassword2&quot;&gt;Password&lt;/label&gt;
+          &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;exampleInputPassword2&quot; placeholder=&quot;Password&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;checkbox&quot;&gt;
+          &lt;input type=&quot;checkbox&quot; id=&quot;rememberme&quot; class=&quot;fa checkbox&quot; value=&quot;check&quot;&gt;
+            &lt;label for=&quot;rememberme&quot;&gt;Remember me&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Sign in&lt;/button&gt;
+    &lt;/form&gt;
+    </code></pre><h2 id="horizontal-form">Horizontal form</h2>
+    <p>Use Securus Pattern Library&#39;s predefined grid classes to align labels and groups of form controls in a horizontal layout by adding <code>.form-horizontal</code> to the form. Doing so changes <code>.form-group</code>s to behave as grid rows, so no need for <code>.row</code>.</p>
+    <div class="spl-example">
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-10">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+              <div class="checkbox">
+                <input type="checkbox" id="rememberme2" class="fa checkbox" value="check">
+                  <label for="rememberme2">Remember me</label>
+              </div>
+              </div>
+          </div>
+          <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-default">Sign in</button>
+              </div>
+          </div>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;inputEmail3&quot; class=&quot;col-sm-2 control-label&quot;&gt;Email&lt;/label&gt;
+          &lt;div class=&quot;col-sm-10&quot;&gt;
+          &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail3&quot; placeholder=&quot;Email&quot;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;inputPassword3&quot; class=&quot;col-sm-2 control-label&quot;&gt;Password&lt;/label&gt;
+          &lt;div class=&quot;col-sm-10&quot;&gt;
+          &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword3&quot; placeholder=&quot;Password&quot;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+          &lt;div class=&quot;checkbox&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; id=&quot;rememberme2&quot; class=&quot;fa checkbox&quot; value=&quot;check&quot;&gt;
+              &lt;label for=&quot;rememberme2&quot;&gt;Remember me&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+          &lt;div class=&quot;col-sm-offset-2 col-sm-10&quot;&gt;
+          &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Sign in&lt;/button&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    </code></pre><h2 id="supported-controls">Supported controls</h2>
+    <p>Examples of standard form controls supported in an example form layout.</p>
+    <h3 id="inputs">Inputs</h3>
+    <p>Most common form control, text-based input fields. Includes support for all HTML5 types: <code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>, <code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>, <code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <code>color</code>.</p>
+    <div class="spl-callout spl-callout-danger">
+        <h4>Type declaration required</h4>
+        <p>Inputs will only be fully styled if their <code>type</code> is properly declared.</p>
+    </div>
+    <div class="spl-example">
+        <form role="form">
+        <input type="text" class="form-control" placeholder="Text input">
+        </form>
+    </div>
+    
+    <pre><code>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Text input&quot;&gt;
+    </code></pre><h4 id="input-groups">Input groups</h4>
+    <p>To add integrated text or buttons before and/or after any text-based <code>&lt;input&gt;</code>, <a href="../components/#input-groups">check out the input group component</a>.</p>
+    <h3 id="textarea">Textarea</h3>
+    <p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+    <form role="form">
+      <textarea class="form-control" rows="3"></textarea>
+    </form>
+    
+    <pre><code>&lt;textarea class=&quot;form-control&quot;  rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+    </code></pre><h3 id="checkboxes-and-radios">Checkboxes and radios</h3>
+    <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
+    <h4 id="default-stacked-">Default (stacked)</h4>
+    <div class="spl-example">
+        <form role="form">
+          <div class="checkbox">
+            <input type="checkbox" id="default-stacked" class="fa checkbox" value="option1">
+              <label for="default-stacked">Option one is this and that—be sure to include why it&#39;s great</label>
+          </div>
+          <br>
+          <div class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" class="fa radio">
+              <label for="optionsRadios1">
+              Option one is this and that—be sure to include why it&#39;s great
+              </label>
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" class="fa radio">
+              <label for="optionsRadios2">
+              Option two can be something else and selecting it will deselect option one
+              </label>
+          </div>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form role=&quot;form&quot;&gt;
+      &lt;div class=&quot;checkbox&quot;&gt;
+        &lt;input type=&quot;checkbox&quot; id=&quot;default-stacked&quot; class=&quot;fa checkbox&quot; value=&quot;option1&quot;&gt;
+          &lt;label for=&quot;default-stacked&quot;&gt;Option one is this and that—be sure to include why it&#39;s great&lt;/label&gt;
+      &lt;/div&gt;
+      &lt;br&gt;
+      &lt;div class=&quot;radio&quot;&gt;
+          &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios1&quot; value=&quot;option1&quot; checked=&quot;&quot; class=&quot;fa radio&quot;&gt;
+          &lt;label for=&quot;optionsRadios1&quot;&gt;
+          Option one is this and that—be sure to include why it&#39;s great
+          &lt;/label&gt;
+          &lt;input type=&quot;radio&quot; name=&quot;optionsRadios&quot; id=&quot;optionsRadios2&quot; value=&quot;option2&quot; class=&quot;fa radio&quot;&gt;
+          &lt;label for=&quot;optionsRadios2&quot;&gt;
+          Option two can be something else and selecting it will deselect option one
+          &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    </code></pre><h4 id="inline-checkboxes">Inline checkboxes</h4>
+    <p>Use <code>.checkbox-inline</code> or <code>.radio-inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
+    <div class="spl-example">
+        <form role="form">
+          <input type="checkbox" id="inlineCheckbox1" class="fa checkbox" value="option1">
+            <label for="inlineCheckbox1" class="checkbox-inline">1</label>
+          <input type="checkbox" id="inlineCheckbox2" class="fa checkbox" value="option2">
+            <label for="inlineCheckbox2" class="checkbox-inline">2</label>
+          <input type="checkbox" id="inlineCheckbox3" class="fa checkbox" value="option3">
+            <label for="inlineCheckbox3" class="checkbox-inline">3</label>
+        </form>
+    </div>
+    
+    <pre><code>&lt;label class=&quot;checkbox-inline&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox1&quot; value=&quot;option1&quot;&gt; 1
+    &lt;/label&gt;
+    &lt;label class=&quot;checkbox-inline&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox2&quot; value=&quot;option2&quot;&gt; 2
+    &lt;/label&gt;
+    &lt;label class=&quot;checkbox-inline&quot;&gt;
+      &lt;input type=&quot;checkbox&quot; id=&quot;inlineCheckbox3&quot; value=&quot;option3&quot;&gt; 3
+    &lt;/label&gt;
+    </code></pre><h4 id="nested-checkboxes">Nested checkboxes</h4>
+    <p>Use the <code>.checkbox-list</code> class in a definition list to a series of checkboxes which are linked to a parent.</p>
+    <div class="spl-example">
+      <dl class="check-list">
+          <dt><input type="checkbox" id="checkinmate0"><label for="checkinmate0">&nbsp;Parent</label></dt>
+          <dd><input type="checkbox" id="checkinmate0-0"><label for="checkinmate0-0">&nbsp;First</label></dd>
+          <dd><input type="checkbox" id="checkinmate0-1"><label for="checkinmate0-1">&nbsp;Second</label></dd>
+          <dd><input type="checkbox" id="checkinmate0-2"><label for="checkinmate0-2">&nbsp;Third</label></dd>
+          <dd><input type="checkbox" id="checkinmate0-3"><label for="checkinmate0-3">&nbsp;Fourth</label></dd>
+          <dd><input type="checkbox" id="checkinmate0-4"><label for="checkinmate0-4">&nbsp;Fifth</label></dd>
+      </dl>
+    </div>
+    
+    
+    <pre><code>&lt;dl class=&quot;check-list&quot;&gt;
+        &lt;dt&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0&quot;&gt;&lt;label for=&quot;checkinmate0&quot;&gt;Parent&lt;/label&gt;&lt;/dt&gt;
+        &lt;dd&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0-0&quot;&gt;&lt;label for=&quot;checkinmate0-0&quot;&gt;First&lt;/label&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0-1&quot;&gt;&lt;label for=&quot;checkinmate0-1&quot;&gt;Second&lt;/label&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0-2&quot;&gt;&lt;label for=&quot;checkinmate0-2&quot;&gt;Third&lt;/label&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0-3&quot;&gt;&lt;label for=&quot;checkinmate0-3&quot;&gt;Fourth&lt;/label&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;input type=&quot;checkbox&quot; id=&quot;checkinmate0-4&quot;&gt;&lt;label for=&quot;checkinmate0-4&quot;&gt;Fifth&lt;/label&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+    </code></pre><p><h3>Selects</h3></p>
+    <p><p>Use the default option, or add <code>multiple</code> to show multiple options at once.</p></p>
+    <div class="spl-example">
+        <form role="form">
+        <select class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <br>
+        <select multiple="" class="form-control">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        </form>
+    </div>
+    
+    <pre><code>&lt;select class=&quot;form-control&quot;&gt;
+      &lt;option&gt;1&lt;/option&gt;
+      &lt;option&gt;2&lt;/option&gt;
+      &lt;option&gt;3&lt;/option&gt;
+      &lt;option&gt;4&lt;/option&gt;
+      &lt;option&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+    &lt;select  multiple class=&quot;form-control&quot;&gt;
+      &lt;option&gt;1&lt;/option&gt;
+      &lt;option&gt;2&lt;/option&gt;
+      &lt;option&gt;3&lt;/option&gt;
+      &lt;option&gt;4&lt;/option&gt;
+      &lt;option&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+    </code></pre><h3 id="static-control">Static control</h3>
+    <p>When you need to place plain text next to a form label within a horizontal form, use the <code>.form-control-static</code> class on a <code>&lt;p&gt;</code>.</p>
+    <div class="spl-example">
+        <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label><br>        <div class="col-sm-10">
+            <p class="form-control-static">email@example.com</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="col-sm-2 control-label">Password</label>
+            <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+            </div>
+        </div>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form class=&quot;form-horizontal&quot; role=&quot;form&quot;&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label class=&quot;col-sm-2 control-label&quot;&gt;Email&lt;/label&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt;
+          &lt;p class=&quot;form-control-static&quot;&gt;email@example.com&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;inputPassword&quot; class=&quot;col-sm-2 control-label&quot;&gt;Password&lt;/label&gt;
+        &lt;div class=&quot;col-sm-10&quot;&gt;
+          &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword&quot; placeholder=&quot;Password&quot;&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/form&gt;
+    </code></pre><h2 id="form-states">Form states</h2>
+    <p>Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
+    <h3 id="input-focus">Input focus</h3>
+    <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+    <div class="spl-example">
+        <form role="form">
+        <input class="form-control" id="focusedInput" type="text" value="This is focused...">
+        </form>
+    </div>
+    
+    <pre><code>&lt;input class=&quot;form-control&quot; id=&quot;focusedInput&quot; type=&quot;text&quot; value=&quot;This is focused...&quot;&gt;
+    </code></pre><h3 id="disabled-inputs">Disabled inputs</h3>
+    <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
+    <div class="spl-example">
+        <form role="form">
+        <input class="form-control" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
+        </form>
+    </div>
+    
+    <pre><code>&lt;input class=&quot;form-control&quot; id=&quot;disabledInput&quot; type=&quot;text&quot; placeholder=&quot;Disabled input here...&quot; disabled&gt;
+    </code></pre><p>###Disabled fieldsets</p>
+    <p>Add the <code>disabled</code> attribute to a <code>&lt;fieldset&gt;</code> to disable all the controls within the <code>&lt;fieldset&gt;</code> at once.</p>
+    <h4 id="link-functionality-of-a-not-impacted">Link functionality of <code>&lt;a&gt;</code> not impacted</h4>
+    <p>This class will only change the appearance of <code>&lt;a class=&quot;btn btn-default&quot;&gt;</code> buttons, not their functionality. Use custom JavaScript to disable links here.</p>
+    <h4 id="cross-browser-compatibility">Cross-browser compatibility</h4>
+    <p>While Securus Pattern Library will apply these styles in all browsers, Internet Explorer 9 and below don&#39;t actually support the <code>disabled</code> attribute on a <code>&lt;fieldset&gt;</code>. Use custom JavaScript to disable the fieldset in these browsers.</p>
+    <div class="spl-example">
+        <form role="form">
+            <fieldset disabled="">
+                <div class="form-group">
+                <label for="disabledTextInput">Disabled input</label>
+                <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+                </div>
+                <div class="form-group">
+                <label for="disabledSelect">Disabled select menu</label>
+                <select id="disabledSelect" class="form-control">
+                    <option>Disabled select</option>
+                </select>
+                </div>
+                <div class="checkbox">
+                <input type="checkbox" id="cantcheckthis" class="fa checkbox">
+                  <label for="cantcheckthis">Can&#39;t check this</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </fieldset>
+        </form>
+    </div>
+    
+    <pre><code>&lt;form role=&quot;form&quot;&gt;
+      &lt;fieldset disabled&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;disabledTextInput&quot;&gt;Disabled input&lt;/label&gt;
+          &lt;input type=&quot;text&quot; id=&quot;disabledTextInput&quot; class=&quot;form-control&quot; placeholder=&quot;Disabled input&quot;&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-group&quot;&gt;
+          &lt;label for=&quot;disabledSelect&quot;&gt;Disabled select menu&lt;/label&gt;
+          &lt;select id=&quot;disabledSelect&quot; class=&quot;form-control&quot;&gt;
+            &lt;option&gt;Disabled select&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;checkbox&quot;&gt;
+          &lt;label&gt;
+            &lt;input type=&quot;checkbox&quot;&gt; Can&#39;t check this
+          &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+      &lt;/fieldset&gt;
+    &lt;/form&gt;
+    </code></pre><h3 id="validation-states">Validation states</h3>
+    <p>Securus Pattern Library includes validation styles for error, warning, and success states on form controls. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element. Any <code>.control-label</code>, <code>.form-control</code>, and <code>.help-block</code> within that element will receive the validation styles.</p>
+    <div class="spl-example">
+        <form role="form">
+        <div class="form-group has-success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <input type="text" class="form-control" id="inputSuccess">
+        </div>
+        <div class="form-group has-warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <input type="text" class="form-control" id="inputWarning">
+        </div>
+        <div class="form-group has-error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <input type="text" class="form-control" id="inputError">
+        </div>
+        </form>
+    </div>
+    
+    <pre><code>&lt;div class=&quot;form-group has-success&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;inputSuccess&quot;&gt;Input with success&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputSuccess&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group has-warning&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;inputWarning&quot;&gt;Input with warning&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputWarning&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;form-group has-error&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;inputError&quot;&gt;Input with error&lt;/label&gt;
+      &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputError&quot;&gt;
+    &lt;/div&gt;
+    </code></pre><h2 id="control-sizing">Control sizing</h2>
+    <p>Set heights using classes like <code>.input-lg</code>, and set widths using grid column classes like <code>.col-lg-*</code>.</p>
+    <h3 id="height-sizing">Height sizing</h3>
+    <p>Create larger or smaller form controls that match button sizes.</p>
+    <div class="spl-example spl-example-control-sizing">
+      <form role="form">
+        <div class="spl-controls">
+          <input class="form-control input-lg" type="text" placeholder=".input-lg" />
+          <input type="text" class="form-control" placeholder="Default input" />
+          <input class="form-control input-sm" type="text" placeholder=".input-sm" />
+          <select class="form-control input-lg">
+            <option value="">.input-lg</option>
+          </select>
+          <select class="form-control">
+            <option value="">Default select</option>
+          </select>
+          <select class="form-control input-sm">
+            <option value="">.input-sm</option>
+          </select>
+        </div>
+      </form>
+    </div>
+    
+    <pre><code>&lt;input class=&quot;form-control input-lg&quot; type=&quot;text&quot; placeholder=&quot;.input-lg&quot;&gt;
+    &lt;input class=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Default input&quot;&gt;
+    &lt;input class=&quot;form-control input-sm&quot; type=&quot;text&quot; placeholder=&quot;.input-sm&quot;&gt;
+    &lt;select class=&quot;form-control input-lg&quot;&gt;...&lt;/select&gt;
+    &lt;select class=&quot;form-control&quot;&gt;...&lt;/select&gt;
+    &lt;select class=&quot;form-control input-sm&quot;&gt;...&lt;/select&gt;
+    </code></pre><h3 id="column-sizing">Column sizing</h3>
+    <p>Wrap inputs in grid columns, or any custom parent element, to easily enforce desired widths.</p>
+    <div class="spl-example">
+        <form role="form">
+        <div class="row">
+            <div class="col-xs-2">
+            <input type="text" class="form-control" placeholder=".col-xs-2">
+            </div>
+            <div class="col-xs-3">
+            <input type="text" class="form-control" placeholder=".col-xs-3">
+            </div>
+            <div class="col-xs-4">
+            <input type="text" class="form-control" placeholder=".col-xs-4">
+            </div>
+        </div>
+        </form>
+    </div>
+    
+    <pre><code>&lt;div class=&quot;row&quot;&gt;
+      &lt;div class=&quot;col-xs-2&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;.col-xs-2&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-xs-3&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;.col-xs-3&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;col-xs-4&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;.col-xs-4&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    </code></pre><h2 id="help-text">Help text</h2>
+    <p>Block level help text for form controls.</p>
+    <div class="spl-example">
+        <form role="form">
+        <input type="text" class="form-control">
+        <span class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+        </form>
+    </div>
+    
+    <pre><code>&lt;span class=&quot;help-block&quot;&gt;A block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+    </code></pre>  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

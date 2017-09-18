@@ -1,0 +1,29 @@
+.confirm-order {
+  .fa {
+    color: white;
+  }
+
+  // Order not confirmed
+  .confirm-order-content {
+    display: block;
+  }
+
+  .order-confirmed-content {
+    display: none;
+  }
+
+  // Order confirmed
+  &.confirmed {
+    .confirm-order-content {
+      display: none;
+    }
+
+    .order-confirmed-content {
+      display: block;
+    }
+  }
+}
+
+.margin-top-25 {
+  margin-top: 25px;
+}

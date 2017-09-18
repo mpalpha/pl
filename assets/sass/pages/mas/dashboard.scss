@@ -1,0 +1,30 @@
+.mas-allowed {
+  background-color: #3fae29;
+  border: 1px solid #3fae29;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mas-blocked {
+  background-color: #c0392b;
+  border: 1px solid #c0392b;
+  color: #fff;
+  cursor: pointer;
+}
+
+.mas-blocked-detail {
+  background-color: transparent;
+  border: 1px solid #c0392b;
+  color: #555555;
+}
+
+.mas-widget-label {
+  font-size: 14px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.mas-widget-detail {
+  font-size: 28px;
+  text-align: center;
+}

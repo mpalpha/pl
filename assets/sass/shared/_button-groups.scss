@@ -1,0 +1,43 @@
+// support for dropdown-menu within button groups
+.btn-group {
+  > .btn,
+  > * {
+    &:not(:only-of-type) {
+      &:nth-last-child(1) {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      &:nth-child(1) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    &:nth-child(1):only-of-type:not(a) {
+      float: none;
+    }
+
+    + .btn {
+      margin-left: -1px;
+    }
+  }
+
+  &-vertical {
+    > .btn-group:not(:first-child):not(:last-child) {
+      > .btn {
+        margin-bottom: -1px;
+      }
+    }
+  }
+
+  > button,
+  > .btn,
+  > [class*=".btn-"] {
+    &.dropdown-toggle {
+      .caret {
+        float: none;
+      }
+    }
+  }
+}

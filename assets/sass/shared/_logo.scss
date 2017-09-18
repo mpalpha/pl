@@ -1,0 +1,40 @@
+.logo {
+  background: $securus-primary-blue url("../images/shared/brand/logos/securus-logo.svg") no-repeat center center;
+  display: inline-block;
+  height: 30px;
+  margin: 10px;
+  text-indent: -999px;
+  width: 74px;
+}
+
+.logo-securus {
+  background-color: $securus-primary-blue;
+  height: 80px;
+  position: relative;
+  width: 80px;
+  $imageWidth: 70px;
+  $imageHeight: 28px;
+
+  &:after {
+    background: url(../images/shared/brand/logos/logo-securus-white-transparent.png) no-repeat center center;
+    content: " ";
+    height: $imageHeight;
+    left: calc(50% - #{$imageWidth / 2});
+    position: absolute;
+    top: calc(50% - #{$imageHeight / 2});
+    width: $imageWidth;
+  }
+}
+
+.stacked-logo,
+.box-logo {
+  &[class*="-logo"] {
+    &[class*="stacked-"] {
+      padding: 27.3% 0%;
+    }
+
+    &[class*="box-"] {
+      padding: 32% 12%;
+    }
+  }
+}

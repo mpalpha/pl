@@ -1,0 +1,10 @@
+/* YOLO */
+.call-schedule-panel,
+.visit-schedule-panel {
+  min-height: 339px;
+
+  .call-schedule-detail,
+  .visit-schedule-panel {
+    min-height: 160px;
+  }
+}

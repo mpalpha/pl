@@ -1,0 +1,141 @@
+.biometrics {
+  h5 {
+    font-size: 1.2em;
+    font-weight: 700;
+    position: relative;
+  }
+}
+
+.biometric-recordings {
+  margin-bottom: 2px;
+  margin-top: 12px;
+
+  .title {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 8px 0 0;
+  }
+}
+
+.biometric-enrollment {
+  .title {
+    .pre {
+      color: #666;
+      display: block;
+      font-size: .8em;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    .post {
+      display: block;
+      font-size: .8em;
+      font-weight: 500;
+      margin-top: 3px;
+    }
+  }
+}
+
+.biometric-enrollment {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+.biometric-btn-group {
+  border-collapse: collapse;
+  display: inline-block;
+  margin-bottom: 12px;
+  position: relative;
+  vertical-align: middle;
+
+  .biometric-btn-play {
+    background-color: white;
+    border: 1px solid #ccc;
+    display: block;
+    float: left;
+    height: 60px;
+    margin-right: 3px;
+    margin-top: 3px;
+    position: relative;
+    text-align: center;
+    width: 60px;
+
+    &:hover {
+      background-color: $brand-primary;
+      color: white;
+
+      * {
+        color: white;
+      }
+    }
+
+    .label {
+      color: #fff;
+      display: block;
+      left: calc(50% - 2em);
+      position: absolute;
+      top: calc(50% - 2em);
+
+      &.stop {
+        color: $brand-primary;
+        display: block;
+        left: calc(50% - 1.5em);
+        position: absolute;
+        top: calc(50% - 1.2em);
+      }
+
+      &.play {
+        color: $brand-primary;
+        display: block;
+      }
+    }
+
+    .status {
+      border: 0;
+      border-top-left-radius: 24px;
+      bottom: 0;
+      color: white;
+      height: 24px;
+      line-height: 24px;
+      padding-right: 2px;
+      padding-top: 2px;
+      position: absolute;
+      right: 0;
+      text-align: right;
+      width: 24px;
+
+      &.accepted {
+        //        background-color: $brand-primary;
+        background-color: $brand-success;
+
+        &:before {
+          content: "";
+        }
+      }
+
+      &.rejected {
+        background-color: #bbb;
+
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}
+
+.verification {
+  margin-right: 3px;
+}
+
+.verification-title {
+  font-size: 1em;
+  font-weight: 500;
+  margin: 8px 0 0;
+}

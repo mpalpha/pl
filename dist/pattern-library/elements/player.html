@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="./../assets/theme-assets/css/patternpack.css" rel="stylesheet" />
+    <link href="./../assets/theme-assets/css/github.css" rel="stylesheet" />
+    <link href="./../assets/css/securus.css" rel="stylesheet" />
+    <link href="./../assets/css/font-awesome.min.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Player</title>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</head>
+
+<body>
+<div class="navbar spl navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <!--hamburger menu for smaller screens-->
+        <button type="button"  class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+            <span class="icon-bar icon-bar--whiteOut"></span>
+        </button>
+        <a class="logo" href="/">Securus Technologies</a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+                   
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Structures <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../structures/brand-colors.html">Brand Colors</a>
+            </li>
+            <li>
+              <a href="./../structures/brand-fonts.html">Brand Fonts</a>
+            </li>
+            <li>
+              <a href="./../structures/device-support.html">Device Support</a>
+            </li>
+            <li>
+              <a href="./../structures/grid.html">Grid</a>
+            </li>
+            <li>
+              <a href="./../structures/layouts.html">Layouts</a>
+            </li>
+            <li>
+              <a href="./../structures/utilities.html">Utilities</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Elements <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../elements/buttons.html">Buttons</a>
+            </li>
+            <li>
+              <a href="./../elements/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="./../elements/image-basic.html">Image Basic</a>
+            </li>
+            <li>
+              <a href="./../elements/modal.html">Modal</a>
+            </li>
+            <li>
+              <a href="./../elements/pagination.html">Pagination</a>
+            </li>
+            <li>
+              <a href="./../elements/player.html">Player</a>
+            </li>
+            <li>
+              <a href="./../elements/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../elements/tag.html">Tag</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Patterns <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../patterns/.html"></a>
+            </li>
+            <li>
+              <a href="./../patterns/activity-timeline.html">Activity Timeline</a>
+            </li>
+            <li>
+              <a href="./../patterns/add-row.html">Add Row</a>
+            </li>
+            <li>
+              <a href="./../patterns/alerts.html">Alerts</a>
+            </li>
+            <li>
+              <a href="./../patterns/busy-indicator.html">Busy Indicator</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-profile-view.html">Card Profile View</a>
+            </li>
+            <li>
+              <a href="./../patterns/card-summary-view.html">Card Summary View</a>
+            </li>
+            <li>
+              <a href="./../patterns/collapsing-section.html">Collapsing Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-filter.html">Column Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/column-sort.html">Column Sort</a>
+            </li>
+            <li>
+              <a href="./../patterns/context-drilldown.html">Context Drilldown</a>
+            </li>
+            <li>
+              <a href="./../patterns/contextual-filter.html">Contextual Filter</a>
+            </li>
+            <li>
+              <a href="./../patterns/corporate-logo.html">Corporate Logo</a>
+            </li>
+            <li>
+              <a href="./../patterns/data-grid.html">Data Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-panel.html">Details Panel</a>
+            </li>
+            <li>
+              <a href="./../patterns/details-section.html">Details Section</a>
+            </li>
+            <li>
+              <a href="./../patterns/dropdown-with-summary.html">Dropdown With Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/header.html">Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/hierarchical-navigation.html">Hierarchical Navigation</a>
+            </li>
+            <li>
+              <a href="./../patterns/inline-edit.html">Inline Edit</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-date-range.html">Input Date Range</a>
+            </li>
+            <li>
+              <a href="./../patterns/input-dropdown-picker.html">Input Dropdown Picker</a>
+            </li>
+            <li>
+              <a href="./../patterns/list-selector.html">List Selector</a>
+            </li>
+            <li>
+              <a href="./../patterns/notifications.html">Notifications</a>
+            </li>
+            <li>
+              <a href="./../patterns/option-box.html">Option Box</a>
+            </li>
+            <li>
+              <a href="./../patterns/override-inheritance.html">Override Inheritance</a>
+            </li>
+            <li>
+              <a href="./../patterns/page-header.html">Page Header</a>
+            </li>
+            <li>
+              <a href="./../patterns/password-requirements.html">Password Requirements</a>
+            </li>
+            <li>
+              <a href="./../patterns/revealing-checkbox.html">Revealing Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/rounded-checkbox.html">Rounded Checkbox</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-field-refiner.html">Search Field Refiner</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-form.html">Search Form</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results-toolbar.html">Search Results Toolbar</a>
+            </li>
+            <li>
+              <a href="./../patterns/search-results.html">Search Results</a>
+            </li>
+            <li>
+              <a href="./../patterns/second-level-nav.html">Second Level Nav</a>
+            </li>
+            <li>
+              <a href="./../patterns/select-entities.html">Select Entities</a>
+            </li>
+            <li>
+              <a href="./../patterns/singlePanel.html">SinglePanel</a>
+            </li>
+            <li>
+              <a href="./../patterns/sub-navigation-grid.html">Sub Navigation Grid</a>
+            </li>
+            <li>
+              <a href="./../patterns/tables.html">Tables</a>
+            </li>
+            <li>
+              <a href="./../patterns/tabs.html">Tabs</a>
+            </li>
+            <li>
+              <a href="./../patterns/user-profile.html">User Profile</a>
+            </li>
+            <li>
+              <a href="./../patterns/validation-alert.html">Validation Alert</a>
+            </li>
+            <li>
+              <a href="./../patterns/visit-summary.html">Visit Summary</a>
+            </li>
+            <li>
+              <a href="./../patterns/widget.html">Widget</a>
+            </li>
+            <li>
+              <a href="./../patterns/wizard.html">Wizard</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Icons <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../icons/icon-set.html">Icon Set</a>
+            </li>
+            <li>
+              <a href="./../icons/icon-tooltip.html">Icon Tooltip</a>
+            </li>
+          </ul>
+        </li>
+          
+        <li class="dropdown">
+          <a href="" class="dropdown-toggle" data-toggle="dropdown">
+            <div class="divider">
+              Angular <i class="caret"></i>
+            </div>
+          </a>
+        
+          <ul class="dropdown-menu dropdown--cropped">
+            <li>
+              <a href="./../angular/components.html">Components</a>
+            </li>
+          </ul>
+        </li>
+               </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid page-header">
+  <h2>Player</h2>
+</div>
+
+<div id="libraryContent" class="container-fluid no-breadcrumb">
+  <div class="container markdown__body">
+    
+    <p>Let the user listen to audio or video attached to a record.</p>
+    <h3 id="example">Example</h3>
+    <div class="library__example">
+        <!-- Audio Player -->
+        <div style="position: relative; height: 240px;">
+            <div class="player" style="display: block; position: absolute; ">
+                <div class="row video-playback hide">
+                    <div class="col-md-12">
+                        <div class="inmate-video">
+                            <img src="//placehold.it/1280x640" class="img-responsive" alt="">
+                            <div class="row name no-margin">
+                                <div class="col-md-6">
+                                    <dl class="dl-horizontal">
+                                        <dt>Visitor:</dt>
+                                        <dd>Jennifer Terrell</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Username:</dt>
+                                        <dd>email@address.com</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Location:</dt>
+                                        <dd>Visitor Lobby</dd>
+                                    </dl>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl class="dl-horizontal">
+                                        <dt>Inmate:</dt>
+                                        <dd>Jonathan Smith</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Account:</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Location:</dt>
+                                        <dd>Visitor West Wing</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row call-playback">
+                    <div class="col-md-6 col-md-12">
+                        <dl class="dl-horizontal">
+                            <dt>Inmate:</dt>
+                            <dd>Jonathan Smith</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Account:</dt>
+                            <dd>123456789</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Location:</dt>
+                            <dd>Visitor West Wing</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="start-time">02:41</div>
+                <div class="end-time pull-right">30:00</div>
+                <div class="player-scrubber">
+                    <div class="play-status"></div>
+                    <button class="player-scrubber-button"></button>
+                </div>
+                <div class="controls-container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <button class="rewind">
+                                <i class="fa fa-step-backward"></i>
+                            </button>
+                            <button class="play">
+                                <i class="fa fa-play"></i>
+                            </button>
+                            <button class="forward">
+                                <i class="fa fa-step-forward"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pull-right volume-position">
+                                <button class="volume">
+                                    <i class="fa fa-lg fa-volume-down"></i>
+                                </button>
+                                <div class="volume-scrubber">
+                                    <div class="volume-status"></div>
+                                    <button class="player-scrubber-button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-player">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Video Player -->
+        <div style="position: relative; height: 500px;">
+            <div class="player" style="display: block; position: absolute; ">
+                <div class="row video-playback">
+                    <div class="col-md-12">
+                        <div class="inmate-video">
+                            <img src="//placehold.it/1280x640" class="img-responsive" alt="">
+                            <div class="row name no-margin">
+                                <div class="col-md-6">
+                                    <dl class="dl-horizontal">
+                                        <dt>Visitor:</dt>
+                                        <dd>Jennifer Terrell</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Username:</dt>
+                                        <dd>email@address.com</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Location:</dt>
+                                        <dd>Visitor Lobby</dd>
+                                    </dl>
+                                </div>
+                                <div class="col-md-6">
+                                    <dl class="dl-horizontal">
+                                        <dt>Inmate:</dt>
+                                        <dd>Jonathan Smith</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Account:</dt>
+                                        <dd>123456789</dd>
+                                    </dl>
+                                    <dl class="dl-horizontal">
+                                        <dt>Location:</dt>
+                                        <dd>Visitor West Wing</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row call-playback hide">
+                    <div class="col-md-6 col-md-12">
+                        <dl class="dl-horizontal">
+                            <dt>Inmate:</dt>
+                            <dd>Jonathan Smith</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Account:</dt>
+                            <dd>123456789</dd>
+                        </dl>
+                        <dl class="dl-horizontal">
+                            <dt>Location:</dt>
+                            <dd>Visitor West Wing</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="start-time">02:41</div>
+                <div class="end-time pull-right">30:00</div>
+                <div class="player-scrubber">
+                    <div class="play-status"></div>
+                    <button class="player-scrubber-button"></button>
+                </div>
+                <div class="controls-container">
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <button class="rewind">
+                                <i class="fa fa-step-backward"></i>
+                            </button>
+                            <button class="play">
+                                <i class="fa fa-play"></i>
+                            </button>
+                            <button class="forward">
+                                <i class="fa fa-step-forward"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="pull-right volume-position">
+                                <button class="volume">
+                                    <i class="fa fa-lg fa-volume-down"></i>
+                                </button>
+                                <div class="volume-scrubber">
+                                    <div class="volume-status"></div>
+                                    <button class="player-scrubber-button"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="close-player">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <h3 id="code">Code</h3>
+    <pre><code class="lang-html">&lt;div class=&quot;player&quot;&gt;
+        &lt;div class=&quot;row video-playback hide&quot;&gt;
+            &lt;div class=&quot;col-md-12&quot;&gt;
+                &lt;div class=&quot;inmate-video&quot;&gt;
+                    &lt;video class=&quot;img-responsive&quot;&gt;
+                        &lt;source id=&quot;mp4&quot; src=&quot;&quot; type=&quot;video/mp4&quot;&gt;
+                    &lt;/video&gt;
+                    &lt;div class=&quot;row name no-margin&quot;&gt;
+                        &lt;div class=&quot;col-md-6&quot;&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Visitor:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Visitor name --&gt;l&lt;/dd&gt;
+                            &lt;/dl&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Username:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Visitor email --&gt;&lt;/dd&gt;
+                            &lt;/dl&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Location:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Visitor location --&gt;&lt;/dd&gt;
+                            &lt;/dl&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;col-md-6&quot;&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Inmate:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Inmate name --&gt;&lt;/dd&gt;
+                            &lt;/dl&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Account:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Inmate account --&gt;&lt;/dd&gt;
+                            &lt;/dl&gt;
+                            &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                                &lt;dt&gt;Location:&lt;/dt&gt;
+                                &lt;dd&gt;&lt;!-- Visit location --&gt;&lt;/dd&gt;
+                            &lt;/dl&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;row call-playback&quot;&gt;
+            &lt;div class=&quot;col-md-6 col-md-12&quot;&gt;
+                &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                    &lt;dt&gt;Inmate:&lt;/dt&gt;
+                    &lt;dd&gt;Jonathan Smith&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                    &lt;dt&gt;Account:&lt;/dt&gt;
+                    &lt;dd&gt;123456789&lt;/dd&gt;
+                &lt;/dl&gt;
+                &lt;dl class=&quot;dl-horizontal&quot;&gt;
+                    &lt;dt&gt;Location:&lt;/dt&gt;
+                    &lt;dd&gt;Visitor West Wing&lt;/dd&gt;
+                &lt;/dl&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;start-time&quot;&gt;02:41&lt;/div&gt;
+        &lt;div class=&quot;end-time pull-right&quot;&gt;30:00&lt;/div&gt;
+        &lt;div class=&quot;player-scrubber&quot;&gt;
+            &lt;div class=&quot;play-status&quot;&gt;&lt;/div&gt;
+            &lt;button class=&quot;player-scrubber-button&quot;&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;controls-container&quot;&gt;
+            &lt;div class=&quot;row&quot;&gt;
+                &lt;div class=&quot;col-md-6 col-md-offset-3&quot;&gt;
+                    &lt;button class=&quot;rewind&quot;&gt;
+                        &lt;i class=&quot;fa fa-step-backward&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button class=&quot;play&quot;&gt;
+                        &lt;i class=&quot;fa fa-play&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;button class=&quot;forward&quot;&gt;
+                        &lt;i class=&quot;fa fa-step-forward&quot;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;col-md-3&quot;&gt;
+                    &lt;div class=&quot;pull-right volume-position&quot;&gt;
+                        &lt;button class=&quot;volume&quot;&gt;
+                            &lt;i class=&quot;fa fa-lg fa-volume-down&quot;&gt;&lt;/i&gt;
+                        &lt;/button&gt;
+                        &lt;div class=&quot;volume-scrubber&quot;&gt;
+                            &lt;div class=&quot;volume-status&quot;&gt;&lt;/div&gt;
+                            &lt;button class=&quot;player-scrubber-button&quot;&gt;&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;button class=&quot;close-player&quot;&gt;
+            &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+
+    <div class="container-fluid">
+        <div class="container">
+            <div class="page-footer">
+                <div class="pull-left">
+                    <ul>
+                        <li>
+                            &copy; <span class="copyright-year">2017</span> Securus Technologies
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("dl input[type=checkbox]").click(function () {
+            if ($(this).parent("dt").length) {
+                // toggle indeterminate
+                $(this).prop("indeterminate", false);
+
+                // toggle all children
+                $(this)
+                    .parents("dt")
+                    .siblings("dd")
+                    .find("input[type=checkbox]")
+                    .prop("checked", $(this).is(":checked"));
+            } else {
+                var parent = $(this).parents("dl"),
+                    checkboxes = parent.find("dd").find("input[type=checkbox]"),
+                    checked = parent.find("dd").find("input[type=checkbox]:checked");
+                var indeterminate = checked.length && checked.length != checkboxes.length,
+                    parentCheck = parent.find("dt").find("input[type=checkbox]");
+                parentCheck.prop("indeterminate", indeterminate);
+                parentCheck.prop("checked", !indeterminate && checked.length);
+            }
+        });
+    </script>
+</body>
+
+</html>

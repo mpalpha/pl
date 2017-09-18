@@ -1,0 +1,12 @@
+@import 'components/color-swatch';
+@import 'components/hero';
+@import 'components/markdown';
+@import 'components/page-header';
+
+.marketing-tab {
+  margin-top: 30px;
+
+  i {
+    font-size: .75em;
+  }
+}

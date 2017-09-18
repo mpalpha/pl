@@ -1,0 +1,765 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>securus-icons Icons</title>
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <style type="text/css">
+      @font-face {
+        font-family: "securus-icons";
+        src: url('securus-icons.eot?1505758586');
+        src: url('securus-icons.eot?#iefix') format('eot'),
+          url('securus-icons.woff?1505758586') format('woff'),
+          url('securus-icons.ttf?1505758586') format('truetype'),
+          url('securus-icons.svg?1505758586#securus-icons') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      .icon[class*="securus-"] {
+          font-family: "securus-icons";
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-style: normal;
+          font-variant: normal;
+          font-weight: normal;
+          text-decoration: none;
+          text-transform: none;
+      }
+
+      
+      .securus-add-child:before {
+        content: "\ea01";
+      }
+      
+      .securus-add-sibling:before {
+        content: "\ea02";
+      }
+      
+      .securus-building8:before {
+        content: "\ea03";
+      }
+      
+      .securus-cd-image:before {
+        content: "\ea04";
+      }
+      
+      .securus-covert-alert:before {
+        content: "\ea05";
+      }
+      
+      .securus-expired-call:before {
+        content: "\ea06";
+      }
+      
+      .securus-expired-video-visit:before {
+        content: "\ea07";
+      }
+      
+      .securus-extend-time:before {
+        content: "\ea08";
+      }
+      
+      .securus-facility:before {
+        content: "\ea09";
+      }
+      
+      .securus-forward-call:before {
+        content: "\ea0a";
+      }
+      
+      .securus-geofence:before {
+        content: "\ea0b";
+      }
+      
+      .securus-informant-line-call:before {
+        content: "\ea0c";
+      }
+      
+      .securus-inmate:before {
+        content: "\ea0d";
+      }
+      
+      .securus-mobile-phone-custom:before {
+        content: "\ea0e";
+      }
+      
+      .securus-no-recording:before {
+        content: "\ea0f";
+      }
+      
+      .securus-play-call:before {
+        content: "\ea10";
+      }
+      
+      .securus-play-video-visit:before {
+        content: "\ea11";
+      }
+      
+      .securus-private-call:before {
+        content: "\ea12";
+      }
+      
+      .securus-private-video-visit:before {
+        content: "\ea13";
+      }
+      
+      .securus-rewind-30:before {
+        content: "\ea14";
+      }
+      
+      .securus-sick-call:before {
+        content: "\ea15";
+      }
+      
+      .securus-terminate-call:before {
+        content: "\ea16";
+      }
+      
+      .securus-terminate-video-visit:before {
+        content: "\ea17";
+      }
+      
+      .securus-video-off:before {
+        content: "\ea18";
+      }
+      
+      .securus-virtual-groups:before {
+        content: "\ea19";
+      }
+      
+      .securus-visitor:before {
+        content: "\ea1a";
+      }
+      
+      .securus-voice-biometrics:before {
+        content: "\ea1b";
+      }
+      
+      .securus-volume-mute:before {
+        content: "\ea1c";
+      }
+      
+      .securus-webcam:before {
+        content: "\ea1d";
+      }
+      
+
+      * {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        
+        box-sizing: border-box; 
+      }
+      
+      html, body {
+        min-width: 20rem;
+        margin:0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+      body > section {
+        flex: 1;
+      }
+
+      body > header, body > section, body > footer {
+        width: 100%;
+      }
+
+      body > header {
+        color: #fff;
+        background-color: #0074C8;
+      }
+      body > footer {
+        padding-bottom: 2rem;
+      }
+
+      header > div, section > div, footer > div {
+        padding:1rem;
+      }
+
+      ul,
+      li {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+      }
+      ul li {
+          float: left;
+          text-align: center;
+      }
+      li span {
+          display: block;
+      }
+      li i {
+          display: block;
+          margin-bottom: 1rem;
+      }
+      .clearfix:after {
+          content: ".";
+          display: block;
+          height: 0;
+          clear: both;
+          visibility: hidden
+      }
+
+      /*
+      * Glyphicons
+      *
+      * Special styles for displaying the icons and their classes in the docs.
+      */
+      
+      .flex {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .flex > * {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+
+      .flex li {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      
+      @media only screen and (min-width: 48rem) {
+        /* tablets and desktop */
+        .glyphicons-list li {
+          font-size: 12px;
+        }
+
+        .flex > * {
+          max-width: 50%;
+          flex-basis: 50%;
+        }
+      }
+      
+      @media only screen and (min-width: 75rem) {
+        /* tablets and desktop */
+        .flex > * {
+          max-width: 32%;
+          flex-basis: 32%;
+        }
+      }
+      
+      @media only screen and (min-width: 90rem) {
+        /* tablets and desktop */
+        .flex > * {
+          max-width: 25%;
+          flex-basis: 25%;
+        }
+      }
+
+      @media only screen and (min-width: 120rem) {
+        /* tablets and desktop */
+        .flex > * {
+          max-width: 16.66%;
+          flex-basis: 16.66%;
+        }
+      }
+
+      .glyphicons h3, .glyphicons h4, .glyphicons hr {
+        width: 100%;
+      }
+      .glyphicons-list {
+        margin-bottom: 2rem;
+        list-style: none;
+      }
+      .glyphicons-list li:not(.pre) {
+        font-size: 1rem;
+        line-height: 1.4;
+        text-align: center;
+        background-color: #f9f9f9;
+        border: 1px solid #fff;
+      }
+      .glyphicons-list .glyphicon-class {
+        display: block;
+        text-align: center;
+        word-wrap: break-word; /* Help out IE10+ with class names */
+      }
+      .glyphicons-list li:not(.pre):hover {
+        color: #fff;
+        background-color: #0074C8;
+      }
+      ul li .icon {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      ul li:not(.pre) {
+        padding: 2rem;
+      }
+
+      li {
+        display: flex;
+      }
+
+    </style>
+</head>
+
+<body>
+  <header>
+    <div>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <h3>securus-icons Icons</h3>
+    <br />
+  </div>
+  </header>
+  <section>
+    <div>
+      <h4>Available Glyphs</h4>
+      <hr/>
+      <ul class="glyphicons-list flex">
+        
+          <li class="" title="Add Child">
+            <i class="icon securus-add-child"></i>
+            <span>.icon .securus-add-child</span>
+          </li>
+          
+          <li class="" title="Add Sibling">
+            <i class="icon securus-add-sibling"></i>
+            <span>.icon .securus-add-sibling</span>
+          </li>
+          
+          <li class="" title="Building8">
+            <i class="icon securus-building8"></i>
+            <span>.icon .securus-building8</span>
+          </li>
+          
+          <li class="" title="Cd Image">
+            <i class="icon securus-cd-image"></i>
+            <span>.icon .securus-cd-image</span>
+          </li>
+          
+          <li class="" title="Covert Alert">
+            <i class="icon securus-covert-alert"></i>
+            <span>.icon .securus-covert-alert</span>
+          </li>
+          
+          <li class="" title="Expired Call">
+            <i class="icon securus-expired-call"></i>
+            <span>.icon .securus-expired-call</span>
+          </li>
+          
+          <li class="" title="Expired Video Visit">
+            <i class="icon securus-expired-video-visit"></i>
+            <span>.icon .securus-expired-video-visit</span>
+          </li>
+          
+          <li class="" title="Extend Time">
+            <i class="icon securus-extend-time"></i>
+            <span>.icon .securus-extend-time</span>
+          </li>
+          
+          <li class="" title="Facility">
+            <i class="icon securus-facility"></i>
+            <span>.icon .securus-facility</span>
+          </li>
+          
+          <li class="" title="Forward Call">
+            <i class="icon securus-forward-call"></i>
+            <span>.icon .securus-forward-call</span>
+          </li>
+          
+          <li class="" title="Geofence">
+            <i class="icon securus-geofence"></i>
+            <span>.icon .securus-geofence</span>
+          </li>
+          
+          <li class="" title="Informant Line Call">
+            <i class="icon securus-informant-line-call"></i>
+            <span>.icon .securus-informant-line-call</span>
+          </li>
+          
+          <li class="" title="Inmate">
+            <i class="icon securus-inmate"></i>
+            <span>.icon .securus-inmate</span>
+          </li>
+          
+          <li class="" title="Mobile Phone Custom">
+            <i class="icon securus-mobile-phone-custom"></i>
+            <span>.icon .securus-mobile-phone-custom</span>
+          </li>
+          
+          <li class="" title="No Recording">
+            <i class="icon securus-no-recording"></i>
+            <span>.icon .securus-no-recording</span>
+          </li>
+          
+          <li class="" title="Play Call">
+            <i class="icon securus-play-call"></i>
+            <span>.icon .securus-play-call</span>
+          </li>
+          
+          <li class="" title="Play Video Visit">
+            <i class="icon securus-play-video-visit"></i>
+            <span>.icon .securus-play-video-visit</span>
+          </li>
+          
+          <li class="" title="Private Call">
+            <i class="icon securus-private-call"></i>
+            <span>.icon .securus-private-call</span>
+          </li>
+          
+          <li class="" title="Private Video Visit">
+            <i class="icon securus-private-video-visit"></i>
+            <span>.icon .securus-private-video-visit</span>
+          </li>
+          
+          <li class="" title="Rewind 30">
+            <i class="icon securus-rewind-30"></i>
+            <span>.icon .securus-rewind-30</span>
+          </li>
+          
+          <li class="" title="Sick Call">
+            <i class="icon securus-sick-call"></i>
+            <span>.icon .securus-sick-call</span>
+          </li>
+          
+          <li class="" title="Terminate Call">
+            <i class="icon securus-terminate-call"></i>
+            <span>.icon .securus-terminate-call</span>
+          </li>
+          
+          <li class="" title="Terminate Video Visit">
+            <i class="icon securus-terminate-video-visit"></i>
+            <span>.icon .securus-terminate-video-visit</span>
+          </li>
+          
+          <li class="" title="Video Off">
+            <i class="icon securus-video-off"></i>
+            <span>.icon .securus-video-off</span>
+          </li>
+          
+          <li class="" title="Virtual Groups">
+            <i class="icon securus-virtual-groups"></i>
+            <span>.icon .securus-virtual-groups</span>
+          </li>
+          
+          <li class="" title="Visitor">
+            <i class="icon securus-visitor"></i>
+            <span>.icon .securus-visitor</span>
+          </li>
+          
+          <li class="" title="Voice Biometrics">
+            <i class="icon securus-voice-biometrics"></i>
+            <span>.icon .securus-voice-biometrics</span>
+          </li>
+          
+          <li class="" title="Volume Mute">
+            <i class="icon securus-volume-mute"></i>
+            <span>.icon .securus-volume-mute</span>
+          </li>
+          
+          <li class="" title="Webcam">
+            <i class="icon securus-webcam"></i>
+            <span>.icon .securus-webcam</span>
+          </li>
+          
+      </ul>
+        <h4>Example:</h4>
+        <hr/>
+      <ul class="flex">
+        <li class="" title="Add Child">
+          <i class="icon securus-add-child"></i>
+        </li>
+        <li class="pre">
+          <pre>&lt;i class="icon securus-add-child"&gt;&lt;/i&gt;</pre>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div>
+      <hr />
+      <span class="copyright-year">&copy; 2017</span> <!-- Company -->
+    </div>
+  </footer>
+
+  <script>
+      console.info('load:', {'glyphs':[
+        {
+          id:"add-child",
+          
+          name:"Add Child",
+          
+          unicode:"ea01",
+          
+        },
+        
+        {
+          id:"add-sibling",
+          
+          name:"Add Sibling",
+          
+          unicode:"ea02",
+          
+        },
+        
+        {
+          id:"building8",
+          
+          name:"Building8",
+          
+          unicode:"ea03",
+          
+        },
+        
+        {
+          id:"cd-image",
+          
+          name:"Cd Image",
+          
+          unicode:"ea04",
+          
+        },
+        
+        {
+          id:"covert-alert",
+          
+          name:"Covert Alert",
+          
+          unicode:"ea05",
+          
+        },
+        
+        {
+          id:"expired-call",
+          
+          name:"Expired Call",
+          
+          unicode:"ea06",
+          
+        },
+        
+        {
+          id:"expired-video-visit",
+          
+          name:"Expired Video Visit",
+          
+          unicode:"ea07",
+          
+        },
+        
+        {
+          id:"extend-time",
+          
+          name:"Extend Time",
+          
+          unicode:"ea08",
+          
+        },
+        
+        {
+          id:"facility",
+          
+          name:"Facility",
+          
+          unicode:"ea09",
+          
+        },
+        
+        {
+          id:"forward-call",
+          
+          name:"Forward Call",
+          
+          unicode:"ea0a",
+          
+        },
+        
+        {
+          id:"geofence",
+          
+          name:"Geofence",
+          
+          unicode:"ea0b",
+          
+        },
+        
+        {
+          id:"informant-line-call",
+          
+          name:"Informant Line Call",
+          
+          unicode:"ea0c",
+          
+        },
+        
+        {
+          id:"inmate",
+          
+          name:"Inmate",
+          
+          unicode:"ea0d",
+          
+        },
+        
+        {
+          id:"mobile-phone-custom",
+          
+          name:"Mobile Phone Custom",
+          
+          unicode:"ea0e",
+          
+        },
+        
+        {
+          id:"no-recording",
+          
+          name:"No Recording",
+          
+          unicode:"ea0f",
+          
+        },
+        
+        {
+          id:"play-call",
+          
+          name:"Play Call",
+          
+          unicode:"ea10",
+          
+        },
+        
+        {
+          id:"play-video-visit",
+          
+          name:"Play Video Visit",
+          
+          unicode:"ea11",
+          
+        },
+        
+        {
+          id:"private-call",
+          
+          name:"Private Call",
+          
+          unicode:"ea12",
+          
+        },
+        
+        {
+          id:"private-video-visit",
+          
+          name:"Private Video Visit",
+          
+          unicode:"ea13",
+          
+        },
+        
+        {
+          id:"rewind-30",
+          
+          name:"Rewind 30",
+          
+          unicode:"ea14",
+          
+        },
+        
+        {
+          id:"sick-call",
+          
+          name:"Sick Call",
+          
+          unicode:"ea15",
+          
+        },
+        
+        {
+          id:"terminate-call",
+          
+          name:"Terminate Call",
+          
+          unicode:"ea16",
+          
+        },
+        
+        {
+          id:"terminate-video-visit",
+          
+          name:"Terminate Video Visit",
+          
+          unicode:"ea17",
+          
+        },
+        
+        {
+          id:"video-off",
+          
+          name:"Video Off",
+          
+          unicode:"ea18",
+          
+        },
+        
+        {
+          id:"virtual-groups",
+          
+          name:"Virtual Groups",
+          
+          unicode:"ea19",
+          
+        },
+        
+        {
+          id:"visitor",
+          
+          name:"Visitor",
+          
+          unicode:"ea1a",
+          
+        },
+        
+        {
+          id:"voice-biometrics",
+          
+          name:"Voice Biometrics",
+          
+          unicode:"ea1b",
+          
+        },
+        
+        {
+          id:"volume-mute",
+          
+          name:"Volume Mute",
+          
+          unicode:"ea1c",
+          
+        },
+        
+        {
+          id:"webcam",
+          
+          name:"Webcam",
+          
+          unicode:"ea1d",
+          
+        },
+        ]});
+    </script>
+</body>
+
+</html>

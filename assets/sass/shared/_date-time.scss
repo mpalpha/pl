@@ -1,0 +1,15 @@
+.dropdown-menu {
+  &.daterangepicker {
+    margin-top: -45px;
+  }
+
+  &.bootstrap-datetimepicker-widget {
+    &.top {
+      margin-top: -45px;
+    }
+
+    &.bottom {
+      margin-top: -45px;
+    }
+  }
+}

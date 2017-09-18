@@ -1,0 +1,65 @@
+#google-map-canvas {
+  background: url(../images/shared/geofence/google-map-large.png) no-repeat left top;
+  height: 400px;
+  position: relative;
+  width: 800px;
+}
+
+.loc {
+  background-color: #111;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  height: 30px;
+  line-height: 200%;
+  text-align: center;
+  vertical-align: middle;
+  width: 30px;
+}
+
+.loc-1 {
+  background-color: #27ae60;
+}
+
+.loc-2 {
+  background-color: #d35400;
+}
+
+.loc-3 {
+  background-color: #8e44ad;
+}
+
+.loc-1b {
+  left: 10px;
+  top: 10px;
+}
+
+.loc-1e {
+  left: 30px;
+  top: 240px;
+}
+
+.loc-2b {
+  left: 40px;
+  top: 30px;
+}
+
+.loc-2e {
+  left: 400px;
+  top: 200px;
+}
+
+.loc-3b {
+  left: 470px;
+  top: 150px;
+}
+
+.loc-3e {
+  left: 600px;
+  top: 180px;
+}
+
+#google-map-canvas .loc {
+  position: absolute;
+}

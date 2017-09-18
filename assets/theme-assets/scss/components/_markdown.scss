@@ -1,0 +1,142 @@
+.markdown__body {
+  clear: both;
+  // Styling of all component documentation need to live in this block
+  // The :not(.library__example) ensures that our documentation styles don't
+  // override the actual project example code. Each child has to be a direct
+  // descendant (>) to ensure all hierarchy works
+  // References:
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/:not
+  // http://stackoverflow.com/questions/14900763/css-selector-for-not-a-child-of-element-type
+  &:not(.library__example) {
+    > *:first-child {
+      margin-top: 0;
+    }
+
+    > h1 {
+      border-bottom: 1px solid #ddd;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 1em;
+      padding-bottom: 10px;
+    }
+
+    > h2 {
+      border-bottom: 1px solid #ddd;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      margin-top: 1em;
+      padding-bottom: 10px;
+    }
+
+    > h3 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 5px;
+      margin-top: 1em;
+    }
+
+    > p {
+      margin-bottom: 1em;
+    }
+
+    > ul,
+    ol {
+      margin-bottom: 1em;
+      margin-left: 1.5em;
+
+      li {
+        ul,
+        ol {
+          margin-left: 1.5em;
+        }
+      }
+    }
+
+    > ul {
+      list-style: square;
+
+      li {
+        ul {
+          list-style: square;
+        }
+      }
+    }
+
+    > ol {
+      list-style: decimal;
+
+      li {
+        ol {
+          list-style: decimal;
+        }
+      }
+    }
+
+    > pre {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+      line-height: 1.3em;
+    }
+
+    > table {
+      width: 100%;
+
+      th {
+        background-color: #ddd;
+        font-size: .8em;
+        font-weight: bold;
+        padding: 10px;
+        text-align: left;
+        text-transform: uppercase;
+      }
+
+      td {
+        padding: 5px 10px;
+      }
+    }
+
+    img[alt*="icon"] {
+      height: 32px;
+      width: auto;
+    }
+
+    > .row {
+      *[class*="col-"] {
+        margin-bottom: 15px;
+      }
+    }
+
+    .background-pink {
+      background-color: rgba(255, 0, 0, 0.15);
+    }
+  }
+}
+
+.hljs {
+  &-title {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+
+  &-tag {
+    margin-right: -0.2rem;
+    &:not(:last-child) {
+      margin-left: -0.2rem;
+    }
+  }
+
+  &-comment {
+    display: inline-block;
+    margin-top: 1em;
+  }
+}
+
+.library__example {
+  h1 {
+    border: none;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+}

@@ -1,0 +1,24 @@
+.no-breadcrumb {
+  padding-top: 80px;
+}
+
+%breadcrumb {
+  background: #ccc;
+  margin: 0;
+}
+
+.breadcrumb {
+  @extend %breadcrumb;
+
+  &-container {
+    margin-bottom: 20px;
+    padding-top: 65px;
+    @extend %breadcrumb;
+  }
+  // -- =BUGFIX --
+  //Temporary fix for LibSass bug where it interprets \ as \\
+  //Remove once LibSass fixes this bug
+  > li + li:before {
+    content: "/\00a0";
+  } // -- =BUGFIX --
+}

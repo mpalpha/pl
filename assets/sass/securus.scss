@@ -1,0 +1,151 @@
+// Securus Pattern Library
+//
+// SCSS imports
+//
+// 
+// Libraries
+//
+// Should live at the top of the stylesheet to they can be easily overridden
+@import 'shared/dropdown-checkbox';
+@import 'vendor-ext/jquery-sortable';
+
+// Core Scaffolding
+//
+// SCSS necessary to "boot up" the project
+@import 'shared/variables';         // Customized Bootstrap variables for shared
+@import 'shared/mixins';            // Custom mixins for NextGen
+@import 'shared/fonts';
+
+// Bootstrap
+//
+// Load only the Bootstrap SCSS files that are needed
+@import 'shared/bootstrap';
+
+// Shared
+//
+// Common Components
+@import 'shared/securus-icons';     // Custom Securus icons
+@import 'shared/elements';          // Elements
+@import 'shared/colors';            // Color
+@import 'shared/grid';              // Grid
+@import 'shared/states';            // States
+@import 'shared/system';            // System (notifications, busy, messages)
+@import 'shared/tooltip';           // Tooltip
+@import 'shared/date-time';         // Date/Time
+@import 'shared/actions';           // Actions
+@import 'shared/checkbox-list';     // Checkbox List
+@import 'shared/accordion';         // Accordions
+@import 'shared/logo';              // Logo
+@import 'shared/icon';              // Icons
+@import 'shared/toggle';            // Toggle
+@import 'shared/override';          // Override
+@import 'shared/info';              // Info icon
+@import 'shared/headers';           // Custom headers
+@import 'shared/footer';            // Custom Footer
+@import 'shared/lists';             // Lists
+@import 'shared/popups';            // Fixes missing styles in Bootstrap
+@import 'shared/modals';            // Fixes missing styles in Bootstrap
+@import 'shared/buttons';           // Custom button elements
+@import 'shared/button-groups';     // Custom button groups
+@import 'shared/panels';            // Custom Panels
+@import 'shared/form';              // Custom form elements
+@import 'shared/badges';            // Badges
+@import 'shared/tables';            // Load Table Styles
+@import 'shared/treeview';          // Treeview (e.g. Sick Call Symptoms admin page)
+@import 'shared/alert';             // Alert Styles
+@import 'shared/tabs';              // Tab Styles
+@import 'shared/dropdowns';         // Management Level Context Styles
+@import 'shared/navbar';            // Navbar Styles
+@import 'shared/timeline';          // Inmate Timeline Styles
+@import 'shared/mgmt-context';      // Management Level Context Styles
+@import 'shared/inputfields';       // Management Level Context Styles
+@import 'shared/player';            // Management Level Context Styles
+@import 'shared/page-header';       // Page Header Styles
+@import 'shared/breadcrumbs';       // Breadcrumbs
+@import 'shared/search';            // Search Styles
+@import 'shared/sidebar';           // Sidebar styles
+@import 'shared/inmate-edit';       // Inmate Profile Edit
+@import 'shared/inmate-profile';    // Inmate Profile
+@import 'shared/val';               // Visitation List
+@import 'shared/securus';           // Securus
+@import 'shared/angular';           // Securus
+@import 'shared/animations';        // Animations
+@import 'shared/redirect';          // Redirect overlay for external apps
+@import 'shared/admin';             // Add styling for Admin components like Devmode (for admin users only)
+@import 'shared/option-box';        // Add styling for Admin components like Devmode (for admin users only)
+@import 'vendor-ext/bootstrap-dropdown-checkbox';   // Override for Boostrap Dropdown Checkbox
+@import 'shared/flex';              // Flex
+@import 'shared/bootstrap-grid-flexbox';   // Bootstrep Grid Flexbox
+@import 'shared/wizard';            // Wizard
+@import 'shared/text-align';        // Text Alignment Utilities
+@import 'shared/helpers';           // Helper
+
+//
+// @import 'pages';
+// MAS
+@import 'pages/mas/dashboard.scss';
+
+// Investigate
+@import 'pages/investigate/lbs';
+@import 'pages/investigate/lbs-add';
+@import 'pages/investigate/modal-geo-location';
+
+// Visits
+@import 'pages/visits/visits';
+
+// Dashboard
+@import 'pages/dashboard/dashboard';
+
+// Dashboard
+@import 'pages/live-monitor/live-monitor';
+
+// Search Communications
+@import 'pages/search/communications/communications';
+
+// Search
+@import 'pages/search/inmate/inmate';
+@import 'pages/search/inmate/voice-biometrics';
+
+// Search System Logs
+@import 'pages/search/system-logs/system-logs';
+
+// Visitors
+@import 'pages/manage/visitors/visitors';
+
+// Users
+@import 'pages/manage/users/modal-bulk-add-users';
+@import 'pages/manage/users/add/add';
+
+// Facilities and Sites
+@import 'pages/manage/facility-and-sites/shared';
+@import 'pages/manage/facility-and-sites/sites';
+
+// Grievances
+@import 'pages/manage/grievances/grievances';
+
+// Security Roles
+@import 'pages/manage/security-roles/security-roles';
+
+// Commissary
+@import 'pages/manage/commissary/commissary';
+
+// Pages
+@import 'pages/manage/virtual-groups/virtual-groups';
+
+// Call Settings
+@import 'pages/manage/call-settings/call-settings';
+
+// Call Restrictions
+@import 'pages/manage/call-settings/call-restrictions/call-restrictions';
+
+// Call Restrictions
+@import 'pages/manage/call-settings/call-schedules/call-schedules';
+
+// Sick Calls
+@import 'pages/manage/sick-calls/sick-calls';
+
+// User Profile
+@import 'pages/manage/profile/profile';
+
+// Monitor
+@import 'pages/monitor/multisession';

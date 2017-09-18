@@ -1,0 +1,31 @@
+.overlay-redirect {
+  background: white url(../images/shared/brand/bg/backdrop1.jpg) no-repeat left top;
+  background-size: cover;
+  display: table;
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 9999;
+}
+
+.overlay-redirect .logo-securus {
+  position: absolute;
+  right: 10%;
+  top: 0;
+}
+
+.overlay-content {
+  display: table-cell;
+  text-align: center;
+  top: 50%;
+  vertical-align: middle;
+}
+
+.overlay-content .container-fluid {
+  background-color: #eee;
+  min-height: 40px;
+  padding: 20px;
+}

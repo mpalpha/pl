@@ -1,0 +1,83 @@
+.restriction-form {
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px dashed;
+  border-radius: 0;
+  box-shadow: none;
+  color: $brand-primary;
+  font-size: 20px;
+  margin: 0 5px;
+  padding: 0;
+}
+
+// Call Schedule and Restriction Grid //
+
+.call-restriction-panel {
+  min-height: 370px;
+
+  .call-restriction-detail {
+    min-height: 191px;
+  }
+}
+
+.call-velocity-restriction-panel {
+  min-height: 350px;
+
+  .call-velocity-restriction-detail {
+    min-height: 124px;
+  }
+}
+
+.visit-restriction-panel {
+  min-height: 265px;
+
+  .visit-restriction-detail {
+    min-height: 86px;
+
+    .btn-group {
+      min-width: 85px;
+    }
+  }
+}
+
+ul.restriction {
+  padding-left: 25px;
+}
+
+// Restrictions pages
+.restrictions-language {
+  font-size: 20px;
+
+  .form-inline,
+   {
+    margin: 10px 0;
+
+    + .form-inline {
+      margin-left: 30px;
+
+      + .reset {
+        margin: 20px 0 0;
+      }
+    }
+  }
+
+  .restriction-form-placeholder {
+    color: $brand-primary;
+
+    input {
+      color: $brand-primary;
+      font-size: 20px;
+
+      &.form-control {
+        width: 105px;
+      }
+    }
+
+    i {
+      font-size: 14px;
+      margin-left: 6px;
+      margin-right: 2px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.library {
+    &__color-swatch {
+        border-radius: 3px;
+        float: left;
+        //margin-right: 2%;
+        margin-bottom: 30px;
+        //    width: 20%;
+        //border: 1px solid #ddd;
+        //padding: 5px;
+        &__preview {
+            display: block;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+        &__details {
+          padding-left: 1.75rem;
+        }
+    }
+}

@@ -1,0 +1,280 @@
+.cdr-actions {
+  text-align: right;
+  white-space: nowrap;
+  width: 75%;
+}
+
+.cdr-actions .add-tag-group {
+  width: 60%;
+}
+
+.cdr-action {
+  display: inline-block;
+}
+
+.add-tag-group {
+  display: none;
+  white-space: nowrap;
+}
+
+.result-options {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.btn-cancel-add-tag {
+  vertical-align: top;
+}
+
+.btn-tag {
+  vertical-align: top;
+  width: auto;
+}
+
+.cdr-end-time {
+  display: none;
+}
+
+.panel.panel-tertiary .panel-body {
+  background: $flat-midnight-blue;
+  border-radius: 4px;
+  color: $white;
+
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 35px;
+  }
+
+  label {
+    font-weight: normal;
+
+    input {
+      margin-right: 10px;
+    }
+  }
+
+  h4 {
+    font-size: 15px;
+  }
+}
+
+.filter-search {
+  position: relative;
+  width: 100%;
+
+  input[type="text"] {
+    border: 1px solid #eee;
+  }
+}
+
+.filter-search-icon {
+  float: right;
+  margin-left: -200px;
+  margin-right: 5px;
+  margin-top: -25px;
+}
+
+.filter-select {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 10px;
+
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 2px;
+    width: 200px;
+    @include indent-checkbox-container;
+
+    &:after {
+      clear: both;
+      content: " ";
+      display: table;
+    }
+  }
+
+  input {
+    float: left;
+  }
+
+  .wrap {
+    display: block;
+    float: left;
+    width: calc(100% - 20px);
+    word-wrap: break-word;
+  }
+
+  input[type="checkbox"] {
+    //    margin-right: 6px;
+    @include indent-checkbox;
+  }
+}
+//PAN
+#pan-details {
+  border-top: 1px solid #cccccc;
+}
+
+#pan-details > .row > div:nth-child(2) {
+  border-left: 1px solid #cccccc;
+}
+
+//----------------------------
+//   Single Filters
+//----------------------------
+.single-filter {
+  padding: 6px;
+
+  label {
+    font-weight: normal;
+    width: calc(100% - 30px);
+  }
+
+  [type="checkbox"] {
+    float: right;
+
+    &.fa.checkbox + label {
+      margin-bottom: 2px;
+      margin-top: 3px;
+    }
+  }
+}
+//----------------------------
+
+
+.fa-type {
+  font-size: 24px;
+}
+
+.filter-message {
+  padding: 10px;
+}
+
+.panel-call-details {
+  padding: 0;
+  word-wrap: break-word;
+
+  h4 {
+    margin-top: 0;
+  }
+
+  .panel-body {
+    padding: 0;
+  }
+
+  .btn-sm {
+    margin-top: 10px;
+    width: 100%;
+    //Removed background-color and color overrides.
+  }
+
+  .details {
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+    margin-top: 3px;
+  }
+
+  .right-panel-hr {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0 10px;
+    padding-bottom: 3px;
+  }
+}
+
+.cdr-call-details,
+.vdr-video-details {
+  [class^="col-md-"] + [class^="col-md-"] {
+    padding-left: 0;
+  }
+}
+
+.filter-container {
+  max-height: 170px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  ul {
+    list-style: none;
+  }
+}
+
+/* ----------------------- */
+/*    Custom Checkboxes    */
+/*    Selected Filters     */
+/* ----------------------- */
+
+.filters-selected {
+  height: 100px;
+  margin-bottom: 10px;
+  overflow-y: auto;
+
+  h4 {
+    margin-bottom: 4px;
+    margin-top: 0;
+  }
+}
+
+.filter-selected {
+  background: $brand-primary;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  max-width: 95%;
+  padding: 1px 8px 1px 0;
+  white-space: nowrap;
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  .icon {
+    color: rgba(255, 255, 255, .5);
+    font-family: FontAwesome;
+    font-style: normal;
+  }
+
+  .icon:after {
+    font-size: 1.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  input[type=checkbox] + .icon:after {
+    content: '\f111';
+  }
+
+  input[type=checkbox]:checked + .icon:after {
+    content: '\f057';
+  }
+
+  .label {
+    color: #fff;
+    display: inline-block;
+    font-size: .9em;
+    font-weight: 500;
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+}
+
+.margin-more-option {
+  margin: 5px 364px 38px 16px;
+}
+
+.filters-selected-group {
+  margin-bottom: 10px;
+}
+
+.table-cdr-results td:nth-child(2) i {
+  opacity: 1;
+}
+
+.disconnect-rule-margin {
+  margin: 10px 0 10px 40px;
+}

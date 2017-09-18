@@ -1,0 +1,202 @@
+$step-circle-size: 50px !default;
+$step-height: $step-circle-size !default;
+$step-color-default: $brand-gunmetal !default;
+$step-color-completed: $securus-primary-blue !default;
+$step-color-active: $brand-success !default;
+$step-color-inverse: #fff !default;
+$step-border-size: 1px !default;
+$step-outline: 0 !default;
+$step-outline-border: 1.5px !default;
+$step-count: 12 !default;
+$steps-class: ".steps" !default;
+
+#{$steps-class} {
+  display: flex;
+  height: $step-height;
+  justify-content: space-between;
+  position: relative;
+  transform: scale(0.999);
+  z-index: 999; // fixes flexbox  z-index issue with col-* and menus
+
+  &-labels {
+    margin-bottom: $step-circle-size * 1.5;
+  }
+
+  .step {
+    font-size: 0;
+    top: 0;
+    transition: all 0.25s ease;
+
+    @if $step-outline-border {
+      // button outline fix
+      &-circle {
+        &:after {
+          border: 0px solid rgba(#0074c8, 0);
+          border-radius: 50%;
+          content: '';
+          height: calc(100% + #{$step-outline-border * 5});
+          left: -#{$step-outline-border * 2.5};
+          position: absolute;
+          top: -#{$step-outline-border * 2.5};
+          transition-duration: .2s;
+          transition-property: outline-color;
+          transition-timing-function: ease-out;
+          width: calc(100% + #{$step-outline-border * 5});
+        }
+      }
+
+      &:focus,
+      &:active,
+      &:active:focus,
+      &:focus:active {
+        .step-circle {
+          &:after {
+            border: $step-outline-border solid rgba(#0074c8, 0.25);
+          }
+        }
+      }
+    }
+
+    @if $step-outline {
+      outline: $step-outline;
+
+      &:focus,
+      &:active {
+        outline: $step-outline;
+      }
+    }
+
+    @for $step from 2 through $step-count {
+      @at-root {
+        #{$steps-class} .step:nth-last-child(#{$step}):first-child,
+        #{$steps-class} .step:nth-last-child(#{$step}):first-child ~ * {
+          &:before {
+            width: calc(#{100 / ($step - 1)}% - #{50 * $step / ($step - 1)}px);
+          }
+        }
+      }
+    }
+
+    &-circle {
+      border: $step-border-size solid $step-color-default;
+      border-radius: 50%;
+      font-size: $step-circle-size / 2;
+      height: $step-circle-size;
+      position: relative;
+      transition: all 0.25s ease;
+      width: $step-circle-size;
+
+      > .fa {
+        color: $step-color-default;
+        height: calc(#{$step-circle-size} - #{$step-border-size * 2});
+        line-height: #{$step-circle-size};
+        text-align: center;
+        transition: all 0.25s ease;
+        width: calc(#{$step-circle-size} - #{$step-border-size * 2});
+      }
+
+      &--content {
+        color: $step-color-default;
+        font-size: initial;
+        left: 0.3em;
+        min-width: 250.1%;
+        padding-top: 0.5rem;
+        position: absolute;
+        top: 100%;
+        transition: all 0.25s ease;
+
+        > small {
+          display: inline-block;
+          width: 100%;
+        }
+      }
+
+      &.text-center {
+        > .step-circle--content {
+          left: -75%;
+        }
+      }
+    }
+
+    &:not(:first-child) {
+      &:before {
+        border-top: $step-border-size solid $step-color-default;
+        content: '';
+        left: auto;
+        position: absolute;
+        top: calc(#{$step-height - $step-border-size} / 2);
+        //width: calc(100% / #{$step-count - 1} + -#{$step-height * 1.18});
+        transform: translateX(-100%);
+        transition: all 0.75s ease;
+        z-index: -1;
+      }
+    }
+
+    &-circle {
+      border-color: $step-color-default;
+
+      &:focus,
+      &:hover {
+        background-color: $step-color-default;
+
+        > .fa {
+          color: $step-color-inverse;
+        }
+      }
+    }
+
+    &.completed {
+      .step-circle {
+        border-color: $step-color-completed;
+
+        > .fa {
+          color: $step-color-completed;
+        }
+
+        > .step-circle--content {
+          color: $step-color-completed;
+        }
+
+        &:focus,
+        &:hover {
+          background-color: $step-color-completed;
+
+          > .fa {
+            color: $step-color-inverse;
+          }
+        }
+      }
+
+      &:before {
+        border-color: $step-color-completed;
+      }
+    }
+
+    &.active {
+      .step-circle {
+        border-color: $step-color-active;
+
+        > .fa {
+          color: $step-color-active;
+        }
+
+        > .step-circle--content {
+          color: $step-color-active;
+        }
+
+        &:focus,
+        &:hover {
+          background-color: $step-color-active;
+
+          > .fa {
+            color: $step-color-inverse;
+          }
+        }
+      }
+
+      &:before {
+        border-color: $step-color-completed;
+      }
+    }
+  }
+}

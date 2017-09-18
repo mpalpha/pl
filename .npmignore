@@ -1,0 +1,8 @@
+assets/
+data/
+gulp/
+src/
+theme/
+gulpfile.js
+.gitignore
+bower.json

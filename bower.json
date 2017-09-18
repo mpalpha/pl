@@ -1,0 +1,27 @@
+{
+    "name": "securus-pattern-library",
+    "version": "1.2.81",
+    "homepage": "http://es-bitbucket01.dal.securustech.net/projects/UX/repos/securus-pattern-library",
+    "authors": [
+        "Securus UI Development"
+    ],
+    "description": "Securus Pattern Library contains UI assets which are used in Securus Applications",
+    "main": [
+        "dist/pattern-library/index.html"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests",
+        "components/",
+        "html/",
+        ".gitignore",
+        ".npmignore",
+        ".patternpackrc",
+        "gruntfile.js",
+        "package.json",
+        "template.md"
+    ]
+}

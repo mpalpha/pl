@@ -1,0 +1,289 @@
+nav,
+section,
+header,
+article {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+$login-body-color: #111;
+
+%clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.login {
+  //Make background image stretch across the entire browser window
+  background: url(../images/shared/brand/bg/backdrop1.jpg) no-repeat right bottom fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: $login-body-color;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  padding-bottom: 80px;
+
+  p {
+    margin-bottom: 20px;
+
+    &.validation-message {
+      color: $alert-danger-text;
+      margin-bottom: 0;
+
+      .fa.fa-warning {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  a {
+    color: $brand-primary;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($brand-primary, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  select {
+    background-color: white;
+    font-size: 16px;
+    height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .col-100 {
+    width: 100%;
+  }
+
+  .col-50 {
+    width: 50%;
+  }
+
+  .col-25 {
+    width: 25%;
+  }
+
+  .logo-row {
+    float: left;
+    width: 100%;
+  }
+
+  .logo-securus {
+    display: block;
+    height: 80px;
+    position: absolute;
+    right: 40px;
+    top: 0;
+    width: 80px;
+    //    background: url('../images/brand/logo.png');
+    //    background-size: 80px;
+  }
+
+  .title {
+    background-color: transparentize($brand-primary, .1);
+    display: block;
+    font-weight: 100 !important;
+    margin-top: 80px;
+    padding: 20px 40px;
+    text-transform: uppercase;
+
+    h1 {
+      color: white;
+      font-size: 28px;
+      font-weight: 100;
+      line-height: 1;
+      margin: 0;
+
+      span {
+        display: block;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .content {
+    background-color: #eee;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    padding-bottom: 20px;
+    @extend %clearfix;
+
+    > * {
+      vertical-align: top;
+    }
+
+    h2 {
+      color: $gray-light;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      color: $gray-light;
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+  }
+
+  .left {
+    display: inline-block;
+    padding: 20px;
+    vertical-align: top;
+    width: 50%;
+  }
+
+  .right {
+    display: inline-block;
+    padding: 20px;
+    position: relative;
+    vertical-align: top;
+    width: 49%;
+
+    &:before {
+      border-left: 1px solid #ccc;
+      bottom: 20px;
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 20px;
+      width: 1px;
+    }
+  }
+
+  .center {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 50%;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .center-content {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 4px 8px;
+  }
+
+  .agreement {
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-weight: 300;
+    height: 300px;
+    line-height: 1.4;
+    overflow: auto;
+    padding: 20px;
+    white-space: normal;
+  }
+
+  .btn {
+    border-radius: 4px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  .btn-primary {
+    background-color: $brand-primary;
+
+    &:hover {
+      background-color: darken($brand-primary, 10%);
+    }
+  }
+
+  .btn-default {
+    background-color: $gray-light;
+
+    &:hover {
+      background-color: darken($gray-light, 10%);
+    }
+  }
+
+  .btn-login {
+    margin-bottom: 8px;
+    width: 25%;
+  }
+
+  .row-btn {
+    margin-top: 20px;
+    @extend %clearfix;
+  }
+
+  .strong-password-rules {
+    margin-bottom: 24px;
+    padding: 8px 0;
+
+    label {
+      text-transform: none;
+    }
+
+    ul {
+      display: block;
+      margin-left: 20px;
+    }
+
+    input[type=checkbox]:checked + .icon:after,
+    input[type=radio]:checked + .icon:after,
+    input[type=checkbox][disabled]:checked + .icon:after,
+    input[type=radio][disabled]:checked + .icon:after {
+      border-color: $brand-primary;
+      color: $brand-primary;
+    }
+  }
+
+  footer {
+    background-color: white;
+    bottom: 0;
+    font-size: 12px;
+    left: 0;
+    padding: 8px 40px;
+    position: fixed;
+    width: 100%;
+  }
+}

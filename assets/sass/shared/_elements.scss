@@ -1,0 +1,412 @@
+body {
+  margin-bottom: 80px;
+  margin-top: 50px;
+  min-height: calc(100vh - 130px);
+  position: relative;
+}
+
+// DONOTUSE! Causes Bing Maps to FREAK OUT! Also, performance problems
+//* {
+//  @include transition(all 0.2s)
+//}
+dd {
+  margin-bottom: 10px;
+}
+
+a.edit {
+  white-space: nowrap;
+}
+
+h1 {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+address {
+  span {
+    display: block;
+  }
+
+  i {
+    color: $gray-light;
+    display: block;
+    font-size: 0.8em;
+  }
+}
+
+fieldset {
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+}
+
+legend {
+  border-bottom: 0;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  font-weight: bold;
+  margin-bottom: 16px;
+  padding: 6px 18px;
+  text-align: center;
+  width: auto;
+
+  span {
+    margin-right: 10px;
+  }
+
+  .form-control {
+    display: inline-block;
+    font-size: 21px;
+    margin-left: 10px;
+    width: auto;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+}
+
+
+
+
+/*
+ * Examples
+ *
+ * Isolated sections of example content for each component or feature. Usually
+ * followed by a code snippet.
+ */
+
+.spl-example {
+  border-color: #e5e5e5 #eee #eee;
+  border-style: solid;
+  border-width: 1px 0;
+  -webkit-box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, .05);
+  margin: 0 -15px 15px;
+  padding: 45px 15px 15px;
+  position: relative;
+}
+/* Echo out a label for the example */
+.spl-example:after {
+  color: #959595;
+  content: "Example";
+  font-size: 12px;
+  font-weight: bold;
+  left: 15px;
+  letter-spacing: 1px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 15px;
+}
+
+.spl-example-padded-bottom {
+  padding-bottom: 24px;
+}
+
+/* Tweak display of the code snippets when following an example */
+.spl-example + .highlight,
+.spl-example + .zero-clipboard + .highlight {
+  border-radius: 0;
+  border-width: 0 0 1px;
+  margin: -15px -15px 15px;
+}
+
+/* Make the examples and snippets not full-width */
+@media (min-width: 768px) {
+  .spl-example {
+    background-color: #fff;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .spl-example + .highlight,
+  .spl-example + .zero-clipboard + .highlight {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-width: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -16px;
+  }
+
+  .spl-example-standalone {
+    border-radius: 4px;
+  }
+}
+
+/* Undo width of container */
+.spl-example .container {
+  width: auto;
+}
+
+/* Tweak content of examples for optimum awesome */
+.spl-example > p:last-child,
+.spl-example > ul:last-child,
+.spl-example > ol:last-child,
+.spl-example > blockquote:last-child,
+.spl-example > .form-control:last-child,
+.spl-example > .table:last-child,
+.spl-example > .navbar:last-child,
+.spl-example > .jumbotron:last-child,
+.spl-example > .alert:last-child,
+.spl-example > .panel:last-child,
+.spl-example > .list-group:last-child,
+.spl-example > .well:last-child,
+.spl-example > .progress:last-child,
+.spl-example > .table-responsive:last-child > .table {
+  margin-bottom: 0;
+}
+
+.spl-example > p > .close {
+  float: none;
+}
+
+/* Typography */
+.spl-example-type .table .type-info {
+  color: #767676;
+  vertical-align: middle;
+}
+
+.spl-example-type .table td {
+  border-color: #eee;
+  padding: 15px 0;
+}
+
+.spl-example-type .table tr:first-child td {
+  border-top: 0;
+}
+
+.spl-example-type h1,
+.spl-example-type h2,
+.spl-example-type h3,
+.spl-example-type h4,
+.spl-example-type h5,
+.spl-example-type h6 {
+  margin: 0;
+}
+
+/* Contextual background colors */
+.spl-example-bg-classes p {
+  padding: 15px;
+}
+
+/* Images */
+.spl-example > .img-circle,
+.spl-example > .img-rounded,
+.spl-example > .img-thumbnail {
+  margin: 5px;
+}
+
+/* Tables */
+.spl-example > .table-responsive > .table {
+  background-color: #fff;
+}
+
+/* Buttons */
+.spl-example > .btn,
+.spl-example > .btn-group {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.spl-example > .btn-toolbar + .btn-toolbar {
+  margin-top: 10px;
+}
+
+/* Forms */
+.spl-example-control-sizing select,
+.spl-example-control-sizing input[type="text"] + input[type="text"] {
+  margin-top: 10px;
+}
+
+.spl-example-form .input-group {
+  margin-bottom: 10px;
+}
+
+.spl-example > textarea.form-control {
+  resize: vertical;
+}
+
+/* List groups */
+.spl-example > .list-group {
+  max-width: 400px;
+}
+
+/* Navbars */
+.spl-example .navbar:last-child {
+  margin-bottom: 0;
+}
+
+.spl-navbar-top-example,
+.spl-navbar-bottom-example {
+  overflow: hidden; /* cut the drop shadows off */
+  padding: 0;
+  z-index: 1;
+}
+
+.spl-navbar-top-example .navbar-header,
+.spl-navbar-bottom-example .navbar-header {
+  margin-left: 0;
+}
+
+.spl-navbar-top-example .navbar-fixed-top,
+.spl-navbar-bottom-example .navbar-fixed-bottom {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
+.spl-navbar-top-example {
+  padding-bottom: 45px;
+}
+
+.spl-navbar-top-example:after {
+  bottom: 15px;
+  top: auto;
+}
+
+.spl-navbar-top-example .navbar-fixed-top {
+  top: -1px;
+}
+
+.spl-navbar-bottom-example {
+  padding-top: 45px;
+}
+
+.spl-navbar-bottom-example .navbar-fixed-bottom {
+  bottom: -1px;
+}
+
+.spl-navbar-bottom-example .navbar {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .spl-navbar-top-example .navbar-fixed-top,
+  .spl-navbar-bottom-example .navbar-fixed-bottom {
+    position: absolute;
+  }
+}
+
+/* Pagination */
+.spl-example .pagination {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+/* Pager */
+.spl-example > .pager {
+  margin-top: 0;
+}
+
+/* Example modals */
+.spl-example-modal {
+  background-color: #f5f5f5;
+}
+
+.spl-example-modal .modal {
+  bottom: auto;
+  display: block;
+  left: auto;
+  position: relative;
+  right: auto;
+  top: auto;
+  z-index: 1;
+}
+
+.spl-example-modal .modal-dialog {
+  left: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Example dropdowns */
+.spl-example > .dropdown > .dropdown-toggle {
+  float: left;
+}
+
+.spl-example > .dropdown > .dropdown-menu {
+  clear: left;
+  display: block;
+  margin-bottom: 5px;
+  position: static;
+}
+
+/* Example tabbable tabs */
+.spl-example-tabs .nav-tabs {
+  margin-bottom: 15px;
+}
+
+/* Tooltips */
+.spl-example-tooltips {
+  text-align: center;
+}
+
+.spl-example-tooltips > .btn {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.spl-example-tooltip .tooltip {
+  display: inline-block;
+  margin: 10px 20px;
+  opacity: 1;
+  position: relative;
+}
+
+/* Popovers */
+.spl-example-popover {
+  background-color: #f9f9f9;
+  padding-bottom: 24px;
+}
+
+.spl-example-popover .popover {
+  display: block;
+  float: left;
+  margin: 20px;
+  position: relative;
+  width: 260px;
+}
+
+/* Scrollspy demo on fixed height div */
+.scrollspy-example {
+  height: 200px;
+  margin-top: 10px;
+  overflow: auto;
+  position: relative;
+}
+
+.spl-example > .nav-pills-stacked-example {
+  max-width: 300px;
+}
+
+/* Simple collapse example */
+#collapseExample .well {
+  margin-bottom: 0;
+}
+
+/* Don't wrap event names in Events tables in JS plugin docs */
+.spl-events-table > thead > tr > th:first-child,
+.spl-events-table > tbody > tr > td:first-child {
+  white-space: nowrap;
+}
+
+.spl-events-table > thead > tr > th:first-child {
+  width: 150px;
+}
+
+.js-options-table > thead > tr > th:nth-child(1),
+.js-options-table > thead > tr > th:nth-child(2) {
+  width: 100px;
+}
+
+.js-options-table > thead > tr > th:nth-child(3) {
+  width: 50px;
+}

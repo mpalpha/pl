@@ -1,0 +1,96 @@
+.treeview {
+  a {
+    border-bottom: 1px solid #eee;
+    display: block;
+    padding: 6px;
+
+    &:hover {
+      background-color: $brand-primary;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    &.active {
+      background-color: $brand-primary;
+      border-radius: 5px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+
+  ul ul a {
+    padding-left: 40px;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+  li {
+    margin: 0 0 -1px 0;
+    padding: 0;
+  }
+
+  .add-treeview-row {
+    border-bottom: 1px solid #eee;
+    display: none;
+    padding: 10px;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .add-treeview-row input,
+  .add-treeview-row .btn {
+    display: inline-block;
+    padding-left: 6px;
+  }
+
+  .add-treeview-row input {
+    width: 70%;
+  }
+
+  .add-treeview-row .btn {
+    width: 10%;
+  }
+
+  .treeview-list {
+    margin-left: 0;
+    padding-left: 0;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
+
+.treeview-simple {
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  ul ul li {
+    padding-left: 15px;
+    position: relative;
+  }
+
+  ul ul li:before {
+    border-bottom: 2px dotted #ccc;
+    border-left: 2px dotted #ccc;
+    content: " ";
+    display: inline-block;
+    height: 10px;
+    left: 2px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+  }
+}

@@ -1,0 +1,26 @@
+.page-footer {
+  border-top: 1px solid $gray-lighter;
+  margin: 40px 0;
+  padding: 20px 0px;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-right: 1px solid #eee;
+      float: left;
+      padding-left: 10px;
+      padding-right: 10px;
+
+      &:nth-child(1) {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+}

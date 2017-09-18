@@ -1,0 +1,258 @@
+// spacing mixin variables
+$spacing-type: margin padding !global;
+$spacing-directions: top right bottom left v h !global;
+$spacing-total: 60 !global;
+$spacing-increment: 5 !global;
+// spacing mixin
+/* stylelint-disable */
+@mixin spacing($type: $spacing-type, $directions: $spacing-directions, $total: $spacing-total, $increment: $spacing-increment) {
+  @for $i from 0 through $total {
+    @if $i % $increment == 0 or $i == 0 {
+      @each $t in $type {
+        @each $d in $directions {
+          @if str_length($d) == 1 {
+            @if $t == margin and $i != 0 {
+              // %spacing-directions--* (negative horitontal/vertical margin)
+              %#{$t}-#{$d}--#{$i},
+              .#{$t}-#{$d}--#{$i} {
+                @if $d == "v" {
+                  #{$t}-top: -#{$i}px !important;
+                  #{$t}-bottom: -#{$i}px !important;
+                } @else {
+                  #{$t}-left: -#{$i}px !important;
+                  #{$t}-right: -#{$i}px !important;
+                }
+              }
+            }
+            // %spacing-directions-* (positive horitontal or vertical margin/padding)
+            %#{$t}-#{$d}-#{$i},
+            .#{$t}-#{$d}-#{$i} {
+              @if $d == "v" {
+                #{$t}-top: #{$i}px !important;
+                #{$t}-bottom: #{$i}px !important;
+              } @else {
+                #{$t}-left: #{$i}px !important;
+                #{$t}-right: #{$i}px !important;
+              }
+            }
+          } @else {
+            // %spacing-direction-* (positive single margin or padding)
+            %#{$t}-#{$d}-#{$i},
+            .#{$t}-#{$d}-#{$i} {
+              #{$t}-#{$d}: #{$i}px !important;
+            }
+
+            %#{$t}-#{$d}--#{$i},
+            .#{$t}-#{$d}--#{$i} {
+              #{$t}-#{$d}: -#{$i}px !important;
+            }
+          }
+        } // %spacing-directions-* (negative all margin)
+        @if $t == margin and $i != 0 {
+          %#{$t}--#{$i},
+          .#{$t}--#{$i} {
+            #{$t}: -#{$i}px !important;
+          }
+        } // %spacing-directions-* (positive all margin or padding)
+        %#{$t}-#{$i},
+        .#{$t}-#{$i} {
+          #{$t}: #{$i}px !important;
+        }
+      }
+    }
+  }
+}
+/* stylelint-enable */
+
+// initialize spacing mixin
+@include spacing();
+$checkbox-indent: 22px;
+
+@mixin indent-checkbox-container {
+  padding-left: $checkbox-indent;
+}
+
+@mixin indent-checkbox {
+  margin-left: -($checkbox-indent);
+}
+
+// retro spacing utility classes - todo: remove from app
+.no {
+  &-padding {
+    @extend %padding-0;
+
+    &-bottom {
+      @extend %padding-bottom-0;
+    }
+
+    &-top {
+      @extend %padding-top-0;
+    }
+  }
+
+  &-margin {
+    @extend %margin-0;
+
+    &-bottom {
+      @extend %margin-bottom-0;
+    }
+
+    &-top {
+      @extend %margin-top-0;
+    }
+  }
+}
+
+// Site line height fix
+.site.line-height-1em {
+  line-height: 1em;
+}
+
+// Use in place of jQuery show/hide
+.show {
+  @extend .display-block;
+
+  &-inline-block {
+    @extend .display-inline-block;
+  }
+
+  &-inline {
+    @extend .display-inline;
+  }
+}
+
+.hide {
+  @extend .display-none;
+}
+
+// Horizontal Rules
+.hr {
+  &-5 {
+    margin: 5px;
+  }
+
+  &-10 {
+    margin: 10px;
+  }
+}
+
+// Borders
+.border {
+  border-style: solid;
+  border-width: 1px;
+
+  @each $d in (top right bottom left) {
+    &-#{$d} {
+      border-#{$d}-width: 1px;
+      border-#{$d}-style: solid;
+    }
+  }
+
+  &-0 {
+    border: none;
+  }
+
+  &-top-0 {
+    border-top: none;
+  }
+}
+
+.no-border-top {
+  border-top: 0 !important;
+}
+
+// Widths
+.width {
+  &-percent-70 {
+    width: 70%;
+  }
+
+  &-percent-100 {
+    width: 100%;
+  }
+}
+
+// Miscellaneous
+.strong-password-rules {
+  background-color: #ddd;
+  border-radius: 5px;
+  color: #333;
+  font-size: .9em;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+
+  h3 {
+    color: #111;
+    margin-top: 0;
+  }
+
+  ul {
+    margin-bottom: 0;
+    margin-left: 10px;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.release-one {
+  display: none;
+}
+
+a {
+  &[ng-href],
+  &[ng-click],
+  &[data-toggle] {
+    cursor: pointer;
+  }
+}
+
+[ng\:cloak],
+[ng-cloak],
+.ng-cloak {
+  display: none;
+}
+
+.height-auto {
+  height: auto;
+}
+
+//Add a max-width to activate the ellipsis
+.text-ellipsis {
+  @include text-overflow();
+}
+
+// vertically center if parent has height/width and non static position example:v-center
+@each $d in (center bottom) {
+  %v-#{$d},
+  .v-#{$d} {
+    position: relative;
+
+    @if ($d == center) {
+      top: 50%;
+      transform: translateY(-50%);
+    } @else {
+      bottom: 100%;
+      transform: translateY(50%);
+    }
+  }
+}
+
+// Vertical Alignment
+.valign {
+  @each $d in (top middle bottom) {
+    &-#{$d} {
+      vertical-align: #{$d};
+    }
+  }
+}
+
+.fa.securus-facility {
+  transform: translateY(7.5%);
+}
+
+// Text "no wrap" tool
+.nowrap {
+  white-space: nowrap;
+}

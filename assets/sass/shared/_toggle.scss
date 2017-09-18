@@ -1,0 +1,49 @@
+.panel-filters a[data-toggle="collapse"] {
+  position: relative;
+}
+
+a[data-toggle="collapse"] {
+  &:hover {
+    color: inherit;
+    display: block;
+    text-decoration: none !important;
+  }
+
+  &:not(.collapsed) {
+    .toggle-show {
+      display: none;
+    }
+  }
+
+  &.collapsed {
+    .toggle-hide {
+      display: none;
+    }
+  }
+
+  // vertically center toggle icons
+  .toggle-icons {
+    padding: 8px;
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .toggle-hide,
+  .toggle-show {
+    &:after {
+      font-family: 'FontAwesome';
+      font-size: .7em;
+      line-height: 200%;
+    }
+  }
+
+  .toggle-hide:after {
+    content: '\f077';
+  }
+
+  .toggle-show:after {
+    content: '\f078';
+  }
+}

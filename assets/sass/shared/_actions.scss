@@ -1,0 +1,36 @@
+.action-initial,
+.action-taken {
+  border-radius: 2em;
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  position: relative;
+  text-align: center;
+  width: 2em;
+}
+
+.action-initial {
+  background-color: white;
+}
+
+.action-taken {
+  color: white;
+}
+
+.action-taken-with-count {
+  margin-right: 1em;
+}
+
+.action-count {
+  background-color: #686868;
+  border: 1px solid gray;
+  border-radius: 1em;
+  color: white;
+  display: block;
+  font-size: 1em;
+  height: 2em;
+  position: absolute;
+  right: -1.3em;
+  top: -.9em;
+  width: 2em;
+}

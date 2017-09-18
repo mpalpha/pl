@@ -1,0 +1,68 @@
+.calendar-snapshot {
+  .fc-toolbar {
+    display: none;
+  }
+
+  .fc-slats td {
+    border: 0;
+    height: .2em;
+  }
+
+  .fc-axis {
+    display: none;
+  }
+
+  .fc-slats table {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+  }
+
+  .fc td,
+  .fc th {
+    border: 0;
+  }
+
+  .fc tr:nth-child(odd) td {
+    border-bottom: 1px solid #eee;
+  }
+
+  .fc tr:nth-child(even) td {
+    border-bottom: 1px solid #eee;
+  }
+
+  .fc-time-grid-event.fc-event.fc-start.fc-end {
+    background: #1aab60;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+.schedule-time {
+  background: transparent;
+  font-family: open sans;
+  font-size: 11px;
+  height: 25px;
+  padding-left: 8px;
+}
+
+.schedule-taken {
+  background: #1aab60;
+  height: 25px;
+  margin: 0px 1px;
+}
+
+.schedule-days {
+  font-family: open sans;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.schedule-available {
+  background: #1aab60;
+  height: 25px;
+  margin: 0px 1px;
+}
+
+.call-schedule-panel {
+  min-height: 265px;
+}

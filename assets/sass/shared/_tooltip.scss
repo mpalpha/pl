@@ -1,0 +1,44 @@
+.tooltip-inner {
+  text-align: left;
+
+  tbody {
+    padding: 1rem;
+
+    tr {
+      td {
+        padding-bottom: 5px;
+        padding-left: 10px;
+        white-space: nowrap;
+
+        &:last-child() {
+          padding-right: 10px;
+        }
+
+        > span {
+          color: $brand-gunmetal;
+        }
+
+        &:last-child() {
+          text-align: left;
+        }
+      }
+
+      &:first-child() {
+        td {
+          padding-top: 10px;
+        }
+      }
+
+      &:last-child() {
+        td {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// todo: look into a better solution for the tooltip positioning
+// .tooltip[tooltip-animation-class] {
+//     margin-top: -50px;
+// }

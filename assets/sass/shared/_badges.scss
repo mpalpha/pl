@@ -1,0 +1,46 @@
+.inherit {
+  &-badge {
+    color: $gray-light;
+    display: block;
+    font-size: 12px;
+    font-weight: normal;
+    padding-top: 3px;
+  }
+
+  &-form-field-badge {
+    margin-top: -15px; //To handle issues with Angular Angular Agility Field-Group
+  }
+}
+
+.badge {
+  font-weight: normal;
+
+  .sub & {
+    background-color: $securus-primary-blue;
+    font-weight: normal;
+  }
+
+  .sub & > a {
+    color: white;
+  }
+
+  &-lg {
+    font-size: 18px;
+  }
+
+  &-success {
+    background-color: $brand-success;
+  }
+
+  &-warning {
+    background-color: $brand-warning;
+  }
+
+  &-danger {
+    background-color: $brand-danger;
+  }
+
+  &-primary {
+    background-color: $brand-primary;
+  }
+}

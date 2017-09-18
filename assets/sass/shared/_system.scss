@@ -1,0 +1,114 @@
+.page-load {
+  left: calc(50% - 100px);
+  position: absolute;
+  top: 10px;
+  z-index: 9999;
+
+  .page-error {
+    top: calc(50% - 20px);
+  }
+}
+
+.notification-badge {
+  background-color: $securus-orange;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: normal;
+  margin-top: 3px;
+  padding: 6px 10px;
+}
+
+.busy {
+  background: rgba(255, 255, 255, .9);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  &-icon {
+    color: black;
+    left: calc(50% - 7px);
+    position: absolute;
+    top: calc(50% - 7px);
+  }
+
+  &.page-busy {
+    display: none;
+  }
+
+  &.section-busy {
+    display: block;
+  }
+}
+
+.notify {
+  color: white;
+  display: none;
+  height: 40px;
+  left: 0;
+  line-height: 30px;
+  padding: 5px 10px;
+  position: absolute;
+  text-align: center;
+  top: 70px;
+  width: 100%;
+  z-index: 999;
+
+  &-info {
+    background-color: #3498db;
+    z-index: 960;
+  }
+
+  &-alert {
+    background-color: #c0392b;
+    z-index: 970;
+  }
+
+  &-system {
+    background-color: #111;
+    z-index: 980;
+  }
+
+  &-success {
+    background-color: #27ae60;
+    z-index: 999;
+  }
+
+  .close {
+    color: white;
+    float: right;
+    line-height: 30px;
+    opacity: .7;
+  }
+
+  .text,
+  & &-content,
+  & &-message,
+  & &-message a {
+    color: white;
+    display: inline-block;
+  }
+
+  & &--bottom {
+    bottom: 0;
+    // Sticks a notification to the bottom of the screen
+    position: fixed;
+    top: initial;
+  }
+}
+
+.page-errors-warnings {
+  left: 0;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: fixed;
+  text-align: center;
+  top: 70px;
+  width: calc(100% - 20px);
+}
+
+.post-beta {
+  display: none;
+}

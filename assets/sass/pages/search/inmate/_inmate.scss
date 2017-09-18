@@ -1,0 +1,108 @@
+.table-inmate-details {
+  td:first-child {
+    width: 30% !important;
+  }
+
+  td:nth-child(2) {
+    width: 70%;
+  }
+}
+
+#murray-video {
+  height: 152px;
+  vertical-align: middle;
+  width: 280px;
+}
+
+.exists-on-other-pan {
+  background-color: $brand-warning;
+  left: -10px;
+  position: relative;
+  top: 6px;
+}
+
+.profile-edit {
+  position: relative;
+
+  img,
+  video {
+    background-color: white;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+    height: 152px;
+    width: 100%;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  .edit-photo-overlay {
+    background-color: rgba(0, 0, 0, .1);
+    bottom: 5px;
+    height: 45px;
+    left: 5px;
+    position: absolute;
+    width: 253px;
+    z-index: 1020;
+
+    .edit-photo-text {
+      color: white;
+      //      display: none;
+      left: 44px;
+      margin-top: -30px;
+      position: absolute;
+    }
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .7);
+      transition: background-color 0.25s ease;
+    }
+
+    .edit-photo-icon {
+      color: white;
+      padding: 15px;
+    }
+
+    &:hover > .edit-photo-icon {
+      transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+      @include scale(1.5);
+    }
+
+    &:hover > .edit-photo-text {
+      //      display: block;
+    }
+  }
+}
+
+.edit-inmate-details {
+  display: none;
+}
+
+.btn-edit-note {
+  display: none;
+}
+
+.view-allow {
+  display: none;
+}
+
+//TEST STYLES ONLY FOR BUSINESS REVIEW
+.inmate-photo {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  display: block;
+}
+
+.inmate-photo-placeholder {
+  display: none;
+}
+
+.form-background {
+  background-color: #eee;
+  border-radius: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 10px 0px;
+}
+

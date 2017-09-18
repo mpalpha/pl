@@ -1,0 +1,215 @@
+// ------------------------------
+//    Dropdown
+// ------------------------------
+.input-group .dropdown-toggle {
+  background-color: $white;
+  color: $btn-default-color;
+  height: 32px;
+  text-align: left;
+  width: 100%;
+}
+
+.dropdown {
+  &-header {
+    background-color: #f2f2f2;
+    color: #656565;
+    margin: 0px 4px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+  }
+
+  &-menu {
+    &.wide {
+      min-width: 240px;
+    }
+
+    &.medium {
+      min-width: 180px;
+    }
+  }
+
+  &-toggle {
+    &:not(:first-child) {
+      padding-right: 15px;
+    }
+  }
+}
+
+.input-group .no-background-dropdown {
+  color: $btn-default-color;
+  height: 32px;
+  text-align: left;
+  width: 100%;
+}
+
+.selected-value {
+  float: left;
+}
+
+div,
+ul {
+  &:not(.dropdown) {
+    .caret {
+      float: right;
+      margin-top: .5em;
+    }
+  }
+}
+
+.cdr-actions .result-options > * {
+  display: inline-block;
+}
+
+.result-options .btn-link {
+  vertical-align: top;
+}
+
+
+/*
+This overrides the behavior of .input-group .dropdown-toggle .caret and scopes
+it to the .add-tag-group component
+*/
+
+.add-tag-group .input-group .dropdown-toggle .caret {
+  float: none;
+  margin-top: 0;
+}
+
+// ------------------------------
+//    Multi-Select Dropdown
+// ------------------------------
+.dropdown-checkbox {
+  #{&}-content {
+    border-top: 0;
+
+    .body {
+      max-height: 200px;
+      overflow: auto;
+    }
+
+    .footer {
+      white-space: nowrap;
+    }
+  }
+}
+
+.required {
+  &:after {
+    color: #c0392b;
+    content: 'Required';
+    font-size: 11px;
+    font-weight: normal;
+    padding-left: 10px;
+  }
+
+  &-phone-email:after {
+    color: #c0392b;
+    content: 'Phone or email required';
+    font-size: 11px;
+    font-weight: normal;
+    padding-left: 10px;
+  }
+}
+
+.input-group-save {
+  background-color: $brand-success;
+  border: 0;
+  color: $white;
+
+  &:hover {
+    background-color: darken($brand-success, 15%);
+  }
+}
+
+//------------------------------
+// Styling for Dropdown Checkbox
+//------------------------------
+.dropdown-checkbox .dropdown-checkbox-header {
+  background-color: transparent;
+  border-bottom: 1px solid #eee;
+  padding: 5px 18px;
+
+  .checkbox-all {
+    width: 100%;
+
+    &:after {
+      content: 'Select All';
+      float: left;
+      line-height: 100%;
+      margin-left: 30px; //      margin-top: -7px;
+      margin-top: -.1em;
+    }
+  }
+
+  .search {
+    display: none;
+  }
+}
+
+table:not(.table-visitors) {
+  th:last-child .dropdown-checkbox-content {
+    right: 0;
+  }
+}
+
+//------------------------------
+// Fake Select Dropdown
+//------------------------------
+.btn-dropdown {
+  background-color: #fff;
+  background-image: url(../images/patterns/dropdown.svg);
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-size: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  display: block;
+  height: 32px;
+  line-height: 1.428571429;
+  padding: 6px 12px;
+  text-align: left;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  width: 100%;
+
+  &:focus {
+    border-color: #66afe9;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    outline: 0;
+  }
+
+  + .dropdown-menu {
+    left: auto;
+
+    li {
+      padding: 5px 15px;
+    }
+
+    input[type='checkbox'] {
+      margin-right: 5px;
+    }
+  }
+}
+
+.overflow-dropdown-container {
+  display: block;
+}
+
+//------------------------------
+// Multiselect Dropdown
+//------------------------------
+.multiselect-container {
+  > .multiselect-all {
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  > .active {
+    > a {
+      &:hover,
+      &:focus {
+        background: none;
+        color: #333;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.ng-invalid.aa-had-focus {
+  border-color: $brand-invalid;
+}
+
+.validation-error {
+  color: $brand-danger;
+  font-style: normal;
+  margin-top: 2px;
+
+  &:before {
+    content: '\f071';
+    display: inline-block;
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+  }
+}
+
+.hideOverflow {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.validation-warning {
+  color: #f26122;
+  font-style: normal;
+  margin-top: 2px;
+}
+
+.validation-warning:before {
+  content: '\f071';
+  display: inline-block;
+  font-family: 'FontAwesome';
+  padding-right: 5px;
+}

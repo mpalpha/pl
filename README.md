@@ -1,0 +1,2 @@
+# Pattern Library
+Pattern Library is the design system created for *company* applications that adopt the *company* style. It provides the css, images, fonts, and icons for an application (as an npm or bower dependency package).

@@ -1,0 +1,74 @@
+.popup {
+  /* height: 100%; Removing to stop the height of popups from being restricted to the size of the underlying div */
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+  display: none;
+  padding: 0 15px 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+
+  &-grid {
+    left: 15px;
+    width: calc(100% - 30px);
+
+    &-scroll {
+      border-bottom: 1px solid #ddd;
+      overflow-y: auto;
+
+      &-new {
+        max-height: 23rem;
+      }
+
+      &-existing {
+        max-height: 46rem;
+      }
+    }
+
+    table {
+      margin-bottom: 0%;
+    }
+  }
+}
+
+.popover {
+  margin-top: 30px;
+  max-width: 360px;
+  z-index: 8000;
+
+  .popover-footer {
+    background-color: $gray-lightest;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid $gray-lighter;
+    margin: 0;
+    padding: 8px 14px;
+  }
+}
+
+// NOTE:  This class must be applied to the <div> that is designated as the popover container;
+// styling the .popover directly would change the styling for all popovers.
+// See the 'container' property documentation: http://getbootstrap.com/javascript/#popovers
+.popover.popover-primary {
+  max-width: 1500px;
+  padding: 0;
+
+  .popover-title {
+    background-color: $brand-primary;
+    color: $white;
+
+    .close {
+      color: $white;
+      font-size: 14px;
+      opacity: 0.4;
+
+      &:hover,
+      &:focus {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.override-group {
+  display: block;
+
+  .override-settings {
+    display: block;
+  }
+}
+
+/*
+  Override of the width for the Bootstrap Timepicker in NextGen. The default width
+  is too narrow for the time to be visible so an override is needed to display the time.
+*/
+.bootstrap-timepicker-widget table td input {
+  width: 45px;
+}
+
+.search-box,
+.close-icon,
+.search-wrapper {
+  padding: 10px;
+  position: relative;
+}
+
+.search-wrapper {
+  margin: auto;
+}
+
+.search-box {
+  border: 1px solid #ccc;
+  outline: 0;
+  width: 100%;
+}
+
+.close-icon {
+  background-color: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  vertical-align: middle;
+}
+
+.close-icon:after {
+  background-color: #fa9595;
+  border-radius: 50%;
+  bottom: 0;
+  color: white;
+  content: "X";
+  cursor: pointer;
+  display: block;
+  font-size: 12px;
+  font-weight: normal;
+  height: 15px;
+  margin: auto;
+  padding: 2px;
+  position: absolute;
+  right: 35px;
+  text-align: center;
+  top: 0;
+  width: 15px;
+  z-index: 1;
+}
+
+.search-box:not(:valid) ~ .close-icon {
+  display: none;
+}

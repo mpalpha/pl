@@ -1,0 +1,150 @@
+$check: "\f046";
+$indeterminate: "\f147";
+$open-check: "\f096";
+$square: "\f0c8";
+$square-check: "\f14a";
+$radio: "\f192";
+$open-radio: "\f10c";
+$check-radio: "\f05d";
+$radio-thin: "\f111";
+$open-radio-thin: "\f1db";
+$primary: #3fae29;
+$primary-radio: #0074c8;
+$secondary: #aaa;
+$size: 1em;
+
+@mixin checkmark($size) {
+  content: $open-check;
+  font-family: FontAwesome;
+  font-size: $size;
+}
+
+@mixin radiomark($size) {
+  content: $open-radio;
+  font-family: FontAwesome;
+  font-size: $size;
+}
+
+@mixin box-style($size: 1em, $position: "left") {
+  content: "";
+  position: absolute;
+  top: calc(50% - 0.025em);
+  transform: translateY(-50%);
+
+  @if ($position == "left") {
+    left: 0.15em;
+  } @else if($position == "right") {
+    right: 0.15em;
+  }
+}
+
+@mixin no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@mixin selector($primary: $primary, $secondary: $secondary, $selector: $check, $selectorChecked: $open-check, $size: $size, $position: "left") {
+  font-size: 0;
+  margin-left: -1em;
+  margin-top: -0.8em;
+  position: absolute;
+  visibility: hidden;
+
+  + label {
+    display: block;
+    font-weight: normal;
+    line-height: inherit;
+    min-height: auto;
+    position: relative;
+    @include no-select;
+
+    @if ($position == "left") {
+      padding-left: 1.25em;
+    }
+
+    @if ($position == "right") {
+      width: inherit;
+    }
+  }
+
+  &:checked + label {
+    &:before {
+      color: $primary;
+      content: $selector;
+
+      @if ($position == "right") {
+        right: 0em;
+      }
+    }
+  }
+
+  &:indeterminate {
+    color: $secondary;
+
+    &:not([type=radio])+label:before {
+      content: $indeterminate;
+    }
+  }
+
+  + label:before {
+    color: darken($secondary, 10%);
+    content: $selectorChecked;
+    font-family: FontAwesome;
+    @include box-style($size, $position);
+  }
+
+  &:not(:disabled) + label:hover {
+    color: darken($secondary, 80%);
+  }
+
+  &:checked:not(:disabled) + label:hover:before {
+    color: $primary;
+  }
+
+  &:disabled,
+  &[disabled],
+  &.disabled {
+    + label {
+      color: darken($secondary, 10%);
+    }
+
+    + label:hover {
+      color: darken($secondary, 10%);
+    }
+  }
+}
+
+dl.check-list {
+  list-style: none;
+  margin-bottom: 10px;
+
+  dd {
+    margin-bottom: 0%;
+    margin-left: 1em;
+  }
+}
+
+input {
+  &[type=checkbox] {
+    dl.check-list &,
+    &.fa.checkbox {
+      &.checkbox-right {
+        @include selector($primary, $secondary, $check, $open-check, $size, "right");
+      }
+
+      &:not(.checkbox-right) {
+        @include selector($primary, $secondary, $check, $open-check, $size);
+      }
+    }
+  }
+
+  &[type=radio] {
+    &.fa.radio {
+      @include selector($primary, $secondary, $radio, $open-radio-thin, $size);
+    }
+  }
+}

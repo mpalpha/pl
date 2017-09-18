@@ -1,0 +1,152 @@
+//Forcing patternpack to build and release 7/29/2015 7:16pm
+.nav-tabs {
+  > li > a {
+    color: $navbar-default-link-color;
+    margin-right: 0;
+    @include transition(all 0.2s);
+
+    &:hover {
+      background-color: transparent;
+      color: $brand-primary;
+      @include box-shadow(inset 0 -2px 0 $brand-primary);
+    }
+
+    &.securus-admin-tab {
+      background-color: $brand-primary;
+      color: white;
+    }
+  }
+
+  > li.active > a {
+    color: $brand-primary;
+    @include box-shadow(inset 0 -2px 0 $brand-primary);
+
+    &:hover {
+      color: $brand-primary;
+    }
+  }
+
+  > li.disabled > a {
+    @include box-shadow(inset 0 -1px 0 #ddd);
+  }
+
+  &.nav-justified {
+    > li > a,
+    > li > a:hover,
+    > .active > a,
+    > .active > a:hover {
+      border: none;
+    }
+  }
+}
+
+.nav > li > a {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+// Pills
+
+.bsnav-pills {
+  li {
+    float: left;
+    // Links rendered as pills
+    > a {
+      border-radius: $nav-pills-border-radius;
+    }
+
+    + li {
+      margin-left: 2px;
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: $brand-primary;
+        color: $white;
+
+        .caret {
+          border-bottom-color: $nav-pills-active-link-hover-color;
+          border-top-color: $nav-pills-active-link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+// Stacked pills
+.bsnav-stacked {
+  li {
+    float: none;
+    margin-top: 2px;
+
+    + li {
+      margin-left: 0;
+      margin-top: 2px;
+      // no need for this gap between nav items
+    }
+  }
+}
+
+.bsnav {
+  // Override default ul/ol
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+  @include clearfix;
+
+  * {
+    transition: 0;
+  }
+
+  > li {
+    display: block;
+    position: relative;
+
+    > a {
+      display: block;
+      padding: $nav-link-padding;
+      position: relative;
+
+      &:hover,
+      &:focus {
+        background-color: $nav-link-hover-bg;
+        text-decoration: none;
+      }
+    }
+    // Disabled state sets text to gray and nukes hover/tab effects
+    &.disabled > a {
+      color: $nav-disabled-link-color;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: $nav-disabled-link-hover-color;
+        cursor: not-allowed;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.bsnav-top-spacing {
+  margin-top: 10px;
+}
+
+//Left navigation for phone numbers and call mgmt
+.bsnav-pills > li.active > a,
+.bsnav-pills > li.active > ul > li.active a {
+  background-color: $brand-primary;
+  color: white;
+}
+
+.bsnav-pills > li.active > ul > li.active a,
+.bsnav > li > a:hover {
+  background-color: $brand-primary;
+  color: white;
+
+  .text-muted {
+    color: $brand-platinum;
+  }
+}

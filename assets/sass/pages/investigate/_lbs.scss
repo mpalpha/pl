@@ -1,0 +1,203 @@
+.map-canvas {
+  background: url(../images/shared/geofence/google-map-large.png) no-repeat left top;
+}
+
+#lbs-map-canvas {
+  border-radius: 4px;
+  height: 350px;
+  margin: 0px;
+  padding: 0px;
+  width: 1140px;
+}
+
+.locating-feedback {
+  background-color: rgba(255, 255, 255, .85);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  height: 100%;
+  position: absolute;
+  width: 1140px;
+  z-index: 500;
+}
+
+.locating-message {
+  color: #555;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  text-align: center;
+  top: 170px;
+
+  .fa-spin {
+    color: #555;
+  }
+}
+
+.controls {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  height: 32px;
+  margin-top: 10px;
+  outline: none;
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 400px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+  margin-left: -1px;
+  padding-left: 14px;
+  /* Regular padding-left + 1. */
+
+  width: 401px;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  background-color: #4d90fe;
+  color: #fff;
+  padding: 5px 11px 0px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+::-webkit-input-placeholder {
+  color: #555;
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+}
+
+.map-controls {
+  display: block;
+  left: 6%;
+  margin: 80px 0 0;
+  pointer-events: none !important;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 400px;
+  z-index: 9;
+}
+
+.zoom-btn {
+  -webkit-backface-visibility: hidden;
+  background: #0089cf url(../images/zoomBtn.png);
+  border: 6px solid #0089cf;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  float: right;
+  height: 60px;
+  pointer-events: all;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-transform-style: preserve-3d;
+  width: 60px;
+}
+
+.zoom-out {
+  background-position: 0 -48px;
+  float: left;
+}
+
+.loc-4 {
+  background-color: $loc-4;
+}
+
+.loc-5 {
+  background-color: $loc-5;
+}
+
+.loc-6 {
+  background-color: $loc-6;
+}
+
+.loc-7 {
+  background-color: $loc-7;
+}
+
+.loc-8 {
+  background-color: $loc-8;
+}
+
+.loc-9 {
+  background-color: $loc-9;
+}
+
+.loc-10 {
+  background-color: $loc-10;
+}
+
+.loc-11 {
+  background-color: $loc-11;
+}
+
+.loc-12 {
+  background-color: $loc-12;
+}
+
+.loc-13 {
+  background-color: $loc-13;
+}
+
+.loc-14 {
+  background-color: $loc-14;
+}
+
+.loc-15 {
+  background-color: $loc-15;
+}
+
+.loc-16 {
+  background-color: $loc-16;
+}
+
+.loc-17 {
+  background-color: $loc-17;
+}
+
+.loc-18 {
+  background-color: $loc-18;
+}
+
+.loc-19 {
+  background-color: $loc-19;
+}
+
+.loc-20 {
+  background-color: $loc-20;
+}
+
+.loc-21 {
+  background-color: $loc-21;
+}
+
+.loc-22 {
+  background-color: $loc-22;
+}
+
+.loc-23 {
+  background-color: $loc-23;
+}
+
+.loc-24 {
+  background-color: $loc-24;
+}
+
+.loc-25 {
+  background-color: $loc-25;
+}

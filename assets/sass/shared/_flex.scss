@@ -1,0 +1,20 @@
+.flex-parent,
+.flex-parent-row,
+.flex-content,
+.flex-content--scroll {
+  &[class*="-parent"] {
+    display: flex;
+
+    &:not([class*="flex-parent-row"]) {
+      flex-direction: column;
+    }
+  }
+
+  &[class*="-content"] {
+    flex: 1;
+
+    &[class*="--scroll"] {
+      overflow-x: auto;
+    }
+  }
+}

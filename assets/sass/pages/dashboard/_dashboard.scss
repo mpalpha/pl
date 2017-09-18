@@ -1,0 +1,492 @@
+.counter-section {
+  margin: 5px 0;
+
+  .value {
+    display: block;
+    font-size: 18px;
+    margin-top: auto;
+    text-align: center;
+
+    &.success {
+      color: $brand-success;
+    }
+
+    &.warning {
+      color: $brand-warning;
+    }
+
+    &.danger {
+      color: $brand-danger;
+    }
+
+    &.primary {
+      color: $brand-primary;
+    }
+
+    &.calls {
+      color: rgba(0, 116, 200, .6);
+    }
+
+    &.small {
+      font-size: 18px;
+    }
+  }
+
+  .desc {
+    display: block;
+    text-align: center;
+  }
+}
+
+.single-panel-style {
+  height: 210px;
+}
+
+.widget-style {
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  height: 250px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &.auto-height {
+    height: auto;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .chart-legend {
+    ul {
+      list-style: none;
+
+      li {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1;
+        padding: 0 8px 0 16px;
+        position: relative;
+
+        span {
+          border-radius: 1px;
+          display: block;
+          height: 12px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  .visit-schedule-list {
+    border-bottom: 1px solid #eee;
+    box-shadow: none;     // override default style inside a dashboard widget
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+
+.dashboard-visitor-row,
+.dashboard-visit-row,
+.dashboard-grievance-row {
+  margin-bottom: 5px;
+
+  .col,
+  .col2 {
+    float: left;
+    padding-left: 5px;
+  }
+
+  .col {
+    width: 33.33333333%;
+  }
+
+  .col2 {
+    width: 66.666666%;
+  }
+}
+
+.dashboard-grievance-row {
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.dashboard-visit-row {
+  .time,
+  .location,
+  .duration {
+    line-height: 1.1;
+    text-align: left;
+  }
+}
+
+.timeline-separator {
+  border-top: 1px solid #eee;
+  margin-top: 5px;
+
+  > a {
+    margin-top: 5px;
+  }
+}
+
+.dashboard-counters .section-header {
+  text-align: center;
+}
+
+.dashboard-counters .value {
+  color: #16a085;
+  display: block;
+  font-size: 2.4em;
+  text-align: center;
+}
+
+.dashboard-counters .desc {
+  color: #2c3e50;
+  display: block;
+  text-align: center;
+}
+
+.dashboard-counters .summary {
+  color: #aaa;
+  font-size: .9em;
+  margin-top: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.counter-section div {
+  border-right: 1px solid #eee;
+  padding: 5px;
+}
+
+.single-panel-info {
+  border: none;
+  margin: auto;
+  padding: 5px;
+  width: 150px;
+}
+
+.center-numbers {
+  margin: auto;
+  width: 30px;
+}
+
+.center-words {
+  margin: auto;
+  width: 100px;
+}
+
+.dashboard-hr {
+  margin: 5px 0;
+}
+
+.counter-section-padding-only {
+  padding: 5px;
+}
+
+.counter-section div:last-child {
+  border-right: 0;
+}
+
+.dashboard-counter {
+  height: 200px;
+}
+
+.panel-dashboard {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+  padding: 16px;
+}
+
+.btn-approve {
+  background: $brand-success;
+  color: white;
+  margin-right: 1%;
+  width: 48%;
+
+  &:hover {
+    background: #389924;
+    color: white;
+    transition: none;
+  }
+}
+
+.btn-reject {
+  background: $brand-danger;
+  color: white;
+  width: 48%;
+
+  &:hover {
+    background: #b03427;
+    color: white;
+    transition: none;
+  }
+}
+
+.gallery {
+  display: none;
+  max-height: 500px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.gallery.active {
+  display: block;
+}
+
+.gallery .widget-style {
+  overflow: hidden;
+}
+
+.gallery-widget-container {
+  position: relative;
+}
+
+.gallery-widget {
+  @include make-md-column(4);
+}
+
+.gallery-widget:hover {
+  cursor: pointer;
+}
+
+.add-gallery-widget {
+  display: block;
+  height: 100%;
+  left: 15px;
+  position: absolute;
+  top: 0;
+  width: calc(100% - 32px);
+  z-index: 999;
+}
+
+.gallery.gallery-activity #canvas {
+  height: 155px;
+  width: 208px;
+}
+
+// Sizing for Dashboard Widgets
+.dashboard-container {
+  transition: margin-top 100ms;
+
+  &.rearranging {
+    margin-top: 32px;
+  }
+}
+
+.dashboard-widget__library-overlay {
+  display: none;
+}
+
+.gallery-widget {
+  .dashboard-widget__library-overlay {
+    background-color: rgba(0, 0, 0, 0);
+    bottom: 0;
+    color: $white;
+    display: block;
+    font-size: 100px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: background-color 100ms ease-in-out;
+    z-index: 1000; // sit above the <canvas> elements
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .5);
+
+      .fa {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .fa {
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      transition: all 100ms ease-in-out;
+      visibility: hidden;
+    }
+  }
+}
+
+.dashboard-rearrange-notification {
+  position: fixed;
+  top: 78px;
+  transition: top 300ms;
+
+  &.visible {
+    top: 110px;
+  }
+
+  .btn {
+    vertical-align: baseline;
+  }
+
+  .btn-success {
+    margin-left: 10px;
+  }
+
+  .btn-link {
+    color: $white;
+  }
+}
+
+// ===============================
+// Sizing for Dashboard Widgets
+// ===============================
+
+// Standard width dashboard includes a sidebar on the right
+.dashboard-standard-width {
+  @include make-md-column(8);
+
+  .dashboard-widget {
+    @include make-md-column(4);
+  }
+}
+
+// Full width dashboard does not include a sidebar on the right
+.dashboard-full-width {
+  @include make-md-column(12);
+
+  .dashboard-widget {
+    @include make-md-column(3);
+  }
+}
+
+// Style/positioning for elements within the left/full-width dashboard area
+.dashboard-standard-width,
+.dashboard-full-width {
+  .dashboard-widget__rearrange-overlay {
+    left: 15px;
+    right: 15px;
+  }
+
+  .dashboard-widget__rearrange-previous {
+    left: 1em;
+
+    &:before {
+      content: "\f104"; // font-awesome's .fa-angle-left
+    }
+  }
+
+  .dashboard-widget__rearrange-next {
+    right: 1em;
+
+    &:before {
+      content: "\f105"; // font-awesome's .fa-angle-right
+    }
+  }
+}
+
+// Style/positioning for elements within the right sidebar area
+.dashboard-sidebar {
+  @include make-md-column(4);
+
+  .dashboard-widget__rearrange-overlay {
+    left: 0;
+    right: 0;
+  }
+
+  .dashboard-widget__rearrange-previous {
+    left: 1em;
+    top: -60px; // slides the previous icon above the number
+
+    &:before {
+      content: "\f106"; // font-awesome's .fa-angle-left
+    }
+  }
+
+  .dashboard-widget__rearrange-next {
+    bottom: -60px; // slides the next icon below the number
+    right: 1em;
+
+    &:before {
+      content: "\f107"; // font-awesome's .fa-angle-right
+    }
+  }
+}
+
+.dashboard-widget {
+  margin-bottom: 20px;
+  position: relative; // used for positioning elements absolutely inside the widget
+  @include clearfix;
+
+  &.rearranging {
+    .dashboard-widget__rearrange-overlay {
+      transform: scale3d(1, 1, 1); // animate the entry
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  &.is-full-width {
+    width: 100%;
+  }
+}
+
+.dashboard-widget__rearrange-overlay {
+  background-color: rgba(0, 0, 0, .5);
+  bottom: 0;
+  color: $gray-lightest;
+  position: absolute;
+  top: 0;
+  transform: scale3d(0, 0, 0); // hides by default and prepared for animating
+  transition: transform 300ms;
+  z-index: 940;
+
+  .dashboard-widget__rearrange-previous,
+  .dashboard-widget__rearrange-next {
+    cursor: pointer;
+    font-size: 100px;
+    position: absolute;
+    transition: color 100ms;
+    z-index: 950;
+
+    &:hover {
+      color: darken($gray-lightest, 10%);
+    }
+  }
+}
+
+.dashboard-widget__rearrange-functions {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%); // vertically center
+  width: 100%;
+}
+
+.dashboard-widget__counter {
+  font-size: 70px;
+  text-align: center;
+  width: 100%;
+}
+
+.dashboard-container {
+  transition: margin-top 100ms;
+
+  &.rearranging {
+    margin-top: 32px;
+  }
+}
+
+.dashboard-standard-width,
+.dashboard-full-width {
+  .dashboard-widget {
+    &.rearranging {
+      .dashboard-widget__rearrange-overlay {
+        left: 15px;
+        right: 15px;
+      }
+    }
+  }
+}

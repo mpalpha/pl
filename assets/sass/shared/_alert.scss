@@ -1,0 +1,218 @@
+.alert,
+.emergency {
+  &.dropdown-menu {
+    margin-top: 5px;
+    padding: 0;
+  }
+
+  .header {
+    background-color: $brand-primary;
+    color: white;
+    font-size: 16px;
+    padding: 7px 14px;
+    white-space: nowrap;
+  }
+
+  .item {
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    margin: 0;
+    padding: 0;
+
+    a {
+      clear: both;
+      color: #333333;
+      display: block;
+      font-weight: normal !important;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    &:hover {
+      background-color: $brand-primary;
+    }
+
+    > a,
+    > .no-link {
+      margin: 0 !important;
+      padding: 14px !important;
+      white-space: nowrap;
+    }
+
+    > a:hover {
+      background-color: $brand-primary;
+      cursor: pointer;
+
+      * {
+        color: white !important;
+      }
+    }
+
+    > .no-link:hover {
+      background-color: #eee;
+      color: #555555;
+      cursor: auto;
+    }
+
+    .icon {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+
+      + .description {
+        padding-left: 14px;
+      }
+    }
+
+    .description {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+    }
+
+    a .description {
+      color: $brand-primary;
+    }
+
+    .date-time {
+      color: #777;
+      font-size: .8em;
+    }
+  }
+}
+
+.emergency {
+  .header {
+    background-color: $brand-primary;
+  }
+
+  &-ribbon {
+    background-color: $brand-danger;
+    border: none;
+    color: white;
+    height: 2.5em;
+    padding: 10 15px;
+    position: fixed;
+    top: 120px;
+    width: 100%;
+    z-index: $page-header-z-index;
+  }
+}
+
+.alerts-dropdown {
+  .dropdown-toggle {
+    display: block;
+    line-height: 20px;
+    position: relative;
+  }
+
+  .dropdown-toggle,
+  .alerts-dropdown .dropdown-toggle:active,
+  .alerts-dropdown .dropdown-toggle:hover {
+    background-color: transparent !important;
+    text-decoration: none;
+  }
+}
+
+.alert.dropdown-menu {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 1px;
+}
+
+/*
+  Sticks the aa-notify-container to the bottom of the screen. Use this in
+  addition to .aa-notify-container (e.g., class="aa-notify-container aa-notify-container--bottom")
+*/
+
+.aa-notify-container {
+  color: white;
+  height: 32px;
+  left: 0;
+  line-height: 20px;
+  max-height: 100px;
+  padding: 5px 10px;
+  position: fixed !important;
+  text-align: center;
+  top: 110px;
+  width: 100%;
+  z-index: 1020;
+
+  &--bottom {
+    bottom: 0;
+    top: initial;
+  }
+
+  .alert {
+    border: 0;
+    border-radius: 0;
+    margin-top: 0;
+    padding: 5px;
+  }
+
+  .aa-notify {
+    &-message {
+      display: inline-block;
+      overflow: hidden;
+      text-align: center;
+      text-overflow: ellipsis;
+      width: 90%;
+    }
+
+    &-close {
+      color: #333;
+      cursor: pointer;
+      font-size: .7em;
+      position: absolute;
+      right: 10px;
+      top: calc(50% - 14px);
+    }
+
+    &-notification {
+      background-color: #111;
+      color: white;
+      left: 0;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: 100%;
+      z-index: 980;
+
+      &.alert-info {
+        background-color: #0074c8;
+        z-index: 960;
+      }
+
+      &.alert-warning {
+        background-color: #f26122;
+        z-index: 960;
+      }
+
+      &.alert-success {
+        background-color: #3fae29;
+        z-index: 999;
+      }
+
+      &.alert-system {
+        background-color: #808c8d;
+        z-index: 980;
+      }
+
+      &.alert-danger {
+        background-color: #c0392b;
+        z-index: 970;
+      }
+    }
+  }
+
+  .aa-notification {
+    -webkit-animation: notify-slide-down .5s ease-out alternate;
+    animation: notify-slide-down .5s ease-out alternate;
+  }
+}

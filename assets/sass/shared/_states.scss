@@ -1,0 +1,13 @@
+.disabled,
+.disabled:active,
+.disabled:hover {
+  color: lighten($sui-gray, 30%);
+  cursor: default;
+  opacity: .3;
+}
+
+.disabled-events {
+  cursor: not-allowed;
+  opacity: .3;
+  pointer-events: none;
+}
