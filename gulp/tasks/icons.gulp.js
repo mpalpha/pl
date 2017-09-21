@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const $ = require('gulp-load-plugins')({ lazy: true });
 const config = require('../gulp.config')();
@@ -18,7 +18,7 @@ const reload = browserSync.reload;
 /**
  * clean, compress and optimize svg icons
  */
-gulp.task('svg-min', false, ['clean-icons'], () => {
+gulp.task('svg-min', ['clean-icons'], () => {
   return gulp
     .src(config.svg_min.src)
     .pipe($.if(!force, $.newer(config.svg_min.newer)))
@@ -32,7 +32,6 @@ gulp.task('svg-min', false, ['clean-icons'], () => {
  */
 gulp.task(
   'icons',
-  'Generate icon font, json and html sample page. Dependencies:',
   ['svg-min'],
   () => {
     return gulp

@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const del = require('del');
 const $ = require('gulp-load-plugins')({ lazy: true });
@@ -16,7 +16,7 @@ const force = require('yargs').argv.force || false;
 /**
  * clean dist
  */
-gulp.task('clean-dist', false, [], cb => {
+gulp.task('clean-dist', cb => {
   return pump([
     gulp.src(config.json.src),
     $.if(!force, $.newer(config.clean.dist)),
@@ -28,7 +28,7 @@ gulp.task('clean-dist', false, [], cb => {
 /**
  * clean assets
  */
-gulp.task('clean-assets', false, [], cb => {
+gulp.task('clean-assets', cb => {
   return pump([
     gulp.src(config.copy.assets.src),
     $.if(!force, $.newer(config.copy.assets.dest)),
@@ -40,7 +40,7 @@ gulp.task('clean-assets', false, [], cb => {
 /** 
  * clean minified icons
  */
-gulp.task('clean-icons', false, [], cb => {
+gulp.task('clean-icons', cb => {
   return pump([
     gulp.src(config.svg_min.src),
     $.if(!force, $.newer(config.icons.newer)),
@@ -52,7 +52,7 @@ gulp.task('clean-icons', false, [], cb => {
 /** 
  * clean pages
  */
-gulp.task('clean-pages', false, [], cb => {
+gulp.task('clean-pages', cb => {
   return pump([
     gulp.src(config.build_templates.src),
     $.if(!force, $.newer(config.build_templates.dest)),
@@ -62,7 +62,7 @@ gulp.task('clean-pages', false, [], cb => {
 });
 
 // clean minified css
-gulp.task('clean-min-css', false, [], cb => {
+gulp.task('clean-min-css', cb => {
   return pump([
     gulp.src([config.css.dest + '**/*.css', '!**/*min.css']),
     $.if(!force, $.newer(config.css.dest)),
@@ -74,7 +74,7 @@ gulp.task('clean-min-css', false, [], cb => {
 /**
  * clean minified theme css
  */
-gulp.task('clean-theme-min-css', false, [], cb => {
+gulp.task('clean-theme-min-css', cb => {
   return pump([
     gulp.src(config.theme_css.src),
     $.if(!force, $.newer(config.theme_css.dest)),
@@ -86,7 +86,7 @@ gulp.task('clean-theme-min-css', false, [], cb => {
 /**
  * clean json
  */
-gulp.task('clean-json', false, [], cb => {
+gulp.task('clean-json', cb => {
   return pump([
     gulp.src(config.build_templates.src),
     $.if(!force, $.newer(config.build_templates.dest)),

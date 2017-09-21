@@ -3,7 +3,8 @@
  */
 
 'use strict';
-const gulp = require('gulp-help')(require('gulp'));
+
+const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const $ = require('gulp-load-plugins')({ lazy: true });
 const fs = require('fs');
@@ -12,12 +13,11 @@ const config = require('../gulp.config')();
 const browserSync = require('browser-sync').create();
 
 /**
- *  Kick off build and development tasks:
- *  Launches the BrowserSync server
- *  Watches & updates files
- *  Reloads the browser after linting has finished.
+ * Kick off build tasks and reload the browser upon changes (ctrl+c to exit)
+ * @task {serve}
+ * @order {4}
  */
-gulp.task('serve', 'Kick off build and development tasks.', [], cb => {
+gulp.task('serve', cb => {
   runSequence('release-prep', () => {
     browserSync.init({
       port: 8888,

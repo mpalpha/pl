@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const runSequence = require('run-sequence');
 const $ = require('gulp-load-plugins')({ lazy: true });
@@ -20,7 +20,7 @@ const getPackageJson = () => {
 /**
  * git add and amend commit
  */
-gulp.task('git-commit-amend', false, [], () => {
+gulp.task('git-commit-amend', () => {
   let version = getPackageJson().version; // get version
   return gulp
     .src('.')
@@ -32,13 +32,13 @@ gulp.task('git-commit-amend', false, [], () => {
         })
       )
     )
-    .pipe($.git.commit('v' + version, { args: '-a --amend' }));
+    .pipe($.git.commit('v' + version, process.platform === 'win32' ? { args: '--amend' } : { args: '-a --amend' }));
 });
 
 /**
  * git add and commit
  */
-gulp.task('git-commit', false, [], () => {
+gulp.task('git-commit', () => {
   let version = getPackageJson().version; // get version
   return gulp
     .src('.')
@@ -50,13 +50,13 @@ gulp.task('git-commit', false, [], () => {
         })
       )
     )
-    .pipe($.git.commit('v' + version, { args: '-a' }));
+    .pipe($.git.commit('v' + version, process.platform === 'win32' ? {} : { args: '-a' }));
 });
 
 /**
  * generate changelog
  */
-gulp.task('changelog', false, [], () => {
+gulp.task('changelog', () => {
   return gulp
     .src('./CHANGELOG.md', {
       buffer: false
@@ -86,7 +86,7 @@ gulp.task('git-push', cb => {
 /**
  * Tag the repository with a version
  */
-gulp.task('git-tag', false, () => {
+gulp.task('git-tag', () => {
   let version = getPackageJson().version; // get version
   return $.git.tag('v' + version, 'Version ' + version, { args: '-a -f' });
 });
@@ -94,7 +94,7 @@ gulp.task('git-tag', false, () => {
 /**
  * release a version
  */
-gulp.task('release-version', function() {
+gulp.task('release-version', () => {
   let repo = getPackageJson().repository.url; // get repository
   return gulp.src(['**/*', '!node_modules/**/*']).pipe(
     $.gitRelease({
@@ -107,51 +107,39 @@ gulp.task('release-version', function() {
   );
 });
 
-/** 
- * Build, add, amend, tag, and commit a release
- * Please read http://semver.org/
- * patch: "gulp release"
- * minor: "gulp release --minor"
- * major: "gulp release --major"
- **/
-gulp.task(
-  'release',
-  'Build, add, amend, tag, and commit a release.',
-  cb => {
-    runSequence(
-      'release-prep',
-      'bump-version',
-      'changelog',
-      'git-commit',
-      'git-tag',
-      'git-push',
-      err => {
-        cb(err || undefined);
-      }
-    );
-  },
-  {
-    options: {
-      patch: 'Example: "gulp release"',
-      minor: 'Example: "gulp release --minor"',
-      major: 'Example: "gulp release --major"'
+/**
+ * Build, commit, bump, and push your local branch (default: patch)
+ * @task {release}
+ * @order {3}
+ * @arg {minor} show verbose build information
+ * @arg {major} show debug information
+ */
+gulp.task('release', cb => {
+  runSequence(
+    'release-prep',
+    'bump-version',
+    'changelog',
+    'git-commit',
+    'git-tag',
+    'git-push',
+    err => {
+      cb(err || undefined);
     }
-  }
-);
+  );
+});
 
-gulp.task(
-  'release-prep',
-  'Build and prepare the project for a release.',
-  cb => {
-    return runSequence(
-      'clean-dist',
-      'build-templates',
-      'styles',
-      'copy-assets',
-      cb
-    );
-  },
-  {
-    aliases: ['build']
-  }
-);
+/**
+ * Build and prepare the project for a release.
+ * @task {release-prep}
+ * @order {2}
+ * @arg {fixcss} fix stylelint errors (use with caution!)
+ */
+gulp.task('release-prep', cb => {
+  return runSequence(
+    'clean-dist',
+    'build-templates',
+    'styles',
+    'copy-assets',
+    cb
+  );
+});

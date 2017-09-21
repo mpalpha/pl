@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const runSequence = require('run-sequence');
 const $ = require('gulp-load-plugins')({ lazy: true });
@@ -15,7 +15,7 @@ const force = require('yargs').argv.force || false;
 /**
  * copy generated assets
  */
-gulp.task('copy-assets', false, ['clean-assets'], cb => {
+gulp.task('copy-assets', ['clean-assets'], cb => {
   pump(
     [
       gulp.src(config.copy.assets.src),
@@ -31,7 +31,7 @@ gulp.task('copy-assets', false, ['clean-assets'], cb => {
 /**
  * copy vendor fonts
  */
-gulp.task('copy-fontawesome', false, [], cb => {
+gulp.task('copy-fontawesome', cb => {
   pump(
     [
       gulp.src(config.copy.fontawesome.src),

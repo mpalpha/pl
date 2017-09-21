@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const stylelintFormatter = require('stylelint-formatter-pretty');
 const pump = require('pump');
 const runSequence = require('run-sequence');
@@ -20,7 +20,7 @@ const nolint = require('yargs').argv.nolint ? false : true;
 /**
  * generate class/id usage json file for csso
  */
-gulp.task('generate-css-usage', false, [], cb => {
+gulp.task('generate-css-usage', cb => {
   pump(
     [
       gulp.src(config.html.src),
@@ -37,7 +37,7 @@ gulp.task('generate-css-usage', false, [], cb => {
 /**
  * minify styles
  */
-gulp.task('minify-css', false, [], cb => {
+gulp.task('minify-css', cb => {
   pump(
     [
       gulp.src(config.min_css.src),
@@ -77,7 +77,7 @@ gulp.task('minify-css', false, [], cb => {
 /**
  * lint theme styles
  */
-gulp.task('lint-theme-css', false, [], cb => {
+gulp.task('lint-theme-css', cb => {
   return gulp
     .src(config.theme_css.src)
     .pipe($.if(debugging, $.debug()))
@@ -95,7 +95,7 @@ gulp.task('lint-theme-css', false, [], cb => {
 /**
  * lint styles
  */
-gulp.task('lint-css', false, [], cb => {
+gulp.task('lint-css', cb => {
   return gulp
     .src(config.css.src)
     .pipe($.if(debugging, $.debug()))
@@ -113,7 +113,7 @@ gulp.task('lint-css', false, [], cb => {
 /**
  * compile pattern library theme styles
  */
-gulp.task('build-theme-css', false, [], cb => {
+gulp.task('build-theme-css', cb => {
   pump(
     [
       gulp.src(config.theme_css.src),
@@ -132,7 +132,7 @@ gulp.task('build-theme-css', false, [], cb => {
 /**
  * compile base styles
  */
-gulp.task('build-css', false, [], cb => {
+gulp.task('build-css', cb => {
   pump(
     [
       gulp.src(config.css.src),
@@ -151,7 +151,7 @@ gulp.task('build-css', false, [], cb => {
 /**
  * fix scss stylelint errors
  */
-gulp.task('fix-scss', function () {
+gulp.task('fix-scss', () => {
   return gulp.src(config.css.src)
     .pipe($.if(fixcss, $.newer(config.css.newer)))
     .pipe($.if(fixcss, $.stylefmt()))
@@ -161,7 +161,7 @@ gulp.task('fix-scss', function () {
 /**
  * kick off the build process
  */
-gulp.task('styles', false, ['icons'], cb => {
+gulp.task('styles', ['icons'], cb => {
   runSequence(
     //"generate-css-usage",
     ['fix-scss'],

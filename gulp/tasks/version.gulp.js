@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const $ = require('gulp-load-plugins')({ lazy: true });
 const config = require('../gulp.config')();
 const args = require('yargs').argv;
@@ -13,23 +13,14 @@ const debugging = args.debug || false;
 
 /**
  * Update bower, component, npm at once
- * example: "grunt bump --patch"
  */
 gulp.task(
   'bump-version',
-  'Update bower, component, npm at once.',
   () => {
     return gulp
       .src(['./bower.json', './package.json', './.version.json'])
       .pipe($.if(debugging, $.debug()))
       .pipe($.bump({ type: bumpVersion }))
       .pipe(gulp.dest('./'));
-  },
-  {
-    options: {
-      patch: 'Example: "gulp bump"',
-      minor: 'Example: "gulp bump --minor"',
-      major: 'Example: "gulp bump --major"'
-    }
   }
 );

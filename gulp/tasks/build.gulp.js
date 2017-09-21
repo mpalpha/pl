@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const runSequence = require('run-sequence');
 const $ = require('gulp-load-plugins')({ lazy: true });
@@ -19,7 +19,7 @@ const force = require('yargs').argv.force || false;
 /**
  *  generate files json data for nested menu helper
  */
-gulp.task('generate-json-file', false, [], cb => {
+gulp.task('generate-json-file', cb => {
   let err;
   pump(
     [
@@ -55,46 +55,34 @@ gulp.task('generate-json-file', false, [], cb => {
 /** 
  * refresh panini libraries
  */
-gulp.task('panini-refresh', false, [], cb => {
+gulp.task('panini-refresh', cb => {
   panini.refresh();
   cb();
 });
 
 /**
- *  generated flat files from html/handlebars/markdown templates
+ * generated flat files from html/handlebars/markdown templates
  */
-gulp.task(
-  'build-templates',
-  false,
-  ['clean-pages', 'generate-json-file'],
-  cb => {
-    gulp.start('panini-refresh');
-    pump(
-      [
-        gulp.src(config.build_templates.src),
-        $.if(debugging, $.debug()),
-        $.if(!force, $.newer(config.build_templates.dest)),
-        panini(config.build_templates.options),
-        $.extname(),
-        $.plumber(),
-        gulp.dest(config.build_templates.dest, cb)
-      ],
-      cb
-    );
-  }
-);
+gulp.task('build-templates', ['clean-pages', 'generate-json-file'], cb => {
+  gulp.start('panini-refresh');
+  pump(
+    [
+      gulp.src(config.build_templates.src),
+      $.if(debugging, $.debug()),
+      $.if(!force, $.newer(config.build_templates.dest)),
+      panini(config.build_templates.options),
+      $.extname(),
+      $.plumber(),
+      gulp.dest(config.build_templates.dest, cb)
+    ],
+    cb
+  );
+});
 
-/** 
+/**
  * kick off the build process
  */
-gulp.task(
-  'build',
-  'Kick off the build process.',
-  cb => {
-    gulp.start('release-prep');
-    cb();
-  },
-  {
-    aliases: ['release-prep']
-  }
-);
+gulp.task('build', cb => {
+  gulp.start('release-prep');
+  cb();
+});

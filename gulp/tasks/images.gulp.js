@@ -4,7 +4,7 @@
 
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const pump = require('pump');
 const $ = require('gulp-load-plugins')({ lazy: true });
 const fs = require('fs');
@@ -16,7 +16,7 @@ const force = require('yargs').argv.force || false;
 /**
  * optimize/compress images
  */
-gulp.task('optimize-images', false, [], cb => {
+gulp.task('optimize-images', cb => {
   pump(
     [
       gulp.src(config.img.src),

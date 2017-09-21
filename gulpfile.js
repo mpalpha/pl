@@ -3,7 +3,7 @@
  */
 'use strict';
 
-const gulp = require('gulp-help')(require('gulp'));
+const gulp = require('gulp');
 const requireDir = require('require-dir');
 
 /**
@@ -14,25 +14,25 @@ requireDir('./gulp', {
 });
 
 /**
- * Default gulp task
+ * Default task / help
  */
-gulp.task('default', 'Default gulp task / help.', ['help'], () => {}, {
-  aliases: ['default']
-});
+gulp.task('default', ['help']);
 
 /**
- * debug task
+ * Show help
+ * @task {help}
+ * @group {help}
+ * @order {0}
  */
-gulp.task(
-  '*',
-  'Show debug or verbose information for any task.',
-  () => {
-    return true;
-  },
-  {
-    options: {
-      debug: 'Example: "gulp * --debug"',
-      verbose: 'Example: "gulp * --verbose"'
-    }
-  }
-);
+gulp.task('help', ['init-help']);
+
+/**
+ * options available to any task
+ * @task {*}
+ * @group {Options}
+ * @order {0}
+ * @arg {verbose} show verbose build information
+ * @arg {debug} show debug information
+ * @arg {force} force an un-cached build
+ */
+gulp.task('*', ['default'], () => {});
