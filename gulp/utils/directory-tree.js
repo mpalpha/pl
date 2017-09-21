@@ -45,10 +45,11 @@ let sortOrderByArray = (
  */
 module.exports = (path, options, onEachFile, getOrder) => {
   const root = process.platform === 'win32' ? slash(path) : path;
+  if (process.platform === 'win32') path = slash(path).replace('\\', '/');
   let getPath = path => {
     let thisPath = {
       abs: path,
-      rel: path.replace(PATH.normalize(root) + '/', '')
+      rel: path.replace(root.split('/')[1] + '/','')
     };
     return thisPath;
   };
@@ -57,7 +58,7 @@ module.exports = (path, options, onEachFile, getOrder) => {
    * recursive directory parse
    */
   let getTree = path => {
-    if (process.platform === 'win32') slash(path).replace('\\', '/');
+    if (process.platform === 'win32') path = slash(path).replace('\\', '/');
     const _path = getPath(path);
     const name = PATH.basename(path).split('.')[0];
     let item = { path: _path.rel, name };
@@ -84,7 +85,7 @@ module.exports = (path, options, onEachFile, getOrder) => {
        * rename file type extension if option.filetype and option.extension are provided
        */
       if (options && options.type && options.extension)
-        item.path = item.path.split('.')[0] + '.' + options.type;
+        item.path = item.path.split('.')[item.path.split('.').length - 2] + '.' + options.type;
 
       item.size = stats.size; // File size in bytes
       item.extension = options.type || ext; // replace extension
