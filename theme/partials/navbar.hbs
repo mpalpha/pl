@@ -12,9 +12,11 @@
 
   <ul class="dropdown-menu dropdown--cropped">
     {{#each children}}
+    {{#if this.name}}
     <li>
       <a href="./{{../../this.root}}{{this.path}}">{{titlecase this.name}}</a>
     </li>
+    {{/if}}
     {{/each}}
   </ul>
 </li>
